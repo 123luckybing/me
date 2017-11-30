@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        #contentLeft,#contentRight{
+            width: 150px;
+            height: 200px;
+            border:1px solid black;
+            text-align:center;
+            line-height:200px;
+            margin-bottom:20px;
+        }
+        #contentLeft option ,#contentRight option{
+            width:100%;
+            height:25px;
+            font-size:20px;
+        }
+        .left div span ,.right div span{
+            background: #e5e5e5;
+            color:black;
+            width: 370px;
+            height: 60px;
+            font-size:20px;
+            border-radius:10%;
+        }
+             .left,.right{
+                float:left;
+                margin-right:30px;
+            }
+    </style>
+</head>
+<body>
+<div class="left">
+    <select multiple="multiple" name="" id="contentLeft">
+        <option value="1">选项1</option>
+        <option value="2">选项2</option>
+        <option value="3">选项3</option>
+        <option value="4">选项4</option>
+        <option value="5">选项5</option>
+        <option value="6">选项6</option>
+        <option value="7">选项7</option>
+    </select>
+    <div>
+        <span id="leftAdd">选中添加到右边</span>
+        <br>
+        <span id="leftAddAll">全选中添加右边</span>
+    </div>
+</div>
+<div class="right">
+    <select multiple="multiple" name="" id="contentRight">
+        <option value="8">选项8</option>
+    </select>
+    <div>
+        <span id="rightAdd">选中添加到左边</span>
+        <br>
+        <span id="rightAddAll">全选中添加左边</span>
+    </div>
+</div>
+<script src="jquery-1.11.2.js"></script>
+<script>
+        $(function(){
+            $("#leftAdd").on("click",function(){
+                $("#contentLeft option:selected").appendTo($("#contentRight"));
+            });
+            $("#leftAddAll").on("click",function(){
+                $("#contentLeft option").appendTo($("#contentRight"));
+            });
+            $("#rightAdd").on("click",function(){
+                $("#contentRight option:selected").appendTo($("#contentLeft"));
+            });
+            $("#rightAddAll").on("click",function(){
+                $("#contentRight option").appendTo($("#contentLeft"));
+            });
+            //双击功能
+            $("#contentRight").on("dblclick","option",function(){
+               $(this).appendTo($("#contentLeft"));
+//                console.log(this);  => value 8
+            });
+            $("#contentLeft").on("dblclick","option",function(){
+                $(this).appendTo($("#contentRight"));
+            });
+
+            //问题一：后添加来的无法实现双击功能（事件委托/事件代理）
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!--编写程序．通过用户输入的年龄判断是哪个年龄段的人-->
+<!--（儿童：年龄＜14；青少年：14<=年龄＜24；青年：24<年龄＜40;-->
+<!--中年：40＜=年龄＜60; 老年：年龄>=60），并在页面上输出判断结果。-->
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    var d = prompt("请输入您的年龄");
+    if(d<14&&d>0){
+        document.write("儿童");
+    }else if(d>14&&d<24){
+        document.write("青少年");
+    }else if(d>=14&&d<24){
+        document.write("儿童");
+    }else if(d>=24&&d<40){
+        document.write("青年");
+    }else if(d>=40&&d<60){
+        document.write("中年");
+    }else if(d>60){
+        document.write("老年");
+    }else{
+        document.write("您输入的有误!");
+    }
+</script>
+</body>
+</html>

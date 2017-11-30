@@ -1,0 +1,18 @@
+<!--有一行单词，空格为单词间的间隔，找出其中最长的单词和最短的单词。-->
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    var words = "hello my name is zhoufangbing";
+    var arr =words.split(" ");
+    arr.sort(function(a,b){
+       return  a.length- b.length;
+    });
+    console.log(arr[0]);
+</script>
+</body>
+</html>

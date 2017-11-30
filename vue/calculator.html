@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>calculator</title>
+</head>
+<body>
+<div id="calculator">
+    <div>{{count}}</div>
+    <button>乘</button>
+    <input type="text" @keyup.13="mul" v-model="keyword1"/>
+    <br/>
+    <button>除</button>
+    <input type="text" @keyup.13="divi" v-model="keyword2"/>
+    <br/>
+    <button>加</button>
+    <input type="text" @keyup.13="add" v-model="keyword3"/>
+    <br/>
+    <button>减</button>
+    <input type="text" @keyup.13="sub" v-model="keyword4"/>
+</div>
+<script src="vue.js"></script>
+<script>
+   var um = new Vue({
+       el:"#calculator",
+       data: {
+             count:0,
+             keyword2:0,
+             keyword1:0,
+             keyword3:0,
+             keyword4:0
+       },
+       methods:{
+           add(){
+           this.count += parseInt(this.keyword3);
+           this.keyword3=0;
+          },
+          mul(){
+           this.count *= parseInt(this.keyword1);
+           this.keyword1=0;
+          },
+          sub(){
+          this.count -= parseInt(this.keyword4);
+          this.keyword4=0;
+         },
+        divi(){
+          this.count/=parseInt(this.keyword2);
+          this.keyword2=0;
+       }
+
+       }
+
+
+   });
+</script>
+</body>
+</html>

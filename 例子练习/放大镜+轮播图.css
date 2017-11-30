@@ -1,0 +1,52 @@
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    position:relative;
+}
+#imag{
+    width:430px;
+    height: 800px;
+    position:relative;
+    overflow:hidden;
+}
+#SmallPicture .selected{
+    border:1px solid black;
+}
+#BigPicture img{
+    width: 440px;
+    height:400px;
+}
+#SmallPicture{
+    width:600px;
+    height:140px;
+    margin-top:10px;
+    position:absolute;
+}
+#SmallPicture img{
+    width: 140px;
+    height: 140px;
+    float:left;
+    margin-right:5px;
+    cursor:pointer;
+}
+#btn div{
+    width: 20px;
+    height: 20px;
+    background:black;
+    color:white;
+    text-align:center;
+    line-height:20px;
+    cursor:pointer;
+    border:1px solid white;
+    position:absolute;
+}
+#left{
+    top:190px;
+    left:5px;
+}
+#right{
+    top:190px;
+    right:5px;
+}

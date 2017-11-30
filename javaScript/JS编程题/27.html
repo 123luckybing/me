@@ -1,0 +1,24 @@
+<!--编制一个从字符串中收集数字字符（"0"',"1"，…"9"）的函数CollectDigits(s)，-->
+<!--它从字符串s中顺序取出数字，并且合并为一个独立的字符串作为函数的返回值。-->
+<!--例如函数调用CollectDigits("1abc23def4"）的返回值是字符串"1234"。-->
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    function num(str){
+        var strnum="";
+        for(var i=0;i<str.length;i++){
+           if(!isNaN(str[i])){
+               strnum += str[i];
+           }
+        }
+        console.log(strnum);
+    }
+    num("1a2s4d3f5f");
+</script>
+</body>
+</html>

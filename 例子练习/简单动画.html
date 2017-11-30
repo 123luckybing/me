@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        body{
+            position:relative;
+        }
+        *{
+            margin:0;
+            padding:0;
+        }
+        #btn{
+            width: 100px;
+            height: 50px;
+            background:greenyellow;
+            color:white;
+            cursor:pointer;
+        }
+        #div{
+            width: 400px;;
+            height: 400px;
+            background:red;
+            margin-top:10px;
+            position:absolute;
+        }
+    </style>
+</head>
+<body>
+   <button id="btn">点击移动</button>
+   <div id="div"></div>
+   <script>
+       var oButton=document.getElementById("btn");
+       var oDiv=document.getElementById("div");
+       oButton.onclick=function(){
+           var timer=setInterval(function(){
+               oDiv.style.top= oDiv.offsetTop+10+"px";
+               oDiv.style.left= oDiv.offsetLeft+10+"px";
+            if(oDiv.offsetLeft>=500){
+                oDiv.style.top=0;
+                oDiv.style.left=0;
+                clearInterval(timer);
+            }
+           },30);
+       };
+   </script>
+</body>
+</html>

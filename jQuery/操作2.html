@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        #div1{
+            background: red;
+            width: 200px;
+            height: 200px;
+            position:relative;
+        }
+        #div2{
+            background: green;
+            height: 100px;
+            width: 100px;
+            position:absolute;
+            top:30px;
+            left:30px;
+        }
+    </style>
+</head>
+<body>
+<div id="div1">
+    <div id="div2"></div>
+</div>
+<div id="div3">div3</div>
+<div id="div6">div6</div>
+<script  src="jquery-1.11.2.js"></script>
+<script>
+    var oDiv7=document.getElementById("div7");
+    console.log($("#div1").offset());// 8 8
+    console.log($("#div1").position());//8 8
+    console.log($("#div2").offset());//38 38
+    console.log($("#div2").position());//30 30
+    $("#div3").append('<div id="div4"> div4 </div>').css("background","lightgreen");
+    $('<div id="div5">div5</div>').appendTo("#div3").css("background","red");
+    $("#div6").wrap('<div id="div7">div7</div>').css("background","yellow");
+    $("#div7").empty();
+    console.log(oDiv7.innerHTML);
+</script>
+</body>
+</html>

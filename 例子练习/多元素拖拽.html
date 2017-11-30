@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        #div1{
+            width: 200px;
+            height: 200px;
+            background:red;
+            top:0;
+            position:absolute;
+        }
+        #div2{
+            width: 200px;
+            height: 200px;
+            background:yellow;
+            top:200px;
+            position:absolute;
+        }
+        #div3{
+            width: 200px;
+            height: 200px;
+            background:green;
+            top:400px;
+            position:absolute;
+        }
+    </style>
+</head>
+<body>
+    <div id="div1"></div>
+    <div id="div2"></div>
+    <div id="div3"></div>
+    <script>
+        var oDiv1=document.getElementById("div1");
+        var oDiv2=document.getElementById("div2");
+        var oDiv3=document.getElementById("div3");
+        function drag(elem) {
+            elem.onmousedown = function (e) {
+                var oDisX = e.clientX - elem.offsetLeft;
+                var oDisY = e.clientY - elem.offsetTop;
+//                先求出鼠标到方块的左边和上边的距离
+                document.onmousemove = function (e) {
+                    e = e || window.event;
+                    elem.style.left = e.clientX - oDisX + "px";
+                    elem.style.top = e.clientY - oDisY + "px";
+//                    再设置方块运动拖拽时到浏览器上端和左端的距离
+                };
+            };
+            document.onmouseup = function () {
+                document.onmousemove = null;
+            };
+        }
+        drag(oDiv1);
+        drag(oDiv2);
+        drag(oDiv3);
+    </script>
+</body>
+</html>

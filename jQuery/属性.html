@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>属性</title>
+</head>
+<body>
+<div id="div1"></div>
+<script src="jquery-1.11.2.js"></script>
+<script>
+    $(function(){
+        $("#div1").attr("aa",123);
+        console.log($("#div1").attr("aa"));
+        $("#div1").prop("bb",456);
+        console.log($("#div1").prop("bb"));
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>搜索框</title>
+</head>
+<body>
+请输入要搜索的计算机内容 <input type="text" id="selected"/>
+<ul id="list">
+    <li>大数据</li>
+    <li>ios</li>
+    <li>Java</li>
+    <li>Android</li>
+    <li>.Net</li>
+    <li>PHP</li>
+    <li>WEB前端</li>
+    <li>UID</li>
+    <li>C++</li>
+    <li>HTML</li>
+    <li>HTML5</li>
+    <li>Linux</li>
+    <li>嵌入式</li>
+    <li>软件测试</li>
+    <li>网络工程</li>
+    <li>网络营销</li>
+    <li>Javascript</li>
+</ul>
+<script src="jquery-1.11.2.js"></script>
+<script>
+    $(function(){
+        var $oLi = $("#list li");
+        $("#selected").on("keyup",function(){
+            $oLi.css("background","transparent");
+            if(this.value != ""){
+                $("#list li:contains("+this.value+")").css("background","lightgreen");
+            }
+        });
+    });
+</script>
+</body>
+</html>

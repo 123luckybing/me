@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        body{
+            background:black;
+        }
+        #canvas{
+            background:white;
+        }
+
+    </style>
+</head>
+<body>
+   <canvas id="canvas" width="500px" height="400px"></canvas>
+              <script>
+      var ocanvas=document.getElementById("canvas");
+      var ctx=ocanvas.getContext("2d");
+      ctx.moveTo(200,300);
+      ctx.lineTo(500,400);
+      ctx.strokeStyle="pink";
+      ctx.lineWidth=10;
+      ctx.stroke();
+//                 直线
+      var ocanvas=document.getElementById("canvas");
+      var ctx=ocanvas.getContext("2d");
+      ctx.moveTo(0,300);
+      ctx.lineTo(100,400);
+      ctx.lineTo(200,200);
+      ctx.strokeStyle="pink";
+      ctx.lineWidth=10;
+      ctx.stroke();
+//                  折线
+      var x=ocanvas.width/2;
+      var y=ocanvas.height/2;
+      var radius=75;
+      var startAngle=1.3*Math.PI;
+      var endAngle=1.1*Math.PI;
+      var counterClockwise=true;
+      ctx.beginPath();
+      ctx.arc(x,y,radius,startAngle,endAngle,counterClockwise);
+      ctx.lineWidth=6;
+      ctx.strokestyle="red";
+      ctx.stroke();
+//      弧线
+
+
+
+
+    </script>
+</body>
+</html>

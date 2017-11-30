@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        #Div{
+            width:400px;
+            height:400px;
+            background:green;
+            position:relative;
+        }
+        #div1{
+            width:100px;
+            height:100px;
+            background:red;
+            position:absolute;
+            top:50%;
+            left:50%;
+            margin-top:-50px;
+            margin-left:-50px;
+        }
+        #Div2{
+            width:400px;
+            height:400px;
+            background:green;
+            position:relative;
+            border:1px solid white;
+        }
+        #div3{
+            width:100px;
+            height:100px;
+            background:red;
+            position:absolute;
+            top:50%;
+            left:50%;
+            transform: translate(-50%,-50%);
+        }
+    </style>
+</head>
+<body>
+                                <!--方法一-->
+<div id="Div">
+    <div id="div1">div1</div>
+</div>
+                                <!--方法二-->
+<div id="Div2">
+    <div id="div3">div3</div>
+</div>
+</body>
+</html>

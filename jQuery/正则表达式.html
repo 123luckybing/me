@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>正则表达式</title>
+</head>
+<body></body>
+<script>
+    var str="abcdcefg";
+    console.log(str.lastIndexOf("c"));
+    console.log(str.indexOf("c"));
+    console.log(str.match(/c/g));
+    var str1 = "123abc89";
+    console.log(str1.match(/\d+/g));
+//    console.log(str1.match(\d));
+   function RegExp(reg,str){
+       var result = reg.exec(str);
+       console.log(result);
+   }
+     var str2 = "ccc67es";
+    console.log(str2.match(/c{3}/));
+    console.log(str2.match(/c{3,5}/));
+    var str3 = "ccccccccabsj47890";
+    console.log(str3.match(/c{3,}/));//3个或者更多
+    console.log(str3.match(/c*/));//*表示零次或者多次
+    console.log(str3.match(/c+/));//+表示一次或者多次
+    console.log(str3.match(/c?/));//？表示0次或者1次
+    var str4 ="qheicovooo";
+    console.log(str4.match(/o{2,}?/));
+    console.log(str4.match(/o*?/));
+    console.log(str4.match(/o+?/));
+    console.log(str4.match(/o??/));
+    console.log(str4.match(/o{3,4}?/));
+
+    var str5 = "asdfghjkl";
+    var reg =/^a/;
+    var reg1 = /^d/;
+    RegExp(reg,str5);
+    RegExp(reg1,str5);
+    var reg2 = /l$/;
+    var reg3 = /s$/;
+    RegExp(reg2,str5);
+    RegExp(reg3,str5);
+
+    console.log(str5.match(/[abc]/));
+</script>
+</html>

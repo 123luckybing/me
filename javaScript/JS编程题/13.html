@@ -1,0 +1,27 @@
+<!--在页面上输出如下数字图案。-->
+<!--1-->
+<!--1 2-->
+<!--1 2 3-->
+<!--1 2 3 4-->
+<!--1 2 3 4 5-->
+<!--其中，每行的数字之间有一个空格间隔。-->
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+function print(num){
+    for(var i=1;i<=num;i++){
+        for(var j=1;j<=i;j++){
+            document.write(j+"&nbsp"+"&nbsp");
+        }
+        document.write("<br>")
+    }
+}
+    print(5);
+</script>
+</body>
+</html>

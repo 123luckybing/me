@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        body{
+            background:black;
+        }
+        #cans {
+            background:white;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="cans" height="400px" width="700px"></canvas>
+    <script>
+        var oCans=document.getElementById("cans");
+        var ctx=oCans.getContext("2d");
+        oCans.onmousedown=function(e){
+            ctx.beginPath();
+            ctx.moveTo(e.clientX, e.clientY);
+
+            oCans.onmousemove=function(e){
+                ctx.lineTo(e.clientX, e.clientY);
+                ctx.stroke();
+
+                oCans.onmouseup=function(){
+                    oCans.onmousemove=null;
+                }
+            };
+        };
+
+
+    </script>
+</body>
+</html>

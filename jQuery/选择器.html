@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div id="div1">div1</div>
+<div class="aa">div2</div>
+<div class="aa">div3</div>
+<div id="div4">div4</div>
+<ul id="ul">
+    <li>001</li>
+    <li>002</li>
+    <li>003</li>
+    <li>004</li>
+</ul>
+
+<ul id="ul2">
+    <li>001</li>
+    <li>002</li>
+    <li>003</li>
+    <li>004</li>
+</ul>
+
+<ul id="ul3">
+    <li>001</li>
+    <li>002</li>
+    <li>003</li>
+    <li>004</li>
+</ul>
+
+<ul id="ul4">
+    <li>001</li>
+    <li>002</li>
+    <li>003</li>
+    <li>004</li>
+</ul>
+<ul id="ul5">
+    <li class="bb">001</li>
+    <li>002</li>
+    <li>003</li>
+    <li>004</li>
+</ul>
+<script src="jquery-1.11.2.js"></script>
+<script>
+    $("#div1").css("background","red");
+    $(".aa").css("background","lightgreen");
+    var $div1 =$("#div1");
+    var oDiv1 =document.getElementById("div1");
+    var oDiv4 =document.getElementById("div4");
+    console.log(oDiv1.innerHTML);
+    console.log($div1.get(0).innerHTML);//JQ转化成原生
+    $(oDiv4).css("background","red");//原生转化为JQ
+    $("#ul li:eq(2)").css("background","red");
+    $("#ul li:eq(-1)").css("background","lightgreen");
+
+    $("#ul2 li:odd").css("background","red");
+    $("#ul2 li:even").css("background","lightgreen");
+
+    $("#ul3 li:first").css("border","3px solid lightgreen");
+    $("#ul3 li:last").css("border","3px solid red");
+
+    $("#ul4 li:gt(2)").css("border","3px solid red");
+    $("#ul4 li:lt(2)").css("border","3px solid lightgreen");
+
+    $("#ul5 li:not(.bb)").css("background","lightgreen");
+</script>
+</body>
+</html>

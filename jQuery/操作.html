@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        .aa{
+            width: 300px;
+            height: 300px;
+        }
+        .bb{
+            border:3px solid black;
+            cursor:pointer;
+        }
+        #div3{
+            height: 40px;
+            background:lightcoral;
+        }
+        .cc{
+            background: #4cae4c;
+            cursor:pointer;
+            border:1px solid black;
+        }
+
+        #div5{
+            width: 200px;
+            margin:20px;
+            padding:30px;
+            border:3px solid;
+        }
+
+    </style>
+</head>
+<body>
+<div id="div1"></div>
+<div id="div2"></div>
+<div id="div3"></div>
+<div id="div4"></div>
+<div id="div5">div5</div>
+<div id="div6">
+    <div id="div7"></div>
+</div>
+<script src="jquery-1.11.2.js"></script>
+<script>
+    $(function(){
+        $("#div1").val("12345");
+       console.log( $("#div1").val());
+        $("#div1").css("background","green");
+        $("#div1").addClass("aa").addClass("bb");
+        $("#div2").css({
+            width:200,
+            height:300,
+            backgroundColor:"red"
+        });
+        $("#div3").css("width",function(){
+            var a = 20;
+            var b = 20;
+            var c = a+b;
+            return c;
+        });
+        $("#div1").removeClass("bb");
+        console.log($("#div1").hasClass("bb"));
+        console.log($("#div1").hasClass("cc"));
+        $("#div4").css({
+            width:300,
+            height:200
+        });
+       $("#div4").on("click",function(){
+           $(this).toggleClass("cc");
+       });
+
+
+        console.log("width是："+$("#div5").width());//200
+        console.log("innerWidth是："+$("#div5").innerWidth());// 260
+        console.log("outerWidth是："+$("#div5").outerWidth());//  260
+        console.log("outerWidth true是："+$("#div5").outerWidth(true));//300
+    });
+</script>
+</body>
+</html>

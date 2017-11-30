@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+  <div id="app">
+      <ul>
+          <li v-for="(val,key,index) in objectsort" :key="index">
+           {{val}}---{{key}}---{{index}}
+          </li>
+          <li v-for="(val,key,index) in objectArr" :key="index">
+              {{val}}---{{key}}---{{index}}
+          </li>
+      </ul>
+  </div>
+<div class="test">
+    <div v-text="msg"></div>
+    <div v-text="msg1"></div>
+    <div v-html="msg2"></div>
+</div>
+</body>
+<script src="vue.js"></script>
+<script>
+    var um= new Vue({
+        el: "#app",
+        data: {
+            object: [
+                {
+                    name: "赵丽颖",
+                    height: 165,
+                    weight: 48
+                }, {
+                    name: "刘诗诗",
+                    height: 165,
+                    weight: 45
+                }, {
+                    name: "关晓彤",
+                    height: 173,
+                    weight: 50
+                }, {
+                    name: "刘昊然",
+                    height: 180,
+                    weight: 60
+                }
+            ]
+        },
+        computed: {
+            objectsort: function () {
+                return this.object.sort(
+                        function (a, b) {
+                            return a.height - b.height;
+                        }
+                )
+            },
+        objectArr: function () {
+            return this.object.sort(
+                    function (a, b) {
+                        return b.weight - a.weight;
+                    }
+            )
+        }
+    }
+    });
+     var um1 = new Vue({
+         el:".test",
+         data:{
+             msg:"Hello World",
+             msg1:"<h1>ddddd</h1>",
+             msg2:"<h1>ddddd</h1>"
+         }
+     });
+
+
+</script>
+</html>

@@ -1,0 +1,28 @@
+<!--求所有满足条件的四位数ABCD，它是13的倍数，且第3位数加上第2位数等于第4位数（即：A=B+C）。-->
+<!--（提示：对于四位数的整数x，通过Math.floor(x/1000)可求出第4位的数字，其他位数的提取也类似） -->
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    function calculate() {
+        for (var i = 1000; i < 1002; i++) {
+            var third = Math.floor(i/100)%10;
+            var second = (Math.floor(i/10)%100)%10;
+            var fourth = Math.floor(i/1000);
+            if (i % 13 == 0) {
+                if (fourth = third + second) {
+                    console.log("满足条件的四位数是：" + i);
+                }
+                }else {
+                console.log("没有找到满足条件的数");
+            }
+        }
+    }
+    calculate();
+</script>
+</body>
+</html>

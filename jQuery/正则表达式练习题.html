@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>正则表达式练习题</title>
+</head>
+<body>
+<script>
+//    1.匹配结尾的2位数字
+     str1 = "30CAC0040";
+    console.log(str1.match(/\d{2}$/));
+    //2.统一空格数为一
+    var str2 ="蓝    红 绿    黄";
+    var str3 =str2.replace(/\s+/g," ");
+    console.log(str3);
+    //3.判断字符串是否由数字组成
+    var str4 = "123456789";
+    var str5 = "123fbpgo";
+    console.log(str4.match(/^\d*$/));
+    console.log(str5.match(/^\d*$/));//null
+
+//    (2)
+    var reg =/[^\d]/g;//全局都是非数字
+    console.log(!reg.test("12345778990"));
+
+    //4.电话号码正则 前面三四位区号 后面7到8位号码
+    var reg1 =/^\d{3,4}-\d{7,8}$/;
+    console.log(reg1.test("0453-3522522"));
+    console.log(reg1.test("0453-wwer2522"));
+
+    //5.手机号正则
+    //支持130-139,150-159，判断他是11位的
+    var reg2 =/^(13|15)\d{9}$/;
+    var str6 = "18846828803";
+    var str7 = "15845673899";
+    var str8 = "1583456777790";
+    console.log(reg2.test(str6));
+    console.log(reg2.test(str7));
+    console.log(reg2.test(str8));
+
+    //6.使用正则表达式去掉字符串中的首尾空格
+   function trim(str){
+       return str.replace(/^\s+|\s+$/g,"");
+   }
+    var str9 = "    wf   th    ";
+    console.log(trim(str9));
+    console.log(str9);
+</script>
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        #app ul li{
+            list-style:none;
+            text-align:center;
+            width:450px;
+            line-height:50px;
+            height:50px;
+            background:#AAAAAA;
+            margin-top:10px;
+        }
+        #app{
+            width:450px;
+            margin:100px auto;
+        }
+         #app .left{
+             float:left;
+             padding-left:10px;
+         }
+        #app .right{
+            float:right;
+            padding-right:10px;
+        }
+        #app .red{
+            background:red;
+        }
+        #app h1{
+            text-align: center;
+        }
+        #app ul button{
+            float:left;
+            margin-top:15px;
+        }
+        .checkbox{
+            float:left;
+            margin-top:15px;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+    <h1>todolist</h1>
+    <hr>
+    <label for="">
+        名称:<input type="text" v-model="name" placeholder="请输入商品名称"/>
+    </label>
+    <label for="">
+        价格:<input type="text" v-model="price" placeholder="请输入价格"/>
+    </label>
+    <button @click="add">增加</button>
+    <ul>
+        <li v-for="(product,index) in productList" @click="select(product)" :class="{red:product.isRed}">
+            <input type="checkbox" class="checkbox" @click.stop="" v-model="checked" :value="index"/>
+            <!--不写value想选中一个结果全选中-->
+            <button @click.stop="del(index)">删除</button>
+            <span class="left">{{product.name}}</span>
+            <span class="right">{{product.price}}</span>
+        </li>
+    </ul>
+    <div>
+        <button >全部删除</button>
+        总价：{{total}}
+    </div>
+</div>
+<script src="vue.js"></script>
+<script>
+    var um = new Vue({
+        el:"#app",
+        data:{
+           productList:[
+               {
+                   name:"衣服",
+                   price:"120",
+                   isRed:false
+               },{
+                   name:"帽子",
+                   price:"20",
+                   isRed:false
+               },{
+                   name:"裤子",
+                   price:"100",
+                   isRed:false
+               },{
+                   name:"衣服",
+                   price:"120",
+                   isRed:false
+               },{
+                   name:"围巾",
+                   price:"30",
+                   isRed:false
+               },{
+                   name:"鞋",
+                   price:"300",
+                   isRed:false
+               }
+           ],
+            total:0,
+            name:"",
+            price:0,
+            checked:[]
+        },
+        methods: {
+            select(product){
+             product.isRed = !product.isRed;
+        if(product.isRed){
+         this.total += parseInt(product.price);
+         }else{
+         this.total -= parseInt(product.price);
+         }
+        // this.sum();
+             },
+    add()
+    {
+        this.productList.push({
+            name: this.name,
+            price: this.price,
+            isRed: false
+        });
+        this.name = "",
+                this.price = 0
+        // 添加元素后清空产品名称和价格
+    },
+    del(index){
+        this.productList.splice(index, 1);
+       }
+    },
+});
+</script>
+</body>
+</html>

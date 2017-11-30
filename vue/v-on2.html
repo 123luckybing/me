@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div id="app">
+    <button v-on ="{mouseup:doThis , mousedown:doThat}">btn</button>
+    <button v-on="{mouseover:doover,mousedown:dodown,mouseup:doup}">btn1</button>
+</div>
+<script src="vue.js"></script>
+<script>
+    var um = new Vue({
+        el:"#app",
+        methods:{
+            doThis(){
+               console.log('dothis');
+        },
+           doThat(){
+              console.log('doThat');
+          },
+          doover(){
+        console.log('you are mouseovering me');
+    },
+    doup(){
+        console.log('you left me just now');
+    },
+    dodown(){
+        console.log('you pressed me just now');
+    }
+       }
+    });
+</script>
+</body>
+</html>
