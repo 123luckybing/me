@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div id="app" v-if="isLogin">
+    {{msg}}
+</div>
+<div id="echo" v-if="select">
+   {{msg}}
+</div>
+<script src="vue.js"></script>
+<script>
+    var um = new Vue({
+        el:"#app",
+        data:{
+            msg:"我在家中",
+            isLogin:true
+        }
+    });
+    var um1 = new Vue ({
+        el:"#echo",
+        data:{
+            msg:"我没在家",
+            select:false
+        }
+    });
+//v-if 可以判断是否显示
+</script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!--设计一个程序，它用数组接收用户输入的7门课程的成绩，然后在页面上显示总成绩和平均分-->
+<!--并列出小于60的成绩分数-->
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+             var arr=[];
+            function cin(){
+                for (var i = 1; i < 8; i++) {
+                    var d = parseInt(prompt("请输入你的成绩"));
+                    if(isNaN(d)){
+                        console.log("您输入有误！");
+                        break;
+                    }
+                    arr.push(d);
+                }
+                console.log(arr);
+            }
+            function score1(){
+                sum=0;
+                var score;
+             for(var i=0;i<arr.length;i++) {
+                 sum += arr[i];
+                 if(arr[i]<60){
+                     console.log(arr[i]);
+                 }
+             }
+                console.log("总成绩是："+sum);
+                score = sum/7;
+                console.log("平均分数是："+score);
+              }
+        cin();
+        score1();
+</script>
+</body>
+</html>

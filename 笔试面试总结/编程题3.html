@@ -1,0 +1,21 @@
+<!--在一个字符串中找到第一个只出现一次的字符。如输入abaccdeff，则输出b。-->
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+</head>
+<body>
+<script>
+   var str="aacdd";
+    for(var i=0;i<str.length;i++){
+        if(str.indexOf(str.charAt(i)) == str.lastIndexOf(str.charAt(i))){
+            //从前往后数是你，从后往前数也是你，所以就一个
+            console.log(str[i]);
+            break;
+        }
+    }
+</script>
+</body>
+</html>

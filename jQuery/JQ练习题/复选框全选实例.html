@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        #container table td:first-child{
+            width: 100px;
+            text-align:center;
+        }
+        #container table td:last-child{
+            width: 250px;
+            text-align:center;
+        }
+        #container table tr:first-child{
+            background: yellow;
+        }
+        #container table tr:last-child{
+            background: lightgreen;
+        }
+        #container table tr:nth-child(11){
+            background: lightcoral;
+        }
+    </style>
+</head>
+<body>
+<div id="container">
+<table border="2">
+    <tr>
+        <td id="all">全选</td>
+        <td>复选框全选示例[爬山的作用]</td>
+    </tr>
+    <tr>
+        <td><input type="checkbox"/>1</td>
+        <td>作用</td>
+    </tr>
+    <tr>
+        <td><input type="checkbox"/>2</td>
+        <td>身体素质培养</td>
+    </tr>
+    <tr>
+        <td><input type="checkbox"/>3</td>
+        <td>手眼的协调一致</td>
+    </tr>
+    <tr>
+        <td><input type="checkbox"/>4</td>
+        <td>平衡性的掌握</td>
+    </tr>
+    <tr>
+        <td><input type="checkbox"/>5</td>
+        <td>小肌肉运动功能</td>
+    </tr>
+    <tr>
+        <td><input type="checkbox"/>6</td>
+        <td>小肌肉运动功能</td>
+    </tr>
+    <tr>
+        <td><input type="checkbox"/>7</td>
+        <td>空间理解力的培养</td>
+    </tr>
+    <tr>
+        <td><input type="checkbox"/>8</td>
+        <td>协调性的培养</td>
+    </tr>
+    <tr>
+        <td><input type="checkbox"/>9</td>
+        <td>自信心的培养</td>
+    </tr>
+    <tr>
+        <td id="reserve">反选</td>
+        <td>反选示例</td>
+    </tr>
+    <tr>
+        <td id="none">全不选</td>
+        <td>全不选示例</td>
+    </tr>
+</table>
+</div>
+<script src="jquery-1.11.2.js"></script>
+<script>
+   $(function(){
+       $checkbox = $("table input[type='checkbox']");
+       $("#all").on("click",function(){
+           $checkbox.prop("checked",true);
+       });
+       $("#none").on("click",function(){
+           $checkbox.prop("checked",false);
+       });
+       $("#reserve").on("click",function(){
+           $checkbox.each(function(index,elem,arr){
+               if($(elem).prop("checked")){
+                   $(elem).prop("checked",false);
+               }else{
+                   $(elem).prop("checked",true);
+               }
+           })
+
+       });
+
+   });
+</script>
+</body>
+</html>

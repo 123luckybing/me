@@ -1,0 +1,42 @@
+<!--在页面上编程输出100~1000之间的所有素数，并要求每行显示6个素数。-->
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    function fn(num){
+        var bFlag=false;
+        for(var i=2;i<=Math.sqrt(num);i++){//除到它的平方根
+            if(num%i==0){
+                bFlag=false;
+                break;
+            }else{
+                bFlag=true;
+            }
+        }
+        if(bFlag){
+            return true;
+        }else{
+            return false;
+        }
+    }
+    var result = [];
+    for(var num=100;num<=1000;num++) {
+        if (fn(num)) {
+            result.push(num);
+        }
+    }
+        for (var i = 1; i < result.length; i++) {
+            document.write(result[i]+"&nbsp");
+            if (i % 6 == 0) {
+                document.write('<br/>');
+            }
+    }
+    console.log(result.length);
+
+</script>
+</body>
+</html>

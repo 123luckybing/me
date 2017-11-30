@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        #progress{
+            height: 30px;
+            background: red;
+            width:0;
+        }
+    </style>
+</head>
+<body>
+<button id="btn">开始</button>
+<div id="progress"></div>
+<script>
+    var oBtn = document.getElementById("btn");
+    var oProgress = document.getElementById("progress");
+    oBtn.onclick = function(){
+        var i =0;
+        var timer = setInterval(function(){
+            oProgress.style.width = i + "%";
+            oProgress.innerHTML= i+"%";
+            i++;
+            if(i>100){
+                clearInterval(timer);
+            }
+        },30)
+    }
+</script>
+</body>
+</html>

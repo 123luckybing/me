@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="刘诗诗美照.css"/>
+    <title></title>
+</head>
+<body>
+<div id="wapper">
+    <div id="BigPicture">
+        <img src="../imag/1.jpg" alt=""/>
+        <div id="drag"></div>
+        <!--要是不把drag放在这里，右侧图会闪-->
+        <div id="mask"></div>
+        <!--在外面包一个mask,把事件绑定在mask上，防止闪-->
+    </div>
+    <div id="SmallPicture">
+        <img src="../imag/1.jpg" alt="" class="selected"/>
+        <img src="../imag/timg-1.jpg" alt=""/>
+        <img src="../imag/timg.jpeg" alt=""/>
+        <img src="../imag/timg-2.jpg" alt=""/>
+        <img src="../imag/timg-3.jpg" alt=""/>
+        <img src="../imag/timg-4.jpg" alt=""/>
+        <img src="../imag/timg-5.jpg" alt=""/>
+    </div>
+    <div id="btn">
+       <div id="left">&lt;</div>
+       <div id="right">&gt;</div>
+    </div>
+</div>
+<div id="expand">
+    <img src="../imag/1.jpg" alt=""/>
+</div>
+<!--<div id="drag"></div>-->
+<script src="刘诗诗美照.js"></script>
+</body>
+</html>

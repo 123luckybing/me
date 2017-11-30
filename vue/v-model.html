@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div id="app">
+    <input type="text" v-model="msg"/>
+    <div>
+        {{msg}}
+    </div>
+    <form action="">
+        <label for="">
+            用户名:<input type="text" v-model="name" placeholder="请输入用户名"/>
+            <div>用户名字是：{{name}}</div>
+        </label>
+    </form>
+
+    性别是：
+    <input type="radio" v-model="sex" value="男"/>男
+    <input type="radio" v-model="sex" value="女"/>女
+    <!--input取得是value的值-->
+    <div>此人性别是：{{sex}}</div>
+
+    学校是:
+    <input type="radio" value="理工" v-model="school"/>理工
+    <input type="radio" value="农大" v-model="school"/>农大
+    <input type="radio" value="林大" v-model="school"/>林大
+    <input type="radio" value="黑大" v-model="school"/>黑大
+    <div>学生学校是：{{school}}</div>
+
+    爱好：
+    <input type="checkbox" v-model="hobby" value="篮球"/>篮球
+    <input type="checkbox" v-model="hobby" value="足球"/>足球
+    <input type="checkbox" v-model="hobby" value="排球"/>排球
+    <input type="checkbox" v-model="hobby" value="网球"/>网球
+    <div>
+        学生爱好为：{{hobby}}
+    </div>
+
+     <select v-model="favorite">
+         <option value="周芳冰">周芳冰</option>
+         <option value="赵丽颖">赵丽颖</option>
+         <option value="刘诗诗">刘诗诗</option>
+         <option value="郭晓婷">郭晓婷</option>
+     </select>
+    <div>
+        最爱是：{{favorite}}
+    </div>
+
+    <textarea name="" id="" cols="30" rows="10" v-model="description"></textarea>
+    <div>
+        说明是：{{description}}
+    </div>
+</div>
+<script src="vue.js"></script>
+<script>
+    var um = new Vue({
+        el:"#app",
+        data:{
+            msg:"",
+            name:"",
+            sex:"",
+            school:"",
+            hobby:[],
+            //把该输出结果当成一个数组
+            favorite:"周芳冰",
+            description:""
+//            下拉菜单默认值写在这里
+        }
+
+    });
+</script>
+</body>
+</html>

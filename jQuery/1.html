@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <div id="div1"></div>
+    <div class="aa"></div>
+    <ul>
+        <li class="list">001</li>//li{00$}*4快捷键
+        <li class="list">002</li>
+        <li class="list">003</li>
+        <li class="list">004</li>
+    </ul>
+    <script>
+        var oDiv = document.querySelector("#div1");
+        console.log(oDiv);
+        var oAa = document.querySelector(".aa");
+        console.log(oAa);
+        var oLi = document.querySelector("li");
+        console.log(oLi);
+        var aLi = document.querySelectorAll("li");
+        console.log(aLi);
+        for(var i=0;i<aLi.length;i++) {
+            aLi[i].onclick = function () {
+                alert(this.innerHTML);
+            }
+        }
+        var aList = document.querySelectorAll(".list");
+        console.log(aList);
+        var oUl = document.querySelector("ul");
+        console.log(oUl.childNodes);//空白部分算text节点  9个
+        console.log(oUl.children);//4个，不算空白部分了
+        console.log(oLi.parentNode);
+        oUl.insertBefore(oLi,oLi[0]);
+        oUl.insertAfter(oLi,oLi[0]);
+    </script>
+</body>
+</html>

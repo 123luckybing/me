@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>选课系统</title>
+</head>
+<body>
+<h1>选择你想要选修的课</h1>
+
+<form action="">
+    <input type="checkbox">Java语言程序设计
+    <input type="checkbox">毛泽东思想概论
+    <input type="checkbox">软件工程
+    <input type="checkbox">计算机网络
+    <input type="checkbox">软件体系结构
+    <input type="checkbox">软件测试技术
+    <input type="checkbox">操作系统原理
+    <input type="checkbox">UML
+    <input type="checkbox">大型数据库
+    <br/>
+    <button id="all" type="button">全选</button>
+    <!--不叫type="button"-->
+    <button id="no" type="button">全不选</button>
+    <button id="reserve" type="button">反选</button>
+</form>
+<script src="jquery-1.11.2.js"></script>
+<script>
+   $(function(){
+       var $course = $("input[type='checkbox']");
+        $("#all").on("click",function(){
+            $course.prop("checked",true);
+        });
+       $("#no").on("click",function(){
+           $course.prop("checked",false);
+       });
+       $("#reserve").on("click",function(){
+           $course.each(function(index,elem,arr){
+//               遍历每一个input
+               if($(elem).prop("checked")){
+                   $(elem).prop("checked",false);
+               }else{
+                   $(elem).prop("checked",true);
+               }
+           });
+       })
+   });
+</script>
+</body>
+</html>

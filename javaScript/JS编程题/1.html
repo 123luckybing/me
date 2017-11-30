@@ -1,0 +1,67 @@
+<!--给定一个字符串例如：“abaasdffggghhjjkkgfddsssss3444343”；问题如下：-->
+<!--1、字符串的字节长度-->
+<!--2、取出指定位置的字符，如：0,3,5,9等-->
+<!--3、查找指定字符是否在以上字符串中存在，如：i，c ，b等-->
+<!--4、替换指定的字符，如：g替换为22,ss替换为b等操作方法-->
+<!--5、截取指定开始位置到结束位置的字符串，如：取得1-5的字符串-->
+<!--6、找出以上字符串中出现次数最多的字符和出现的次数-->
+<!--7、遍历字符串，并将遍历出的字符两头添加符号“@”输出至当前的文档页面。-->
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    var str = "abaasdffggghhjjkkgfddsssss3444343";
+//    1
+    console.log(str.length);
+//    2
+    console.log(str[0]);
+    console.log(str[3]);
+    console.log(str[5]);
+    console.log(str[9]);
+//    3
+    console.log(str.indexOf("i"));
+    console.log(str.indexOf("c"));
+    console.log(str.indexOf("b"));
+//    4
+    var str1 = str.replace(/g/g,"22");
+    console.log(str1);
+    var str2= str.replace(/ss/g,"b");
+    console.log(str2);
+//    5
+    console.log(str.slice(1,6));
+//    6
+    var o = {};
+    for (var i = 0; i <str.length; i++) {
+        var char = str.charAt(i);
+        if (o[char]) {
+            o[char]++; //次数加1
+        } else {
+            o[char] = 1; //若第一次出现，次数记为1
+        }
+    }
+    console.log(o); //输出的是完整的对象，记录着每一个字符及其出现的次数
+    //遍历对象，找到出现次数最多的字符的次数
+    var max = 0;
+    for (var key in o) {
+        if (max < o[key]) {
+            max = o[key]; //max始终储存次数最大的那个
+        }
+    }
+    for (var key in o) {
+        if (o[key] == max) {
+//console.log(key);
+            console.log("最多的字符是" + key);
+            console.log("出现的次数是" + max);
+        }
+    }
+//    7
+    for(var i in str){
+        document.write("@"+str[i]+"@");
+    }
+</script>
+</body>
+</html>

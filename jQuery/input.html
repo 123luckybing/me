@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <input type="text" id="search"/>
+    <ul id="list">
+        <li>iphone7</li>
+        <li>华为</li>
+        <li>小米</li>
+        <li>魅族</li>
+        <li>vivo</li>
+        <li>oppo</li>
+        <li>iphoneX</li>
+        <li>iphone plus</li>
+    </ul>
+</body>
+<script src="jquery-1.11.2.js"></script>
+<script>
+    $(function(){
+        var $oLi= $("#list li");
+        $("#search").on("keyup",function(){
+//            console.log(this.value);
+            //input里输入什么，控制台输入什么
+            $oLi.css("border","transparent");
+            if(this.value!= "") {
+                $("#list li:contains(" + this.value + ")").css("border", "3px solid green");
+            }
+        });
+    });
+</script>
+</html>

@@ -1,0 +1,22 @@
+<!--定义一个函数test(n,m)  -->
+<!--n>1,m>n,返回n到m之间的所有回文数。-->
+<!--（回文数是正读和反读相同的数，例如 121，1001,…）-->
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    function test(n,m){
+        for(var i=n;i<= m;i++) {
+             if(i.toString().split('').reverse().join('') == i){
+               console.log(i);
+              }
+             }
+        }
+    test(10,100);
+</script>
+</body>
+</html>

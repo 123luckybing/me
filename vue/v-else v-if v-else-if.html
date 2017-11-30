@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div id="app">
+<div v-if="type=='A'">A</div>
+<div v-else-if="type=='B'">B</div>
+<div v-else>C</div>
+</div>
+
+<div id="select" v-show="display">
+    <div v-if="type=='A'">您的会员等级为A级</div>
+    <div v-else-if="type=='B'">您的会员等级为B级</div>
+    <div v-else-if="type=='C'">您的会员等级为C级</div>
+    <div v-else>您还不是会员</div>
+</div>
+<script src="vue.js"></script>
+<script>
+    var um = new Vue({
+        el:"#app",
+        data:{
+            type:'t'
+        }
+    });
+    var um1 = new Vue({
+        el:"#select",
+        data:{
+            type:'F',
+            display:false
+        }
+    });
+
+</script>
+</body>
+</html>

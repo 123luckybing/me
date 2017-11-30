@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        #container{
+            width:100px;
+            height:100px;
+        }
+    </style>
+</head>
+<body>
+<form action="" id="container">
+    <fieldset>
+        <legend>留言系统</legend>
+        账户：<input type="text" value="周芳冰"/>
+        密码：<input type="password" value="1234567"/>
+        留言：<input type="text" value="满意"/>
+    </fieldset>
+</form>
+<script src="jquery-1.11.2.js"></script>
+<script>
+  $(function(){
+     var  $Input =$("#container input");
+      $Input.on("focus",function(){
+          $(this).css("background","pink");
+          $(this).val("");//内容清空！！
+          $(this).val(this.value ==this. defaultValue ? defaultValue:this.value);
+      });
+      $Input.on("blur",function(){
+          $(this).css("background","transparent");
+      });
+  });
+</script>
+</body>
+</html>

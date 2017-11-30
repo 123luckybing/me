@@ -1,0 +1,46 @@
+#square div{
+    text-align:center;
+    line-height:100px;
+    width: 100px;
+    height: 100px;
+    background:black;
+    color:white;
+    border:1px solid white;
+    float:left;
+    margin-right:5px;
+}
+*{
+    margin:0;
+    padding:0;
+}
+#arrow{
+    width: 100px;
+    height: 30px;
+    overflow:hidden;
+    margin:130px auto;
+}
+#arrow div{
+    width: 40px;
+    height: 30px;
+    background:grey;
+    overflow:hidden;
+    text-align:center;
+    line-height:30px;
+    float:left;
+    margin-right:10px;
+}
+#wapper{
+    width: 310px;
+    height: 200px;
+    overflow:hidden;
+    margin:200px auto;
+    border:1px solid black;
+    position:relative;
+}
+#square{
+    width:430px;
+    height: 100px;
+   position:absolute;
+    left:0;
+    top:0;
+}

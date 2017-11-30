@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+   <ul id="menu">
+       <li>coffee</li>
+       <li>milk</li>
+       <li>juice</li>
+       <li>water</li>
+   </ul>
+<h5>点击按钮来删除列表中首个项目</h5>
+<button id="button">双击删除</button>
+</body>
+<script>
+        var oMenu = document.getElementById("menu");
+        var oButton = document.getElementById("button");
+        oButton.onclick = function () {
+            oMenu.removeChild(oMenu.childNodes[0]);
+        };
+</script>
+</html>

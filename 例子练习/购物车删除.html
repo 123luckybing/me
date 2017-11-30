@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .product img{
+            width: 190px;
+            height: 190px;
+            float:left;
+        }
+        .introduce{
+            width: 600px;
+            height: 200px;
+            float:left;
+            position:relative;
+            border-bottom:1px solid black;
+        }
+        .introduce div{
+            width: 300px;
+            height: 180px;
+            margin:0 auto;
+        }
+        .introduce input{
+            width: 50px;
+            height: 20px;
+        }
+        .introduce .pic{
+            width: 20px;
+            height: 20px;
+            position:absolute;
+            top:0;
+            right:0;
+        }
+        #total{
+           width: 800px;
+            height: 400px;
+        }
+    </style>
+</head>
+<body>
+      <h1>我的购物车（2）</h1>
+<div id="total">
+    <div class="product">
+        <img src="../imag/yellow_two_small.jpg" alt=""/>
+        <div class="introduce">
+            <div class="wapper">
+            <h4>爽肤水300ML</h4>
+            <h5>价格￥500</h5>
+            请输入数量:<input type="number" value="1"/>
+            </div>
+            <img src="../imag/yellow_two_small.jpg" class="pic" alt=""/>
+        </div>
+    </div>
+
+
+     <div class="product">
+         <img src="../imag/yellow_two_small.jpg" alt=""/>
+         <div class="introduce">
+             <div class="wapper">
+                 <h4>爽肤水300ML</h4>
+                 <h5>价格￥500</h5>
+                 请输入数量:<input type="number" value="1"/>
+             </div>
+             <img src="../imag/yellow_two_small.jpg" class="pic" alt=""/>
+         </div>
+     </div>
+</div>
+<script>
+    var oTotal=document.getElementById("total");
+    var oProduce=oTotal.getElementsByClassName("product")[0];
+    var oIntroduce=oProduce.getElementsByClassName("introduce")[0];
+    var oImgAim=oIntroduce.getElementsByClassName("pic")[0];
+    for(var i=0;i<oImgAim.length;i++){
+        oImgAim[i].index=i;
+        oImgAim[i].onclick=function(){
+            oTotal.removeChild(oProduce[this.index]);
+            for(var i=0;i<oImgAim.length;i++){
+                oImgAim[i].index=i;
+            }
+        };
+    }
+</script>
+</body>
+</html>

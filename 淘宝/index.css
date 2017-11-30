@@ -1,0 +1,736 @@
+#nav{
+    width:100%;
+    height:36px;
+    background:#f5f5f5;
+}
+ul{
+    list-style:none;
+}
+a{
+    text-decoration:none;
+    color:black;
+}
+*{
+    margin:0;
+    padding:0;
+}
+#nav h6,#left .mouseover{
+    width: 70px;
+    height: 36px;
+    line-height:36px;
+    text-align:center;
+    cursor:pointer;
+}
+#left h6{
+    float:left;
+}
+#right h6{
+    float:right;
+}
+#right h6 img{
+    width: 12px;
+    height: 12px;
+}
+#left{
+    width: 400px;
+    margin-left:5%;
+    position:relative;
+}
+#right{
+    margin-right:5%;
+}
+#left .red{
+    color:red;
+}
+/*划入出现 划出消失 开始*/
+#Chinese_island{
+    width: 280px;
+    height: 150px;
+    border: 1px solid #f5f5f5;
+    background: white;
+    margin-left: 5%;
+    display: none;
+    position: relative;
+    z-index:1;
+    overflow:scroll;
+    text-align:left;
+}
+#left .mouseover:hover{
+    background:white;
+}
+#left .mouseover:hover #Chinese_island{
+    display:block;
+}
+/*结束*/
+ul li{
+    line-height:25px;
+    font-size: 13px;
+}
+#left .mouseover a{
+    text-decoration:none;
+    font-size: 13px;
+    color:black;
+}
+#left .mouseover{
+    float:left;
+}
+.mytaobao,.tabao,.con{
+    width: 70px;
+    height: 50px;
+    background:white;
+    font-size:10px;
+    display:none;
+    position: relative;
+    border:1px solid #f5f5f5;
+    z-index: 1;
+}
+#right h6 a{
+    text-decoration: none;
+    color:black;
+}
+#right h6:hover{
+    background:white;
+}
+.store:hover{
+    background:white;
+}
+.store:hover .tabao{
+    display:block;
+}
+#right .taobao:hover .mytaobao{
+    display:block;
+}
+#sell .sold{
+    width: 70px;
+    height: 150px;
+    border:1px solid #f5f5f5;
+    display:none;
+    z-index: 1;
+    background:white;
+    position: relative;
+    /*不加position还是在下面上不来*/
+}
+#sell:hover .sold{
+    display:block;
+}
+#contact:hover .con{
+    display:block;
+}
+#Longimg img {
+    width: 100%;
+    height:80px;
+}
+#main{
+    position:relative;
+    width:1350px;
+    left:-800px;
+    /*从自己正对着下方往左移动*/
+    height:130px;
+    background:white;
+    border:1px solid #f5f5f5;
+    overflow: hidden;
+    display:none;
+    z-index: 1;
+    /*脱离文档流，想让谁下去给谁加overflow:hidden;*/
+}
+#oleft h4{
+    color:red;
+    text-align: left;
+}
+#oleft,#last{
+    width:25%;
+    height:120px;
+    float:left;
+}
+#oleft .first,.second,.third,.fourth{
+     float:left;
+     margin-left:10px;
+     margin-top:10px;
+ }
+#last .first,.second,.third,.fourth{
+    float:left;
+    margin-left:10px;
+    margin-top:10px;
+}
+#center .first,.second,.third,.fourth{
+    float:left;
+    margin-left:10px;
+    margin-top:10px;
+}
+#oRight .first,.second,.third,.fourth{
+    float:left;
+    margin-left:10px;
+    margin-top:10px;
+}
+#center,#oRight{
+    position:relative;
+    float:left;
+    width:22%;
+    height:120px;
+}
+#center h4{
+    color:green;
+    text-align: left;
+}
+#oRight h4{
+    color:blue;
+    text-align: left;
+}
+#NetNav:hover #main{
+    display:block;
+}
+#last h4{
+    color:yellow;
+    text-align: left;
+}
+#NetNav a:hover{
+    color:red;
+}
+#search{
+    width:100%;
+    height:130px;
+    position:absolute;
+}
+#search img{
+    margin-left:13%;
+    width:10%;
+    height:130px;
+    float:left;
+}
+#Search-Meau {
+    width: 80%;
+    height: 30px;
+    top: 30px;
+    left: 30%;
+    position: absolute;
+}
+#Search-Meau ul{
+    position:relative;
+}
+#Search-Meau ul li{
+    float:left;
+    width:50px;
+    height:25px;
+    background:white;
+    text-align:center;
+    line-height:25px;
+    color:red;
+    border:1px solid #f5f5f5;
+    cursor:pointer;
+}
+#Search-Meau ul .selected{
+    background:#ff5400;
+    /*取色器：点随机一个颜色前面的颜色小方块*/
+    color:white;
+}
+#Search-bar{
+    width:60%;
+    height:30px;
+    border:4px solid #ff5400;
+    position:absolute;
+    left:0;
+    top:30px;
+    overflow:hidden;
+}
+#Search-bar .tdiv{
+    width:100%;
+    height:30px;
+    position:absolute;
+    left:0;
+    top:0;
+}
+.Search-button{
+    width:15%;
+    color:white;
+    height:30px;
+    background:#ff5400;
+    position:absolute;
+    right:0;
+    top:0;
+    text-align:center;
+    line-height:30px;
+}
+#Search-bar img{
+    width:6%;
+    height:30px;
+    position:absolute;
+    left:0;
+    top:0;
+    margin-left:2px;
+}
+#Search-bar input{
+    width:78%;
+    height:30px;
+    font-size:16px;
+    left:40px;
+    top:0;
+    right:0;
+    position:absolute;
+    padding-left:3px;
+    /*input输入框输入文字不顶格*/
+    line-height:30px;
+}
+#Search-bar .tdiv.ddd{
+    /*有两个class的都要写上，中间没有空格*/
+    display:block;
+}
+#Search-bar .tdiv{
+    display:none;
+}
+#list li{
+    float:left;
+    margin-left:7px;
+    height:25px;
+}
+#list li:hover{
+    color:red;
+}
+#list{
+    width:1350px;
+    height:15px;
+    position:relative;
+    left:7%;
+    top:100px;
+}
+#list .red{
+    color:red;
+}
+#left-nav{
+    width:17%;
+    height:555px;
+    position:absolute;
+    background:#ff6504;
+    margin-top:10px;
+    left:10%;
+    color:white;
+}
+#first,#second,#third,#fourth,#fifth{
+    width:230px;
+    height:110px;
+}
+#left-nav h3{
+    width:50px;
+    height:25px;
+    float:left;
+}
+#left-nav div:hover{
+    background:white;
+    color:black;
+    border:1px solid #ff5400;
+}
+#NavMav{
+    width:100%;
+    height:550px;
+    position:absolute;
+    overflow:hidden;
+    margin-top:125px;
+}
+#NavMav .afirst,.asecond,.athird,.afourth,.afifth{
+    width:305%;
+    position:absolute;
+    left:100%;
+    top:0;
+    height:550px;
+    display:none;
+    background:white;
+    border: 1px solid #ff5400;
+}
+#first:hover .afirst{
+    display:block;
+    z-index:5;
+}
+#first:hover .afirst{
+    display:block;
+    z-index:5;
+}
+#second:hover .asecond{
+    display:block;
+    z-index:5;
+}
+#third:hover .athird{
+    display:block;
+    z-index:5;
+}
+#fourth:hover .afourth{
+    display:block;
+    z-index:5;
+}
+#fifth:hover .afifth{
+    display:block;
+    z-index:5;
+}
+#Carousel-figure img{
+    width:100%;
+    height:300px;
+    float:left;
+    position:absolute;
+    top:0;
+    left:0;
+    display:none;
+}
+#Carousel-figure{
+    position:relative;
+    width:50%;
+    height:300px;
+    left:29%;
+    top:135px;
+}
+#footer{
+    height:25px;
+    width:170px;
+    position:absolute;
+    overflow:hidden;
+    bottom:5px;
+    left:38%;
+}
+#footer ul li{
+    width:25px;
+    height:25px;
+    float:left;
+    background:white;
+    color:black;
+    border:1px solid black;
+    text-align:center;
+    line-height:25px;
+}
+#footer ul .li-selected{
+    background:#ff5400;
+    color:white;
+}
+#Carousel-figure .picture-selected{
+    display:block;
+}
+#left-button,#right-button{
+    width:25px;
+    height:25px;
+    background:white;
+    color:black;
+    border:1px solid black;
+    text-align:center;
+    line-height:25px;
+}
+#left-button{
+    position:relative;
+    left:1%;
+    top:130px;
+}
+#right-button{
+    position:absolute;
+    right:1%;
+    top:130px;
+}
+#username{
+    width:21%;
+    height:300px;
+    background:#f1f1f1;
+    position:absolute;
+    top:255px;
+    right:0;
+}
+#username .img1{
+    position:relative;
+    width:96%;
+    height: 150px;
+    margin-left:3%;
+    margin-top:3%;
+
+}
+#username .img2{
+    position:absolute;
+    left:41%;
+    top:30px;
+    width:56px;
+    height: 56px;
+    cursor:pointer;
+}
+#username .hello{
+    position:absolute;
+    width: 60px;
+    left:43%;
+    top:90px;
+}
+#username .img3{
+    width: 16px;
+    height: 16px;
+    position:absolute;
+    left:20%;
+    top:110px;
+}
+#tjb .red{
+    color:red;
+    cursor:pointer;
+}
+#tjb h6{
+    float:left;
+}
+#tjb{
+    position:absolute;
+    left:26%;
+    top:110px;
+}
+#orange-button button{
+    width:30%;
+    height: 25px;
+    background:#ff6404;
+    color:white;
+    border:none;
+    cursor:pointer;
+}
+#orange-button{
+    width:100%;
+    position:absolute;
+    height: 25px;
+    bottom:145px;
+    left:5%;
+}
+#report{
+    position:relative;
+    background:#ffe4dd;
+    color:red;
+    width:96%;
+    height:32px;
+    float:right;
+    left:-1%;
+    top:-4px;
+    text-align: center;
+    line-height:32px;
+    cursor:pointer;
+}
+
+/*以下为在网页中做一个三角形*/
+#report .triangle{
+    border:10px solid;
+    /*不加solid显示不出来，我还以为是在下面给盖住了*/
+    width:0;
+    height:0;
+    /*中间是空的，只有边框*/
+    right:10%;
+    top:6px;
+    position:absolute;
+    border-color:transparent transparent transparent #ff6404;
+    /*顺序为上右下左*/
+}
+#tab{
+    width:96%;
+    position:relative;
+    height:100px;
+    background:white;
+    top:29px;
+    left:3%;
+}
+#tab .tab-nav{
+    width:100%;
+    height:30px;
+    position:relative;
+}
+#tab .tab-nav ul li{
+    width:20%;
+    height:24px;
+    text-align: center;
+    line-height:24px;
+    float:left;
+    cursor:pointer;
+}
+#tab .tab-nav ul{
+    position:absolute;
+    top:0;
+    left:0;
+    width:96%;
+    height:24px;
+}
+#tab .context{
+    position:relative;
+    width:96%;
+    height:70px;
+    line-height:25px;
+    display:none;
+}
+.context .fff{
+    float:left;
+    width:48%;
+    height:16px;
+    margin-left:2%;
+}
+.context .color{
+    color:red;
+    width:48%;
+    height:16px;
+}
+.context .color.long{
+    width:100%;
+}
+.context a{
+    float:left;
+    width:48%;
+    height:16px;
+    margin-left:2%;
+    top:5px;
+}
+#tab .tab-nav .tSelected,#tab .cSelected{
+    display:block;
+}
+#tab .tab-nav .tSelected{
+    border-bottom: 2px solid red;
+}
+#cat{
+    position:relative;
+    width:50%;
+    height:28px;
+    background:#f1f1f1;
+    left:29%;
+    top:132px;
+    border-bottom:3px solid #c12c26;
+}
+#cat h4{
+    float:left;
+    position:absolute;
+    left:8%;
+    bottom:-1px;
+}
+#cat h6{
+    float:left;
+    position:absolute;
+    left:19%;
+    bottom:-1px;
+}
+#cat img{
+    position:absolute;
+    left:0;
+    bottom:0;
+}
+#cat span{
+    float:right;
+    bottom:-1px;
+    position:absolute;
+    right:1%;
+}
+#picture-order li{
+    float:left;
+    font-size:16px;
+    position:absolute;
+    bottom:-3px;
+    right:4%;
+    display:none;
+}
+#picture-order .order-selected{
+    color:red;
+    display:block;
+}
+#Carousel-figure2{
+    width:42%;
+    background:grey;
+    height:210px;
+    position:relative;
+    left:29%;
+    top:133px;
+    border:1px solid #ff5400;
+}
+#Carousel-figure2 .first-1{
+    height:210px;
+    position:absolute;
+    left:0;
+    top:0;
+}
+#Carousel-figure2 img{
+    border:1px solid #ebebeb;
+}
+#Carousel-figure2 .first-2{
+    height:110px;
+    position:absolute;
+    left:180px;
+    top:0;
+}
+#Carousel-figure2 .first-3{
+    height:110px;
+    position:absolute;
+    left:180px;
+    top:100px;
+}
+#Carousel-figure2 .first-4{
+    height:110px;
+    position:absolute;
+    left:373px;
+    top:100px;
+}
+#Carousel-figure2 .first-5{
+    height:110px;
+    position:absolute;
+    left:373px;
+    top:0;
+}
+#top{
+    width:100%;
+    height:70px;
+    background:white;
+    display:none;
+    Z-index:10000;
+    position:absolute;
+    /*固定顶部的搜索框要在所有的最上方*/
+}
+#fix{
+    height:1400px;
+}
+#top img{
+    position:relative;
+    left:9%;
+}
+#top .display-rearch{
+    width:50%;
+    position:absolute;
+    left:29%;
+    top:20px;
+    height: 35px;
+    border:3px solid #ff5400;
+    overflow:hidden;
+}
+#btn{
+    width:15%;
+    height:35px;
+    background:#ff6404;
+    line-height:35px;
+    text-align:center;
+    color:white;
+    position:absolute;
+    right:0;
+    top:0;
+    cursor:pointer;
+}
+#top ul{
+    width:7%;
+    height:36px;
+    background:#f6f6f6;
+    border:1px solid #f6f6f6;
+}
+#top ul li{
+    width:100%;
+    height:33px;
+    text-align:right;
+    line-height:33px;
+    background:#f6f6f6;
+}
+#top .low-triangular{
+    background:#f6f6f6;
+    position:absolute;
+    left:7%;
+    top:0;
+    width:3%;
+    height:33px;
+}
+#top .btm-triangular{
+    width:0;
+    height:0;
+    border:5px solid;
+    position:relative;
+    top:45%;
+    left:30%;
+    border-color:black transparent transparent transparent;
+}
+#top input{
+    width:75%;
+    position:absolute;
+    height:35px;
+    top:0;
+    left:10%;
+    padding-left:3px;
+    /*输入文字不顶格*/
+}

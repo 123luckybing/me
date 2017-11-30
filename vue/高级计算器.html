@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        #calculator{
+            height:348px;
+            width:210px;
+            border:1px solid #AAAAAA;
+            position: relative;
+        }
+        #input{
+            width:208px;
+            height:80px;
+            border:1px solid #AAAAAA;
+            font-size:30px;
+            padding-right:0;
+            padding-left:2px;
+        }
+        .btn div{
+            width:50px;
+            height:50px;
+            background:#000000;
+            color:white;
+            float:left;
+            font-size:30px;
+            line-height:50px;
+            text-align:center;
+            border:1px solid white;
+        }
+        .btn{
+            width:208px;
+            height:256px;
+        }
+        .btn .red{
+            background:red;
+        }
+    </style>
+</head>
+<body>
+<div id="calculator">
+    <div id="input">
+        {{count}}{{soo}}
+    </div>
+    <div class="btn">
+            <div @click="show(1,$event)">1</div>
+            <div @click="show(2,$event)">2</div>
+            <div @click="show(3,$event)">3</div>
+            <div @click="show(4,$event)">4</div>
+            <div @click="show(5,$event)">5</div>
+            <div @click="show(6,$event)">6</div>
+            <div @click="show(7,$event)">7</div>
+            <div @click="show(8,$event)">8</div>
+            <div @click="show(9,$event)">9</div>
+            <div @click="clear">C</div>
+            <div @click="display('%',$event)">%</div>
+            <div>←</div>
+            <div @click="display('+',$event)" >+</div>
+            <div @click="display('-',$event)">-</div>
+            <div @click="display('*',$event)">*</div>
+            <div @click="display('/',$event)">/</div>
+            <div @click="display('00',$event)">00</div>
+        <!--字符串加单引号-->
+            <div @click="show(0,$event)">0</div>
+            <div @click="display('.',$event)">.</div>
+            <div class="red" @click="equal()">=</div>
+    </div>
+</div>
+<script src="vue.js"></script>
+<script>
+    var um =new Vue({
+        el:"#calculator",
+        data:{
+             count:"",
+             soo:""
+        },
+        methods:{
+            show(num,e){
+               this.count += String(num);
+               console.log(this.count);
+        //把数字转换成字符串
+         },
+         display(string,e){
+                 this.count+= String(string);
+                 console.log(this.count);
+        },
+        clear(){
+           this.count="";
+        }
+    }
+        });
+</script>
+</body>
+</html>

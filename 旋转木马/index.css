@@ -1,0 +1,27 @@
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    perspective:1000px;
+    perspective-origin: 45% 100%;
+}
+#container img{
+    width:150px;
+    height:150px;
+    position:absolute;
+    top:0;
+    left:0;
+    transition: all 1s linear;
+    border:1px solid white;
+}
+#container{
+    position:relative;
+    width:200px;
+    height:150px;
+    left:500px;
+    top:250px;
+    transform-style:preserve-3d;
+    transition: all 1s linear;
+}
+/*先把所有图片先叠在一起*/

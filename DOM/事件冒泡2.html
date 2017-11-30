@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>事件冒泡2</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        #div1{
+            background: greenyellow;
+            width: 300px;
+            height: 300px;
+        }
+        #div2{
+            background: red;
+            width: 200px;
+            height: 200px;
+        }
+        #div3{
+            background: blueviolet;
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+<div id="div1">
+    <div id="div2">
+        <div id="div3"></div>
+    </div>
+</div>
+<script>
+    var oDiv1=document.getElementById("div1");
+    var oDiv2=document.getElementById("div2");
+    var oDiv3=document.getElementById("div3");
+    oDiv1.addEventListener("click",function(){
+        alert("底部");
+    },false);
+    oDiv2.addEventListener("click",function(){
+        alert("中部");
+    },true);
+    oDiv3.addEventListener("click",function(){
+        alert("上部");
+    },false);
+</script>
+</body>
+</html>

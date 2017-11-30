@@ -1,0 +1,23 @@
+<!--使用二重循环打印9×9乘法表。-->
+<!--提示：-->
+<!--1、第一个乘数（乘号前的乘数）的变化规律：从第一行倒第九行，第一个乘数从1变到9，与行号相同-->
+<!--2、第二个乘数（乘号后的乘数）的变化规律：从1开始，最大与行号相等。-->
+<!--3、可以用i代表第一个乘数，用j代表第二个乘数，那么每一行j与i的关系是：j<=i。-->
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    for(var i=1;i<10;i++){
+        document.write("<br/><br/>");//js中换行
+        for(var j=1;j<=i;j++){
+            k=i*j;
+            document.write(i+"*"+j+"="+k );
+        }
+    }
+</script>
+</body>
+</html>

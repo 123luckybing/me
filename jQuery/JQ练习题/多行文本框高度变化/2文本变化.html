@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        #content{
+            width:300px;
+            height: 320px;
+            border:1px solid black;
+        }
+
+    </style>
+</head>
+<body>
+<button id="comment">放大</button>
+<button id="smaller">缩小</button>
+<div id="content">
+    多行文本框高度变化你在哪里哈哈哈哈哈哈哈哈哈哈多行文本框高度变化多行文本框高度变化多行多行文本框高度变化你在哪里哈哈哈哈哈哈哈哈哈哈多行文本框高度变化多行文本框高度变化多行多行文本框高度变化你在哪里哈哈哈哈哈哈哈哈哈哈多行文本框高度变化多行文本框高度变化多行多行文本框高度变化你在哪里哈哈哈哈哈哈哈哈哈哈多行文本框高度变化多行文本框高度变化多行
+</div>
+<script src="jquery-1.11.2.js"></script>
+<script>
+  $(function(){
+      $("#comment").on("click",function(){
+          if(!$("#comment").is(":animated")){//判断是否做动画
+              $("#content").animate({
+                  height:"+=50"//height减50
+              },400);
+          }
+      });
+      $("#smaller").on("click",function(){
+          if(!$("#content").is(":animated")){
+              $("#content").animate({
+                  height:"-=10"
+              },100);
+          }
+
+      })
+  });
+</script>
+</body>
+</html>

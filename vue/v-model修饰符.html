@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div id="app">
+    同户名：<input type="text" v-model.lazy="name"/>
+    <div>
+        用户名：{{name}}
+    </div>
+
+    同户名：<input type="number" v-model.number="age"/>
+    <div>
+        年龄：{{age}}
+    </div>
+
+    同户名：<input type="text" v-model.trim="password"/>
+    <div>
+        密码：{{password}}
+    </div>
+</div>
+<script src="vue.js"></script>
+<script>
+    new Vue({
+        el:"#app",
+        data:{
+            name:"",
+            age:"",
+            password:""
+        }
+    });
+</script>
+</body>
+</html>

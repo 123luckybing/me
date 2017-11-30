@@ -1,0 +1,8 @@
+#nav{
+    width: 336px;
+    border:1px solid black;
+    background: #fff2e9;
+}
+#nav span{
+    margin-right:40px;
+}

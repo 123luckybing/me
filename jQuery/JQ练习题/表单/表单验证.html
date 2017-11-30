@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        #container{
+            width:500px;
+            height:140px;
+            margin:100px auto;
+        }
+        #container input{
+            width:100px;
+        }
+        .star{
+            color:red;
+            width:15px;
+            height:15px;
+            position:absolute;
+            right:130px;
+            top:5px;
+        }
+        .id{
+            position:relative;
+            width:300px;
+        }
+        .password{
+            position:relative;
+            width:300px;
+        }
+        #container .iwrong{
+            width:100px;
+            position:absolute;
+            top:5px;
+            right:47px;
+            color:red;
+        }
+        #container .pwrong{
+            position:absolute;
+            left:153px;
+            top:5px;
+            color:red;
+        }
+    </style>
+</head>
+<body>
+<div id="container">
+    <fieldset>
+        <legend>请填写信息</legend>
+        <div class="id" >
+        账号：<input type="text" name="clear"/>
+        </div>
+        <br>
+        <div class="password">
+        密码：<input type="password" name="clear"/>
+        </div>
+        <br>
+        <br>
+        <input type="submit"/>
+        <input type="reset"/>
+    </fieldset>
+</div>
+<script src="jquery-1.11.2.js"></script>
+<script>
+    $(function() {
+        $("#container input").on("focus", function () {
+            $(this).css("background", "pink");
+            $("<div class='star'>*</div>").appendTo($(this).parent());
+        });
+        $("#container").on("blur", 'input', function () {
+            $(this).css("background", "transparent");
+            $(this).siblings(".star").remove();//类名叫star的兄弟移除掉
+            if($(this).is(".id input")){
+                    if($(this).val().length<6||$(this).val()==""){
+                        $("<h6 class='iwrong'>您输入的账号有误</h6>").appendTo($(this).parent(".id"));
+                    }else{
+                        $("<h6 class='iwrong'>输入格式正确</h6>").appendTo($(this).parent(".id"));
+                    }
+            }
+            if($(this).is(".password input")){
+                if(this.value==""||this.value.length<6|| !/^[0-9A-Za-z]/.test(this.value)){
+                    $("<h6 class='pwrong'>您输入的密码格式有误</h6>").appendTo($(this).parent(".password"));
+                }else{
+                    $("<h6 class='pwrong'>输入正确</h6>").appendTo($(this).parent(".password"));
+                }
+            }
+        });
+
+
+        //重置
+        $("#container input[type='reset']").on("click",function(){
+            $("#container input[name='clear']").val("");
+
+        });
+
+    });
+//    $("")
+</script>
+</body>
+</html>

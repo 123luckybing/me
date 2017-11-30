@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        #container{
+            width: 300px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+<div id="container">
+    <fieldset>
+        <legend>登陆</legend>
+        账号：<input type="text"/>
+        <br>
+        密码：<input type="password"/>
+        <br>
+        留言：<input type="text"/>
+    </fieldset>
+</div>
+<script src="jquery-1.11.2.js"></script>
+<script>
+    $(function() {
+        var $Input = $("#container input");
+        $Input.on("focus",function(){
+             $(this).css("background","pink");
+        });
+        $Input.on("blur",function(){
+            $(this).css("background","transparent");
+        });
+        });
+</script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>全选 全不选 反选</title>
+</head>
+<body>
+<h1>你爱好的运动是：</h1>
+<form action="">
+    <input type="checkbox" name="hobby"/>篮球
+    <input type="checkbox" name="hobby"/>排球
+    <input type="checkbox" name="hobby"/>网球
+    <input type="checkbox" name="hobby"/>足球
+    <br/>
+    <button id="all" type="button">全选</button>
+    <button id="none" type="button">全不选</button>
+    <button id="oppsite" type="button">反选</button>
+</form>
+<script src="jquery-1.11.2.js"></script>
+<script>
+        $(function(){
+            $("#all").on("click",function(){
+                $('input[name="hobby"]').prop("checked",true);
+            });
+            $("#none").on("click",function(){
+                $("input[name='hobby']").prop("checked",false);
+            });
+            $("#oppsite").on("click",function(){
+                   $("input[name='hobby']").each(function(index,elem,arr){
+                       if($(elem).prop("checked")){
+                           $(elem).prop("checked",false)
+                       }else{
+                           $(elem).prop("checked",true)
+                       }
+                   })
+            })
+        })
+</script>
+</body>
+</html>

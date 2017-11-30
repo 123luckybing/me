@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>轮播图</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        #img img{
+            width:400px;
+            height:300px;
+            position:absolute;
+            left:0;
+            top:0;
+            display:none;
+        }
+        #container{
+            margin:100px auto;
+            width:400px;
+            height: 300px;
+            position:relative;
+        }
+        #img{
+            position:relative;
+            width:400px;
+            height:500px;
+        }
+        #order div{
+            width:20px;
+            height: 20px;
+            border:1px solid black;
+            text-align:center;
+            line-height:20px;
+            float:left;
+        }
+        #order{
+            position:absolute;
+            right:140px;
+            bottom:3px;
+        }
+        #button div{
+            width:20px;
+            height: 20px;
+            border:1px solid black;
+            text-align:center;
+            line-height:20px;
+            float:left;
+        }
+        #left{
+            position:absolute;
+            left:3px;
+            top:250px;
+        }
+        #right{
+            position:absolute;
+            right:3px;
+            top:250px;
+        }
+        .select{
+            background: black;
+            color:white;
+        }
+        #img .selected{
+            display:block;
+        }
+    </style>
+</head>
+<body>
+<div id="container">
+    <div id="img">
+        <img src="../../imag/s1.jpg" alt="" class="selected"/>
+        <img src="../../imag/s2.jpg" alt=""/>
+        <img src="../../imag/s3.jpg" alt=""/>
+        <img src="../../imag/s4.jpg" alt=""/>
+    </div>
+    <div id="button">
+        <div id="left">&lt;</div>
+        <div id="right">&gt;</div>
+    </div>
+    <div id="order">
+        <div class="select">1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+    </div>
+</div>
+<script src="jquery-1.11.2.js"></script>
+<script>
+    $(function(){
+        var timer;
+        var  nowIndex =0;
+        var  nowIndex = $(this).index();
+        $("#order div").on("mouseover",function(){
+            $(this).addClass("select").siblings().removeClass("select");
+            $("#img img").eq($(this).index()).addClass("selected").siblings().removeClass("selected");
+        });
+
+       $("#button").on("click","div",function(){
+           if( this.id == 'left'){//this.id 获取id
+                 nowIndex--;
+               if(nowIndex == -1){
+                    nowIndex = $("#order div").length - 1;
+               }
+           }else{
+               nowIndex++;
+               if(nowIndex == $("#order div").length){
+                    nowIndex = 0;
+               }
+           }
+           changeImag();
+       });
+        function play() {
+            timer = setInterval(function () {
+                $("#right").trigger("click");
+            }, 1000);
+        }
+        play();
+
+        $("#container").hover(function(){
+            clearInterval(timer);
+        },function(){
+            timer = setInterval(function () {
+                $("#right").trigger("click");
+            }, 1000);
+        });
+         function  changeImag(){
+            $("#order div").eq(nowIndex).addClass("select").siblings().removeClass("select");
+            $("#img img").eq(nowIndex).addClass("selected").siblings().removeClass("selected");
+        }
+
+    });
+</script>
+</body>
+</html>

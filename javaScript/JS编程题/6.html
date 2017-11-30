@@ -1,0 +1,28 @@
+<!--用JavaScript编写函数ts() ，实现如下功能：
+根据文本框输入的梯形的上底、下底，高的值-->
+<!--并计算此梯形的面积显示在console中。-->
+<!--说明：三个文本框的名字分别用a,b,c，结果文本框名用result-->
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    function ts(){
+//        遇到问题了，没有转化成小数或者整数，所以编译器把+当成拼接字符串了
+        var a =parseFloat(prompt("请输入梯形的上底"));
+        var b =parseFloat(prompt("请输入梯形的下底"));
+        var c =parseFloat(prompt("请输入梯形的高"));
+        var result = (a+b)*c/2;
+        if ( isNaN( result )){
+            console.log("您输入的有误");
+        }else{
+            console.log("梯形的面积是:"+ result);
+        }
+    }
+      ts();
+</script>
+</body>
+</html>

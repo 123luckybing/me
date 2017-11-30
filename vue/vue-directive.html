@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div id="app">
+    <h1 v-bg="aa">加油吧你是你最棒的</h1>
+</div>
+<script src="vue.js"></script>
+<script>
+    Vue.directive("bg",{
+        bind(el,binding,vnode){
+            el.style.background=binding.value;
+        },
+        inserted(){
+            console.log("inserted");
+    }
+    });
+    new Vue({
+        el:"#app",
+        data:{
+            aa:"green"
+        }
+    });
+</script>
+</body>
+</html>
