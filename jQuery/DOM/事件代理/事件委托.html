@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<button id="btn">增加</button>
+<ul id="ul1">
+    <li>001</li>
+    <li>002</li>
+    <li>003</li>
+    <li>004</li>
+</ul>
+
+<h1>年度最佳女演员</h1>
+<div id="menu">
+    <p>刘诗诗</p>
+    <p>赵丽颖</p>
+    <p>杨幂</p>
+</div>
+<button id="button">添加</button>
+
+
+<script>
+    var oButton = document.getElementById("btn");
+    var oUl1= document.getElementById("ul1");
+    var oLi=oUl1.getElementsByTagName("li");
+    for(var i=0;i<oLi.length;i++) {
+        oLi[i].onclick = function () {
+             alert(this.innerHTML);
+        }
+    }
+    oButton.onclick = function(){
+        var oLi=document.createElement("li");
+        oUl1.appendChild(oLi);
+        oLi.innerHTML="005";
+    };
+
+
+    var oBtn = document.getElementById("button");
+    var oDiv = document.getElementById("menu");
+    oBtn.onclick = function(){
+        var oP = document.createElement("p");
+        oDiv.appendChild(oP);
+        oP.innerHTML = "迪丽热巴";
+    };
+
+</script>
+</body>
+</html>
