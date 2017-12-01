@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        table tr{
+            width:450px;
+            line-height:30px;
+        }
+        table td{
+            width:100px;
+            line-height:30px;
+            text-align:left;
+        }
+    </style>
+</head>
+<body>
+筛选：<input type="text"/>
+<table>
+    <tr>
+        <td>姓名</td>
+        <td>性别</td>
+        <td>暂住地</td>
+    </tr>
+    <tr>
+        <td>张三</td>
+        <td>男</td>
+        <td>浙江宁波</td>
+    </tr>
+    <tr>
+        <td>李四</td>
+        <td>女</td>
+        <td>浙江杭州</td>
+    </tr>
+    <tr>
+        <td>王五</td>
+        <td>男</td>
+        <td>湖南长沙</td>
+    </tr>
+    <tr>
+        <td>赵六</td>
+        <td>男</td>
+        <td>浙江温州</td>
+    </tr>
+    <tr>
+        <td>Rain</td>
+        <td>男</td>
+        <td>浙江杭州</td>
+    </tr>
+    <tr>
+        <td>MAXMAN</td>
+        <td>女</td>
+        <td>浙江杭州</td>
+    </tr>
+    <tr>
+        <td>王六</td>
+        <td>男</td>
+        <td>浙江杭州</td>
+    </tr>
+    <tr>
+        <td>李玉</td>
+        <td>女</td>
+        <td>黑龙江哈尔滨</td>
+    </tr>
+    <tr>
+        <td>李四</td>
+        <td>男</td>
+        <td>广州</td>
+    </tr>
+</table>
+<script src="jquery-1.11.2.js"></script>
+<script>
+    $(function(){
+        $("input").on("keyup",function(){
+            if($(this).val()!=""){
+                $("table tr").hide(50);//先隐藏掉
+                $("table tr:contains("+this.value+")").show(50);
+            }else{
+                $("table tr").show(50);
+            }
+        });
+    });
+</script>
+</body>
+</html>
