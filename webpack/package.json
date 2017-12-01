@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "build":"webpack"
+    "build": "webpack",
+    "server": "webpack-dev-server"
   },
   "repository": {
     "type": "git",
@@ -18,6 +19,8 @@
   "keywords": [],
   "description": "",
   "devDependencies": {
-    "webpack": "^3.9.1"
+    "html-webpack-plugin": "^2.30.1",
+    "webpack": "^3.9.1",
+    "webpack-dev-server": "^2.9.5"
   }
 }
