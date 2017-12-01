@@ -3,24 +3,92 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title></title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        table tr td{
+            width:150px;
+            height:30px;
+            text-align:center;
+            line-height:30px;
+        }
+        #container{
+            border:1px solid black;
+            margin:100px auto;
+        }
+        .aa{
+            background:yellow;
+        }
+        .toggle{
+            /*写在.aa后面*/
+            background: orange;
+        }
+        .parent{
+            cursor:pointer;
+        }
+    </style>
 </head>
 <body>
-<table>
+<table id="container">
     <tr>
         <td>姓名</td>
         <td>性别</td>
         <td>暂住地</td>
     </tr>
     <tr>
-        <td>前台设计组</td>
+        <td colspan="3" class="parent" id="1">前台设计组</td>
+    </tr>
+        <tr class="child1">
+            <td>张三</td>
+            <td>男</td>
+            <td>浙江宁波</td>
+        </tr>
+        <tr class="child1">
+            <td>李四</td>
+            <td>女</td>
+            <td>浙江杭州</td>
+        </tr>
+    <tr>
+        <td colspan="3" class="parent" id="2">前台开发组</td>
+    </tr>
+    <tr class="child2">
+        <td>王五</td>
+        <td>男</td>
+        <td>湖南长沙</td>
+    </tr>
+    <tr class="child2">
+        <td>赵六</td>
+        <td>男</td>
+        <td>浙江温州</td>
     </tr>
     <tr>
-
+        <td colspan="3" class="parent" id="3">后台开发组</td>
+    </tr>
+    <tr class="child3">
+        <td>Ranin</td>
+        <td>男</td>
+        <td>湖南长沙</td>
+    </tr>
+    <tr class="child3">
+        <td>NAMNA</td>
+        <td>男</td>
+        <td>浙江温州</td>
     </tr>
 </table>
 <script src="jquery-1.11.2.js"></script>
 <script>
+    $(function(){
+        var $Otd =$(".parent");
+        $Otd.addClass("aa");
+        $Otd.on("click",function(){
+            $(this).toggleClass("toggle");
+            $(this).parent().siblings(".child"+this.id).slideToggle(100);
+        });
 
+        
+    });
 </script>
 </body>
 </html>
