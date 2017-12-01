@@ -1,5 +1,3 @@
-/**
- * Created by asus1 on 2017/12/1.
- */
+import css from "./css/index.css"
 var oDiv=document.getElementById("div");
 oDiv.innerHTML="hello world1233!!";
