@@ -11,7 +11,8 @@ module.exports={
     },
     output:{
         path:path.resolve(__dirname,'src'),
-        filename:'[entry].js'
+        filename:'[entry].js',
+        publicPath:"http://127.0.0.1:8081/"
     },
     devServer:{
         contentBase:path.resolve(__dirname,'src'),
@@ -28,6 +29,7 @@ module.exports={
             template: './dist/index.html'
         }),
         new ExtractTextPlugin("css/index.css"),
+         //new UglifyJSPlugin()
     ],
     module:{
         rules:[
@@ -44,6 +46,18 @@ module.exports={
                 use: ExtractTextPlugin.extract({
                     fallback: "style-loader",
                     use: "css-loader"
+                },{
+                    test:/\.(jpg|png|gif)/,
+                    use:[{
+                        loader:"url-loader",
+                        options:{
+                            limit:500,
+                            outputPath:"img/"
+                        }
+                    }]
+                },{
+                    test:/\.(htm|html)$/i,
+                    loader:"html-withimg-loader"
                 })
             }
         ]
