@@ -1,0 +1,59 @@
+//±‰¡ø
+$color:#ff0000;
+$w:200px;
+.aa{
+  background:$color;
+  .bb{
+    font-size:14px;
+    &:hover {
+      background: $color;
+    }
+    &-test{
+      width:$w;
+    }
+  }
+  .dd{
+    background: $color;
+  }
+  .cc{
+    background: $color;
+  }
+}
+#div4{
+  background:{
+    color:$color;
+    image:url(xx.jpg);
+  }
+  .aa{
+    background:red;
+  }
+}
+#div5{
+  border:{
+    left:{
+      color:$color;
+      weight:2px;
+      style:solid;
+    }
+  }
+}
+@mixin attr{
+  width: 200px;
+  height: 200px;
+  background:#ff0000;
+}
+#div6{
+  @include attr;
+}
+@mixin prop($bg:#ff0000){
+  width: 200px;
+  height: 200px;
+  background:$bg;
+}
+#div7{
+  @include prop(yellow);
+}
+#div8{
+  @extend #div4;
+}
+@import "base/base";
