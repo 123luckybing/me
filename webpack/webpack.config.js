@@ -2,9 +2,12 @@
  * Created by asus1 on 2017/12/1.
  */
 const path =require('path');
+const webpack=require("webpack");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
+const glob = require('glob');
+const PurifyCSSPlugin = require('purifycss-webpack');
 module.exports={
     entry:{
         entry:"./dist/index.js"
@@ -30,6 +33,10 @@ module.exports={
         }),
         new ExtractTextPlugin("css/index.css"),
          //new UglifyJSPlugin()
+        new PurifyCSSPlugin({
+            paths: glob.sync(path.join(__dirname, 'dist/*.html'))
+        }),
+        new webpack.BannerPlugin('成哥所有，翻版必究!'),
     ],
     module:{
         rules:[
