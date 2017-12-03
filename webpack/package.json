@@ -20,6 +20,7 @@
   "description": "",
   "devDependencies": {
     "autoprefixer": "^7.1.6",
+    "copy-webpack-plugin": "^4.2.3",
     "css-loader": "^0.28.7",
     "extract-text-webpack-plugin": "^3.0.2",
     "file-loader": "^1.1.5",
@@ -34,5 +35,9 @@
     "url-loader": "^0.6.2",
     "webpack": "^3.9.1",
     "webpack-dev-server": "^2.9.5"
+  },
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "vue": "^2.5.9"
   }
 }
