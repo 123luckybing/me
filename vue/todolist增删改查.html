@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>todolist</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        #app{
+            width:400px;
+            margin:100px auto;
+        }
+        #app h1{
+            text-align:center;
+        }
+        #app ul li{
+            list-style:none;
+            background: #ccc;
+            width: 400px;
+            height:50px;
+            margin-top:10px;
+            text-align:center;
+            line-height:50px;
+            padding:0 10px;
+            /*上下为0，左右为10px*/
+        }
+        #app .left{
+            float:left;
+        }
+        #app .right{
+            float:right;
+        }
+       #app .red{
+            background: red;
+        }
+        #app .delete{
+            float:left;
+            margin-top:15px;
+        }
+        #app input[type="checkbox"]{
+            float:left;
+            margin-top:18px;
+        }
+    </style>
+</head>
+<body>
+<div  id="app">
+    <h1>todolist</h1>
+    <hr>
+    <ul>
+        名称：<input type="text" placeholder="请输入产品名称" v-model="name"/><br>
+        价格：<input type="text" placeholder="请输入商品价格" v-model="price"/>
+        <button @click="add">添加</button>
+        <input type="text" placeholder="请输入查询内容" v-model="searched"/>
+        <button @click="search">查询</button>
+        <li v-for="(product,index) in productList" @click="selected(product)" :class="{red:product.isRed}">
+            <input type="checkbox" @click.stop="" v-model="checked" :value="index"/>
+            <button class="delete" @click.stop="del(index)">【X】</button>
+            <span class="left">{{product.name}}</span>
+            <span class="right">{{product.price}}</span>
+        </li>
+    </ul>
+        <div>
+            <button @click="delall">删除选中</button>
+            总价：{{total}}
+        </div>
+</div>
+<script src="vue.js"></script>
+<script>
+    var um =new Vue({
+        el:"#app",
+        data:{
+            productList:[{
+                name:"补水仪",
+                price:"158",
+                isRed:false
+            },{
+                name:"瘦脸器",
+                price:"179",
+                isRed:false
+                },{
+                name:"水乳",
+                price:"268",
+                isRed:false
+            },{
+                name:"羊毛衫",
+                price:"268",
+                isRed:false
+            },{
+                name:"羽绒服女",
+                price:"2445",
+                isRed:false
+            },{
+                name:"四件套",
+                price:"199",
+                isRed:false
+            },{
+                name:"面膜",
+                price:"699",
+                isRed:false
+            }],
+            total:0,
+            name:"",
+            price:"",
+            checked:[],
+            searched:""
+        },
+        methods:{
+                selected(product){
+                    product.isRed = !product.isRed;
+                        this.sum();
+                     },
+                sum(){
+                    var sum = 0;//先等于零，每次点击都重新来一遍
+                  //先遍历整个数组
+                    this.productList.forEach(function(val,idx){
+                        if(val.isRed){
+                         sum += parseInt(val.price);
+                        }
+                    });
+                        this.total = sum ;
+                    },
+                add(){
+                    this.productList.push({
+                        name:this.name,
+                        price:this.price,
+                        isRed :false
+                    });
+                        this.name="",
+                        this.price=""
+                    },
+                del(index){
+                        this.productList.splice(index,1);
+                    },
+                delall(){
+                        let arr =this.productList.filter((val,index)=>{
+                            if(!this.checked.includes(index)){
+                                return val;
+                                    }
+                        });
+                            this.productList = arr;
+                            this.checked=[];
+                    },
+                search(){
+                       var arr = this.productList.filter((val,index)=>{
+                            if(val.name.includes(this.searched)){
+                                        return val;
+                             }
+                        })
+                            this.productList = arr;
+                    }
+        }
+    });
+</script>
+</body>
+</html>
