@@ -14,7 +14,7 @@
             width:450px;
             line-height:50px;
             height:50px;
-            background:#AAAAAA;
+            background:#ccc;
             margin-top:10px;
         }
         #app{
@@ -56,6 +56,10 @@
         价格:<input type="text" v-model="price" placeholder="请输入价格"/>
     </label>
     <button @click="add">增加</button>
+    <div>
+      <input type="text" placeholder="请输入搜索关键字" v-model="keywords"/>
+        <button @click="search">查询</button>
+    </div>
     <ul>
         <li v-for="(product,index) in productList" @click="select(product)" :class="{red:product.isRed}">
             <input type="checkbox" class="checkbox" @click.stop="" v-model="checked" :value="index"/>
@@ -66,57 +70,71 @@
         </li>
     </ul>
     <div>
-        <button >全部删除</button>
+        <button @click="delAll">删除选中</button>
         总价：{{total}}
     </div>
 </div>
 <script src="vue.js"></script>
 <script>
     var um = new Vue({
-        el:"#app",
-        data:{
-           productList:[
-               {
-                   name:"衣服",
-                   price:"120",
-                   isRed:false
-               },{
-                   name:"帽子",
-                   price:"20",
-                   isRed:false
-               },{
-                   name:"裤子",
-                   price:"100",
-                   isRed:false
-               },{
-                   name:"衣服",
-                   price:"120",
-                   isRed:false
-               },{
-                   name:"围巾",
-                   price:"30",
-                   isRed:false
-               },{
-                   name:"鞋",
-                   price:"300",
-                   isRed:false
-               }
-           ],
-            total:0,
-            name:"",
-            price:0,
-            checked:[]
+        el: "#app",
+        data: {
+            productList: [
+                {
+                    name: "衣服",
+                    price: "140",
+                    isRed: false
+                }, {
+                    name: "帽子",
+                    price: "20",
+                    isRed: false
+                }, {
+                    name: "裤子",
+                    price: "100",
+                    isRed: false
+                }, {
+                    name: "衣服",
+                    price: "120",
+                    isRed: false
+                }, {
+                    name: "围巾",
+                    price: "30",
+                    isRed: false
+                }, {
+                    name: "鞋",
+                    price: "300",
+                    isRed: false
+                }
+            ],
+            total: 0,
+            name: "",
+            price: 0,
+            checked: [],
+            keywords:""
         },
         methods: {
-            select(product){
-             product.isRed = !product.isRed;
-        if(product.isRed){
-         this.total += parseInt(product.price);
-         }else{
-         this.total -= parseInt(product.price);
-         }
-        // this.sum();
-             },
+            select(product)
+    {
+        product.isRed = !product.isRed;
+//        if(product.isRed){
+//         this.total += parseInt(product.price);
+//         }else{
+//         this.total -= parseInt(product.price);
+//         }
+        this.sum();
+    }
+    ,
+    sum()
+    {
+        let sum = 0;//先清空价格，哪个红了重新算一遍
+        this.productList.forEach(function (val, idx) {
+            if (val.isRed) {
+                sum += parseInt(val.price);
+            }
+        })
+        this.total = sum;
+    }
+    ,
     add()
     {
         this.productList.push({
@@ -125,14 +143,39 @@
             isRed: false
         });
         this.name = "",
-                this.price = 0
+                this.price = ""
         // 添加元素后清空产品名称和价格
-    },
-    del(index){
+    }
+    ,
+    del(index)
+    {
         this.productList.splice(index, 1);
-       }
-    },
-});
+    }
+    ,
+    delAll()
+    {
+// 数组下标改变了
+//        this.checked.forEach((val) => {
+//            this.productList.splice(val, 1);
+    //}循环选中的元素
+    let arr = this.productList.filter((val, idx) => {
+                if(!this.checked.includes(idx)){
+                    return val;
+        }
+    })
+    this.productList = arr;
+    this.checked=""
+            },
+    search(){
+            let arr=this.productList.filter((val,key)=>{
+                if(val.name.includes(this.keywords)){
+              return val;
+        }
+            });
+    this.productList =arr;
+    }
+    }
+    });
 </script>
 </body>
 </html>

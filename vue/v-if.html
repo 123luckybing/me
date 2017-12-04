@@ -23,11 +23,11 @@
             <!--ppppp-->
         <!--</p>-->
 
-        <template v-show="show">
+        <div v-if="show">
             <h1>hhhh</h1>
             <p>ppppp</p>
             <span>ssssssss</span>
-        </template>
+        </div>
 
 
     </div>
@@ -38,7 +38,7 @@
     var vm = new Vue({
         el:'#app',
         data:{
-            show:true
+            show:false
         }
     })
 
