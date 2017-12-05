@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>v-set</title>
+</head>
+<body>
+<div id="app">
+    <button @click="change">改值</button>
+    <ul>
+        <li v-for="item in list">{{item}}</li>
+    </ul>
+</div>
+<script src="vue.js"></script>
+<script>
+  var um =new Vue({
+      el:"#app",
+      data:{
+          list:["a","s","f","o","g","r"]
+      },
+      methods:{
+          change(){
+            Vue.set(this.list,0,"zhoufangbing");
+            }
+      }
+  });
+</script>
+</body>
+</html>

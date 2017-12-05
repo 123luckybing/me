@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>v-extend</title>
+</head>
+<body>
+<div id="app"></div>
+<div id="div1">
+    <my-components></my-components>
+</div>
+<script src="vue.js"></script>
+<script>
+   var authorName = Vue.extend({
+        template:"<p><a :href='url'>{{name}}</a></p>",
+        data:function(){
+            return {
+                name:'zhoufangbing',
+                url:"http://www.baidu.com"
+            }
+        }
+    });
+//    new authorName().$mount("#app");
+    var person = Vue.extend({
+        template:"<p><a :href='personUrl'>{{perName}}</a></p>",
+        data:function(){
+            return {
+                personUrl: 'http://www.baidu.com',
+                perName: 'yangmi'
+            }
+        }
+    });
+//    new person().$mount("#div1");
+new Vue({
+    el:"#div1",
+    components:{
+        myComponents:authorName
+    }
+});
+</script>
+</body>
+</html>
