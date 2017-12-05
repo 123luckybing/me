@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div id="app">
+    <bing>
+        <span slot="name">lili</span>
+        <span slot="age">19</span>
+        <span slot="sex">女</span>
+    </bing>
+    <bing>
+        <span slot="name">丽丽</span>
+        <span slot="age">34</span>
+        <span slot="sex">女</span>
+    </bing>
+    <bing>
+        <span slot="name">哈哈</span>
+        <span slot="age">23</span>
+        <!--<span slot="sex"></span>-->
+        <!--不写会使默认值，不是传了但为空-->
+    </bing>
+</div>
+<template id="aaa">
+    <div>
+       <div>
+           名字：<slot name="name"></slot>
+       </div>
+        <div>
+            年龄：<slot name="age"></slot>
+        </div>
+        <div>
+            性别：<slot name="sex">男</slot>
+        </div>
+    </div>
+</template>
+<script src="vue.js"></script>
+<script>
+    new Vue({
+        el:"#app",
+        components:{
+            bing:{
+                template:'#aaa'
+            }
+        }
+    });
+</script>
+</body>
+</html>

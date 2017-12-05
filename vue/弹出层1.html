@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .my-dialog-mask{
+            position:absolute;
+            left:0;
+            right:0;
+            top:0;
+            bottom:0;
+            background: #CCC;
+        }
+        .dialog-box{
+            width: 500px;
+            height: 400px;
+            margin:100px auto;
+            border:1px solid black;
+        }
+        .dialog-title{
+            height:30px;
+            background: #000;
+            color:white;
+            line-height:30px;
+            padding:0 5px;
+        }
+        .left{
+            float:left;
+        }
+        .right{
+            float:right;
+            cursor:pointer;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+    <button @click="showLogin=true">登录</button>
+    <button @click="showRegister=true">注册</button>
+    <!--登录-->
+    <my-dialog v-show="showLogin" @close="showLogin= false">
+    <div slot="content">
+        <span slot="name">登录</span>
+        <label for="">
+            用户名：<input type="text"/>
+        </label>
+        <br>
+        <label for="">
+            密码：<input type="password"/>
+        </label>
+        <br>
+        <input type="submit"/>
+    </div>
+    </my-dialog>
+    <!--注册-->
+    <my-dialog v-show="showRegister" @close="showRegister= false">
+        <span slot="name">注册</span>
+        <div slot="content">
+            <label for="">
+                用户名：<input type="text"/>
+            </label>
+            <br>
+            <label for="">
+                密码：<input type="password"/>
+            </label>
+            <br>
+            请再输入一遍密码：<input type="password"/>
+            <br>
+            请填写验证码：
+            <input type="text"/>
+            <input type="submit"/>
+        </div>
+    </my-dialog>
+</div>
+<template id="dialog">
+    <div class="my-dialog-mask">
+        <div class="dialog-box">
+            <div class="dialog-title">
+                <span class="left">
+                   <slot name="name"></slot>
+                </span>
+                <span class="right" @click="$emit('close')">[X]</span>
+            </div>
+            <div class="dialog-content">
+                <slot name="content"></slot>
+            </div>
+        </div>
+    </div>
+</template>
+<script src="vue.js"></script>
+<script>
+    new Vue({
+        el:"#app",
+        components: {
+            myDialog: {
+                template: "#dialog"
+            }
+        },
+        data:{
+            showLogin:false,
+            showRegister:false
+            }
+    });
+</script>
+</body>
+</html>
