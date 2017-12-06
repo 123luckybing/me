@@ -1,13 +1,101 @@
-<!DOCTYPE html>
-<html>
-<head lang="en">
+<!doctype html>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
-    <title></title>
+    <title>Document</title>
+    <style>
+        .diagle-box{
+            background: #ccc;
+            position:absolute;
+            left:0;
+            right:0;
+            bottom:0;
+            top:0;
+        }
+        .diagle-mask{
+            width: 400px;
+            height: 300px;
+            border:1px solid black;
+            margin:100px auto;
+        }
+        .diagle-title{
+            height: 30px;
+            background: #000;
+            color:white;
+            line-height:30px;
+            padding:10px;
+        }
+        .right{
+            float:right;
+            cursor:pointer;
+        }
+        .left{
+            float:left;
+        }
+    </style>
 </head>
 <body>
+<div id="app">
+    <button @click="Login=true">登录</button>
+    <button @click="Register=true">注册</button>
+    <lucky v-show="Login" @close="Login=false">
+        <span slot="name">登录</span>
+        <div slot="content">
+            <label for="">
+                用户名：<input type="text"/>
+            </label>
+            <br>
+            <label for="">
+                密码：<input type="password"/>
+            </label>
+            <br>
+            <input type="submit"/>
+        </div>
+    </lucky>
+    <lucky v-show="Register" @close="Register=false">
+        <span slot="name">注册</span>
+        <div slot="content">
+            <label for="">
+                账号:<input type="text">
+            </label>
+            <br>
+            <label for="">
+                密码：<input type="password"/>
+            </label>
+            <br>
+            <input type="submit"/>
+        </div>
+    </lucky>
+</div>
+<template id="diagle">
+    <div class="diagle-box">
+        <div class="diagle-mask">
+            <div class="diagle-title">
+                <span class="left">
+                    <slot name="name"></slot>
+                </span>
+                <span class="right" @click="$emit('close')">[X]</span>
+            </div>
+            <div class="dialog-content">
+                <slot name="content"></slot>
+            </div>
+        </div>
+    </div>
+</template>
 <script src="vue.js"></script>
 <script>
-
+    new Vue({
+        el:"#app",
+        components:{
+            lucky:{
+                template:"#diagle"
+            }
+        },
+        data:{
+            Login:false,
+            Register:false
+        }
+    });
 </script>
 </body>
 </html>

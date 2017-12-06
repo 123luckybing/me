@@ -40,8 +40,8 @@
     <button @click="showRegister=true">注册</button>
     <!--登录-->
     <my-dialog v-show="showLogin" @close="showLogin= false">
-    <div slot="content">
         <span slot="name">登录</span>
+        <div slot="content">
         <label for="">
             用户名：<input type="text"/>
         </label>
