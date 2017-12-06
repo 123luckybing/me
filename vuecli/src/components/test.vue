@@ -1,17 +1,17 @@
 <template>
-  <h1>{{msg}}</h1>
+    <h1 class="test">{{msg}}</h1>
 </template>
 <script>
 export default{
   data(){
     return{
-      msg:"测试组件"
-    }
+      msg:'测试组件'
+    };
   }
 }
 </script>
 <style scoped>
-  h1{
+  .test{
     background:red;
   }
 </style>
