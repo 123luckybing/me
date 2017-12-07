@@ -1,5 +1,11 @@
 <template>
-    <h1>Url</h1>
+  <div>
+    <h1>URL</h1>
+    <h1>
+            Id:{{$route.params.userId}}
+            name:{{$route.params.username}}
+    </h1>
+  </div>
 </template>
 
 <script>
