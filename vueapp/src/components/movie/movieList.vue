@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <ul class='all'>
+  <div class='all'>
+    <ul>
       <li v-for='movie in movieList' :key='movie.id' class='movie'>
         <div class='img'>
           <img :src='movie.img' alt=''/>
@@ -16,6 +16,9 @@
     <div class='loading' v-show='showLoading'>
       <img src='../../assets/img/loading.gif' alt=''/>
     </div>
+    <div v-show='end'>
+        <h4 class='endtext'>数据已经到底了</h4>
+    </div>
   </div>
 </template>
 
@@ -25,18 +28,49 @@
     data(){
     return{
       movieList:[],
-      showLoading:true
+      showLoading:true,
+      end:false
     }
   },
-  mounted(){ //钩子函数
-    Axios .get(API_PROXY+'http://m.maoyan.com/movie/list.json?type=hot&limit=10&offset='+ movieList.length)
-      .then((res)=>{
-      //console.log(res);
-    this.movieList = res.data.data.movies;
-    this.showLoading=false;
-  }).catch(()=>{});
+  mounted(){
+    this.loadData();
+  //钩子函数
+    //监听滚动条事件
+    window.onscroll=()=>{
+      let CH = document.documentElement.clientHeight;//可视区域高度
+      let ST = document.documentElement.scrollTop||document.body.scrollTop;//滚动条高度  浏览器兼容问题
+      let SH = document.documentElement.scrollHeight;//文本高度
+     if( CH+ST == SH ){
+       this.showLoading = true;
+        if(this.end==false){
+            this.loadData();
+        }else{
+          this.showLoading = false;
+        }
+     }
+    }
+  },
+  methods:{
+      loadData(){
+      //url1表示猫眼的远程接口，url2 表示本地的
+          let url1 = API_PROXY+ 'http://m.maoyan.com/movie/list.json?type=hot&limit=10&offset='+ this.movieList.length;
+          let url2 = '../../../static/moviedata.json'
+          Axios .get(url2)
+           .then(res=>{
+           console.log(res);
+           let list= res.data.data.movies;// 37条数据
+           let data = list.slice(this.movieList.length,this.movieList.length+10);
+           this.movieList = this.movieList.concat(data);
+           if(data.length<10){
+             this.end = true;
+             }
+         //假加页的方式，一次截取10个
+         this.showLoading=false;
+        }).catch(()=>{});
+  }
   }
 }
+
 </script>
 
 <style scoped>
@@ -62,6 +96,10 @@
     font-weight:bolder;
 }
 .loading{
+      text-align:center;
+}
+.endtext{
+   text-align:center;
 }
 
 </style>
