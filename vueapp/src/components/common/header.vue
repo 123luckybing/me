@@ -1,13 +1,17 @@
 <template>
   <div class='header'>
-      <span>首页</span>
+      <span @click='goHome'>首页</span>
       <h2>Movie</h2>
   </div>
 </template>
 
 <script>
 export default{
-
+    methods:{
+      goHome(){
+        this.$router.push('/');
+      }
+    }
 }
 
 </script>

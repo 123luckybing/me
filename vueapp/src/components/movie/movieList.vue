@@ -1,7 +1,7 @@
 <template>
   <div class='all'>
     <ul>
-      <li v-for='movie in movieList' :key='movie.id' class='movie'>
+      <li @click='goDetail(movie.id)' v-for='movie in movieList' :key='movie.id' class='movie'>
         <div class='img'>
           <img :src='movie.img' alt=''/>
       </div>
@@ -67,7 +67,10 @@
          //假加页的方式，一次截取10个
          this.showLoading=false;
         }).catch(()=>{});
-  }
+  },
+      goDetail(movieId){
+        this.$router.push('/movie/movieDetail/'+movieId);
+        }
   }
 }
 
