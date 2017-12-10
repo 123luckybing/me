@@ -15,7 +15,7 @@
         </div>
     </div>
     <div class='ino'>
-        影片介绍:{{detail.dra}}
+        <p v-html="'影片介绍:'+detail.dra"></p>
     </div>
   </div>
 </template>

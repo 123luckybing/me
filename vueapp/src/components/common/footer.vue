@@ -1,15 +1,15 @@
 <template>
-  <div class='footer'>
-      <li>电影</li>
-    <li>音乐</li>
-    <li>书籍</li>
-    <li>图片</li>
+  <div class='footer'  :style='{background:bgc}'>
+    <li><router-link to='/movie/movieList'>电影</router-link></li>
+    <li><router-link to='/music'>音乐</router-link></li>
+    <li><router-link to='/book'>书籍</router-link></li>
+    <li><router-link to='/picture'>图片</router-link></li>
   </div>
 </template>
 
 <script>
 export default{
-
+    props:["bgc"]
 }
 
 </script>
@@ -17,7 +17,7 @@ export default{
 <style scoped>
   .footer{
       height:1rem;
-      background-color: rgb(33, 150, 243);
+
       color:white;
       position:fixed;
       width:100%;
@@ -31,5 +31,11 @@ export default{
       flex-grow:1;
       list-style:none;
 
+  }
+  .footer li a{
+      color:#ccc;
+  }
+  .footer a.router-link-active{
+    color:#000;
   }
 </style>

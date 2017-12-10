@@ -1,8 +1,11 @@
 <template>
   <div>
-       <Common-header></Common-header>
+       <Common-header bg='rgb(63, 81, 181)'>
+          <span slot='title'>Movie</span>
+       </Common-header>
           <router-view></router-view>
-      <Common-footer></Common-footer>
+      <Common-footer bgc='rgb(63, 81, 181)'>
+      </Common-footer>
   </div>
 </template>
 
