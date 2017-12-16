@@ -3,7 +3,7 @@
   <CommonHeader bg='rgb(125,125,125)'>
       <span slot='title'>Picture</span>
   </CommonHeader>
-
+    <router-view></router-view>
   <CommonFooter bgc='rgb(125,125,125)'>
   </CommonFooter>
 </div>

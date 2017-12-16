@@ -2,22 +2,98 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <title></title>
+    <title>vue轮播图</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        li{
+            list-style:none;
+            width: 20px;
+            height: 20px;
+            border:1px solid black;
+            text-align:center;
+            line-height:20px;
+            float:left;
+        }
+        #imag img{
+            width: 300px;
+            height: 500px;
+            position:absolute;
+            top:0;
+            left:0;
+        }
+        #imag{
+            width: 300px;
+            height: 500px;
+            position:relative;
+            margin:100px auto;
+        }
+        .list{
+            position:absolute;
+            bottom:5px;
+            right:280px;
+        }
+        #container{
+            position:relative;
+        }
+        .selected{
+            background: red;
+            color:white;
+        }
+    </style>
 </head>
 <body>
 <div id="container">
-    <img :src="" alt="" />
+    <div id="imag" @mouseover="stop" @mouseout="conti">
+        <img v-for='(item,index) in imgs' :src="item" alt="" v-show="index==nowIndex"/>
+        <!--数组v-for循环 当index==nowIndex显示-->
+    </div>
+    <ul class="list">
+        <li v-for="(item ,index) in imgs.length" :class="{selected:index==nowIndex}" @mouseover="changeImg(index)">
+            {{item}}
+        </li>
+        <!--输出123-->
+    </ul>
 </div>
 <script src="vue.js"></script>
 <script>
-    var um =new Vue({
-        el:"#container",
+    new Vue({
+        el:'#container',
         data:{
             imgs:[
-                 "../imag/s1.jpg",
-            ]
+                'https://img3.doubanio.com/lpic/s24468373.jpg',
+                'https://img3.doubanio.com/lpic/s6989253.jpg',
+                'https://img3.doubanio.com/lpic/s27102925.jpg'
+            ],
+            nowIndex:0,
+            timer:null
+        },
+        methods:{
+            changeImg(index){
+        this.nowIndex = index;
+    },
+    stop(){
+        clearInterval(this.timer);
+    },
+    conti(){
+        this.play();
+    },
+    play(){
+        this.timer = setInterval(()=>{
+                    this.nowIndex++;
+        if(this.nowIndex==this.imgs.length){
+            this.nowIndex=0;
         }
+    },1000);
+    }
+    },
+    mounted(){
+        this.play();
+    }
     });
+
 </script>
 </body>
 </html>

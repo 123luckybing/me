@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+       #hello{
+           width: 200px;
+           height: 200px;
+           background: red;
+           margin-top:10px;
+       }
+        .fade-enter-active, .fade-leave-active{
+            transition:opacity 2s;
+        }
+        .fade-enter, .fade-leave-to{
+            opacity:0;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+    <div id="demo">
+        <button v-on:click="show = !show">
+            Toggle
+        </button>
+        <transition name="fade">
+        <div id="hello" v-if="show">
+            hello World
+        </div>
+        </transition>
+    </div>
+</div>
+</body>
+<script src="vue.js"></script>
+<script>
+    new Vue({
+        el:"#app",
+        data:{
+            show:true
+        }
+    });
+</script>
+</html>
