@@ -98,8 +98,7 @@
     var oProduct_div = oProduct.getElementsByTagName("div");
     for(var i=0;i<oProduct_div.length;i++) {
         oProduct_div[i].onclick = function () {
-            //this.style.borderCcolor = 'red';
-            console.log(oProduct_div[i]);
+           console.log(i);
         }
     }
 })();
