@@ -70,10 +70,16 @@
     <h3>娱乐新闻</h3>
 </div>
 <script src="jquery-1.11.2.js"></script>
+<script src="jquery.cookie.js"></script>
 <script>
     $(function(){
+        var skin = $.cookie('this.id');
+        if(skin) {
+            $("#skinChange").attr("href", 'css/' + skin+ '.css');
+        }
         $("#choice li").on("click",function(){
             $("#skinChange").attr("href",'css/'+this.id+'.css');
+            $.cookie('this.id',this.id,{expires:30});
         });
     });
 </script>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>jqCookie</title>
+</head>
+<body>
+
+</body>
+<script src="jquery-1.11.2.js"></script>
+<script src="jquery.cookie.js"></script>
+<script>
+    $(function(){
+        $.cookie('name','zhoufangbing',{expires:30});
+        console.log($.cookie("name"));
+        $.cookie("name","zhoufangbing",{expires:-1});
+        console.log($.cookie("name"));
+
+
+    });
+</script>
+</html>

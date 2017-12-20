@@ -123,7 +123,7 @@ ul li{
 #main{
     position:relative;
     width:1350px;
-    left:-800px;
+    left:-790px;
     /*从自己正对着下方往左移动*/
     height:130px;
     background:white;
@@ -301,7 +301,7 @@ ul li{
     position:absolute;
     background:#ff6504;
     margin-top:10px;
-    left:10%;
+    left:6%;
     color:white;
 }
 #first,#second,#third,#fourth,#fifth{
@@ -668,7 +668,7 @@ ul li{
     /*固定顶部的搜索框要在所有的最上方*/
 }
 #fix{
-    height:1400px;
+    height:150px;
 }
 #top img{
     position:relative;
@@ -734,3 +734,109 @@ ul li{
     padding-left:3px;
     /*输入文字不顶格*/
 }
+#fix img{
+    width: 380px;
+    height: 212px;
+    position:absolute;
+    right:0;
+    top:584px;
+}
+#Footer{
+    background: #ffb4a8;
+    width:100%;
+    height:120px;
+    position:relative;
+    bottom:0;
+    right:0;
+    overflow:hidden;
+    padding-top:40px;
+}
+.first-line .triangular{
+    width:0;
+    height:0;
+    border:5px solid;
+    position:relative;
+    top:10px;
+    left:-3px;
+    border-color:black transparent transparent transparent;
+}
+.first-line li{
+    float:left;
+    margin-left:10px;
+    /*color:#ccc;*/
+}
+.first-line li:hover{
+    color:red;
+}
+.first-line{
+    width: 1000px;
+    height: 30px;
+    position:absolute;
+    margin-left:300px;
+}
+#Footer .last-line li{
+    float:left;
+    margin-left:10px;
+}
+#Footer .last-line li:hover{
+    color:red;
+}
+#Footer .last-line{
+    width: 600px;
+    height: 30px;
+    margin-top:30px;
+    position:absolute;
+    margin-left:400px;
+}
+#more .detail{
+    width: 70px;
+    height: 80px;
+    background: #FFF;
+    display:none;
+    color:black;
+    border:1px solid black;
+}
+.first-line #more:hover .detail{
+    display:block;
+}
+#more{
+    height:100px;
+}
+#product div{
+    width: 250px;
+    height: 330px;
+    border:1px solid #ccc;
+    float:left;
+    margin-left:16px;
+    margin-top:10px;
+}
+#product{
+    width: 1349px;
+    height: 700px;
+}
+#product img{
+    width: 250px;
+    height: 250px;
+}
+#product .store{
+    float:left;
+    color:#815f53;
+    margin:0 10px;
+}
+#product .person{
+    float:right;
+    color:#815f53;
+    margin:0 10px;
+}
+#product .price{
+    color:red;
+    margin:0 10px;
+}
+#product .name{
+    margin:0 10px;
+}
+#product h1{
+    margin-left: 50%
+
+}
+

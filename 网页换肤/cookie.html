@@ -7,4 +7,36 @@
 <body>
 
 </body>
+<script>
+
+    function addCookie(name,value,expires){
+        if(expires != undefined){
+            var now = new Date();
+            now.setDate(now.getDate()+expires);
+            document.cookie = name+ '='+value+';expires ='+now.toUTCString();
+        }else{
+            document.cookie = name+'='+value;
+        }
+    }
+    addCookie('age','12',10);
+
+    function getCookie(name){
+        var arr =  document.cookie.split(';');//把一堆cookie分割开来，以每组为单位
+        for(var i = 0;i<arr.length;i++){
+            var temp = arr[i].split('=');//name=张三分成 name 张三
+            if(temp[0].trim()==name){//去掉空格 去除 name
+                return temp[1];
+            }
+        }
+    }
+    console.log(getCookie('age'));
+
+    //删除把过期时间调到当前时间之前就可以删除
+    function delCookie(name,value){
+       var now = new Date();
+        now.setDate(now.getDate()-10);
+        document.cookie = name+ '='+value+';expires ='+now.toUTCString();
+    }
+    delCookie('age',12);
+</script>
 </html>
