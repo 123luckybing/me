@@ -96,9 +96,12 @@
 
     var oProduct = document.getElementById("product");
     var oProduct_div = oProduct.getElementsByTagName("div");
-    for(var i=0;i<oProduct_div.length;i++) {
-        oProduct_div[i].onclick = function () {
-           console.log(i);
-        }
+    for(var a=0;a<oProduct_div.length;a++) {
+        oProduct_div[a].onmouseover = function(){
+            this.style.borderColor = 'red';
+        };
+        oProduct_div[a].onmouseout = function(){
+            this.style.borderColor = '#f1f1f1';
+        };
     }
 })();
