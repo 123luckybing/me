@@ -1,0 +1,210 @@
+*{
+    margin:0;
+    padding:0;
+}
+#nav{
+    width:100%;
+    height: 100px;
+    position:relative;
+    background: white;
+}
+#left{
+    height: 50px;
+    width: 30px;
+    position:absolute;
+    left:5%;
+    top:30px;
+}
+#center{
+    height:50px;
+    width:50px;
+    /*margin:10px auto;*/
+    position:absolute;
+    left:45%;
+    top:30px;
+}
+#right{
+    height: 40px;
+    position:absolute;
+    right:5%;
+    top:40px;
+}
+#right a{
+    color:#b89f7a;
+    font-weight:bolder;
+}
+#img{
+    width:100%;
+    position:relative;
+}
+#img img{
+    width:100%;
+}
+#last{
+    display:none;
+}
+a{
+    text-decoration:none;
+}
+#img span{
+    color:rgb(255,255,255);
+    position:absolute;
+    right:4%;
+    bottom:2%;
+    font-size:18px;
+    font-weight:bolder;
+}
+#login{
+    height: 220px;
+    width: 100%;
+    background: #000;
+    position:relative;
+}
+.star-enjoy{
+    color:#ffffff;
+    width:30%;
+    position:absolute;
+    left:26%;
+    top:60px;
+}
+#club{
+    color:#ffffff;
+    width: 50%;
+    height: 110px;
+    position:absolute;
+    right:3%;
+    top:55px;
+}
+.dif-color{
+    color:#a98e67;
+}
+#club .btn{
+    width:114px;
+    height: 50px;
+    border:3px solid #a98e67;
+    float:left;
+    margin-left:10px;
+    font-size:18px;
+    margin-top:10px;
+    line-height:50px;
+    text-align:center;
+}
+#club .btn:hover{
+    background:#a98e67;
+}
+#club a:hover{
+    color:#ffffff;
+}
+#club .learn-more{
+    position:absolute;
+    top:130px;
+    margin-left:10%;
+}
+#club h1{
+    left:18%;
+    top:10px;
+}
+#load img{
+    width: 100%;
+}
+#load{
+    width: 100%;
+}
+#load .last{
+    display:none;
+    width:100%;
+    position:relative;
+}
+#load .last span{
+    width: 80%;
+    position:absolute;
+    left:10%;
+    bottom:100px;
+    text-align:center;
+}
+#load .last h2{
+    position:absolute;
+    width: 60%;
+    left:40%;
+    bottom:80px;
+}
+#load .last h2:hover{
+  text-decoration:underline;
+    color:darkred;
+}
+#load .last button{
+    width: 150px;
+    height:60px;
+    background:#00af66;
+    border-radius:30%;
+    position:absolute;
+    bottom:10px;
+    left:50%;
+    margin-left:-75px;
+}
+#load .last button a h3,h4{
+    color:#ffffff;
+}
+#two-img{
+    width: 100%;
+}
+#two-img .first-img{
+    width: 50%;
+    float:left;
+    position:relative;
+}
+#two-img .second-img{
+    width: 50%;
+    float:left;
+    position:relative;
+}
+#two-img .first-span{
+    position:absolute;
+    left:50%;
+    margin-left:-90px;
+    bottom:20px;
+}
+.first-img img , .second-img img{
+    width: 100%;
+}
+#two-img .second-span{
+    position:absolute;
+    left:50%;
+    margin-left:-90px;
+    bottom:5px;
+}
+#two-img .first-img h2{
+    width: 180px;
+    height: 36px;
+    color:red;
+}
+#two-img .second-img h2{
+    width: 180px;
+    height: 36px;
+    color:#ffffff;
+}
+#two-img .second-img h5{
+    width: 180px;
+    height: 36px;
+    color:#a98e67;
+    margin-left:20px;
+}
+#two-img h5{
+    width: 120px;
+    height: 15px;
+}
+/*body{*/
+    /*position:relative;*/
+/*}*/
+#left-nav{
+    width: 270px;
+    height: 638px;
+    background: #000000;
+    opacity:0.8;
+    filter:alpha(opacity=80);
+    display:none;
+    z-index:999;
+    position:absolute;
+    left:0;
+    top:0;
+}

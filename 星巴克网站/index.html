@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>首页 | 星巴克</title>
+    <link rel="stylesheet" href="index.css"/>
+    <link rel="shortcut icon" href="img/main.PNG"/>
+    <style>
+        @media(max-width:768px) {
+            #right {
+                font-size: 12px;
+            }
+            #load .pre{
+                display:none;
+            }
+            #load .last{
+                display:block;
+            }
+            #two-img .first-img,#two-img .second-img{
+                width: 100%;
+            }
+        }
+        @media(max-width:861px){
+           #login .star-enjoy h1,h2,h3{
+              font-size:16px;
+            }
+            #login .star-enjoy{
+                  width:60%;
+                 left:40%;
+              }
+            #club{
+                width:60%;
+                top:200px;
+                left:30%;
+            }
+            #club h1{
+                font-size:18px;
+                position:absolute;
+                left:18%;
+                top:-30px;
+            }
+            #club .btn{
+                width: 80%;
+            }
+            #club .learn-more{
+                width:80%;
+                margin-top:80px;
+                left:22%;
+            }
+            #login{
+                height:450px;
+                position:relative;
+            }
+        }
+        @media(max-width:991px){
+            /*首页大图片横竖切换，两张图片，一张横的一张竖的*/
+            #preverse{
+                display:none;
+            }
+            #last{
+                display:block;
+            }
+            #img span{
+                font-size:14px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div id="nav">
+    <div id="left">
+        <img src="img/menu.PNG" alt=""/>
+        <h6>菜单</h6>
+    </div>
+    <img src="img/main.PNG" alt="" id="center"/>
+    <div id="right">
+        <span>星享俱乐部</span><br>
+        <span><a href="">登录</a> 或 <a href="">注册</a></span>
+    </div>
+</div>
+<div id="left-nav">
+
+</div>
+<div id="img">
+    <img src="img/indexPicture.jpg" alt="" id="preverse"/>
+    <img src="img/indexPictureLong.jpg" alt="" id="last"/>
+    <a href=""><span>了解更多>></span></a>
+</div>
+<div id="login">
+    <div class="star-enjoy">
+        <h1>星享卡</h1>
+        <h2>My StarBucks</h2>
+        <h3>REWARDS</h3>
+    </div>
+    <div id="club">
+        <h1>星享俱乐部</h1>
+        <p>开启您的星享之旅，星星越多，会员等级越高，好礼越丰富</p>
+        <div class="btn dif-color"><a href="">登录</a></div>
+        <div class="btn dif-color"><a href="">注册</a></div>
+        <h3 class="dif-color learn-more">了解更多>></h3>
+    </div>
+</div>
+<div id="load">
+    <img src="img/erweima.PNG" alt="" class="pre"/>
+    <div class="last">
+        <img src="img/download.png" alt=""/>
+        <span>下载全新星巴克中国官方APP，开启更便捷的星巴克体验。</span>
+        <a href=""><h2>了解更多>></h2></a>
+        <button><a href="">
+           <h3>星巴克APP</h3><br>
+            <h4>下载</h4>
+        </a></button>
+    </div>
+</div>
+<div id="two-img">
+    <div class="first-img">
+        <img src="img/left.jpg" alt="" class="left"/>
+        <span class="first-span">
+            <h2>留住冬日梦幻</h2>
+            <h5>星巴克天猫旗舰店</h5>
+        </span>
+    </div>
+    <div class="second-img">
+        <img src="img/right.jpg" alt="" class="right"/>
+        <span class="second-span">
+            <h2>如天鹅绒般丝滑</h2>
+            <h5>气质冷却咖啡</h5>
+        </span>
+    </div>
+</div>
+<script src="require.js" data-main="index.js"></script>
+</body>
+</html>
