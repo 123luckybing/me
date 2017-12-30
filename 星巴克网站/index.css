@@ -217,7 +217,7 @@ a{
 }
 #nav-top{
     margin-top:20px;
-    bottom-
+    border-bottom:1px white;
 }
 #nav-top li{
     color:#b89f7a;
