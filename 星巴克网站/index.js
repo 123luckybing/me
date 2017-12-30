@@ -22,16 +22,10 @@ require(["jquery"],function($){
             }
         })
     $("#left img").on("click",function(){
-        $("#left-nav").fadeIn(500);
+        $("#left-nav").css("display","block");
+        $("#left-nav .nav").fadeIn(1000);
     });
-    //$(document).on("click",function(){
-    //    var e =e||window.event;//浏览器兼容
-    //    var elem = e.target|| e.srcElement;//获取当前事件源
-    //    while(elem){
-    //       if(elem.id != 'left-nav'){
-    //           $("#left-nav").fadeOut(500);
-    //       }
-    //   }
-    //});
+    $("#left-nav").on("click",function(){
+        $("#left-nav").css("display","none");
     });
-
+    });
