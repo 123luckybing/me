@@ -32,9 +32,9 @@ require(["jquery"],function($){
     $(".title").on("click",function(event){
         event.stopPropagation();
         if(flag==false){
-            $(this).siblings().slideDown(1000);
+            $(this).siblings().slideDown(500);
         }else{
-            $(this).siblings().slideUp(1000);
+            $(this).siblings().slideUp(500);
         }
         flag=!flag;
     });
