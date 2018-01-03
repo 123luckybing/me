@@ -1,0 +1,127 @@
+li{
+    list-style:none;
+}
+#footer{
+    width: 100%;
+    height: 792px;
+    background: #292929;
+    overflow:hidden;
+    position:relative;
+}
+#container{
+    width:100%;
+    margin-top:50px;
+    margin-left:7%;
+    height: 792px;
+}
+#container h3{
+    color:white;
+    margin-top:10px;
+}
+#container li{
+    color:#c9c9c9;
+    margin-top:10px;
+}
+#news,#menu,#star-card,#gift-card,#about,#quick-link,#problem,#ma{
+    width: 20%;
+    height: 250px;
+    float:left;
+    margin-right:5%;
+}
+#ma .ma{
+    width: 100px;
+    height: 100px;
+}
+#ma .iphone{
+    width: 25px;
+    height: 25px;
+    margin-left:20px;
+    margin-right:0;
+}
+#ma .android{
+    width: 25px;
+    height: 25px;
+}
+#ma p{
+    color:white;
+    margin-left:5px;
+}
+#footer-bottom p{
+    color:#c9c9c9;
+    font-size:14px;
+}
+#footer-bottom p:hover{
+    text-decoration: underline;
+}
+#footer-bottom{
+    width: 70%;
+    height:130px;
+    overflow:hidden;
+    position:absolute;
+    bottom:20px;
+    left:7%;
+}
+#footer-bottom .bottom-img{
+     float:left;
+ }
+#footer-bottom .footer-bottom-left{
+    width: 50%;
+    height:50px;
+    position:relative;
+}
+#footer-bottom .office{
+    float:right;
+    position:absolute;
+    left:25px;
+}
+.footer-bottom-right {
+    position:relative;
+    left:80%;
+    bottom:20px;
+}
+.footer-bottom-right img{
+    width: 40px;
+    height: 40px;
+}
+#footer-top-last{
+    display:none;
+    color:white;
+    width: 100%;
+    position:relative;
+    top:10px;
+}
+#footer-new-product .title,#footer-food .title,#footer-star-card .title ,#footer-star-gift .title{
+    position:relative;
+}
+#footer-new-product .title .left{
+    font-size:18px;
+}
+#footer-star-gift .title .left{
+    font-size:18px;
+}
+#footer-new-product,#footer-food,#footer-star-card,#footer-star-gift{
+    margin-top:20px;
+}
+#footer-food .title .left{
+    font-size:18px;
+}
+#footer-star-card .title .left{
+    font-size:18px;
+}
+.footer-product-detail,.footer-food-detail,.footer-star-card-detail,.footer-star-gift-detail{
+    position:absolute;
+    left:5%;
+    display:none;
+}
+#footer-new-product .tran,#footer-food .tran,#footer-star-card .tran,#footer-star-gift .tran{
+    width: 0;
+    height: 0;
+    border:5px solid;
+    float:right;
+    top:10px;
+    right:15%;
+    color:white;
+    position:absolute;
+    border-color:white transparent transparent transparent;
+}
+
