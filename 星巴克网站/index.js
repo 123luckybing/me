@@ -20,12 +20,22 @@ require(["jquery"],function($){
         }else{
                 $("#nav").slideDown(500);
             }
-        })
-    $("#left img").on("click",function(){
-        $("#left-nav").css("display","block");
-        $("#left-nav .nav").fadeIn(1000);
+        });
+
+    $("#left").on("click",function(){
+        $("#left-nav").fadeIn(1000);
     });
-    $("#left-nav").on("click",function(){
-        $("#left-nav").css("display","none");
+    $("#left-nav").on("click",function(event){
+        $("#left-nav").fadeOut(1000);
+    });
+    var flag = false;//ºÏÉÏµÄ
+    $(".title").on("click",function(event){
+        event.stopPropagation();
+        if(flag==false){
+            $(this).siblings().slideDown(1000);
+        }else{
+            $(this).siblings().slideUp(1000);
+        }
+        flag=!flag;
     });
     });

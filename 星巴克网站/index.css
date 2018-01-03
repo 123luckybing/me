@@ -195,7 +195,7 @@ a{
 }
 .nav{
     width: 270px;
-    height: 638px;
+    height: 700px;
     background: #000000;
     opacity:0.8;
     filter:alpha(opacity=80);
@@ -212,12 +212,13 @@ a{
     right:0;
     bottom:0;
     background:rgba(0,0,0,0.5);
-    /*display:none;*/
+    display:none;
     z-index:222;
 }
+
 #nav-top{
     margin-top:20px;
-    border-bottom:1px white;
+    border-bottom:2px solid whitesmoke;
 }
 #nav-top li{
     color:#b89f7a;
@@ -230,4 +231,120 @@ a{
 }
 #nav-top li:hover{
     color:#ffffff;
+}
+.index{
+    color:#ffffff;
+    position:relative;
+    width:100%;
+    height:30px;
+    line-height: 30px;
+    font-size:16px;
+    padding:0 20px;
+    top:20px;
+}
+#left-nav .nav{
+    overflow:scroll;
+}
+#new-product .left:hover{
+     color:#b89f7a;
+ }
+#coffee .left:hover{
+    color:#b89f7a;
+}
+#food .left:hover{
+    color:#b89f7a;
+}
+#about-us .left:hover{
+    color:#b89f7a;
+}
+#help-center .left:hover{
+    color:#b89f7a;
+}
+#star-move .left:hover{
+    color:#b89f7a;
+}
+#new-product{
+    position:relative;
+}
+#new-product .tran:hover{
+    color:#b89f7a;
+}
+.index:hover{
+    color:#b89f7a;
+}
+.nav .tran{
+    width: 0;
+    height: 0;
+    border:5px solid;
+    float:right;
+    top:13px;
+    right:20px;
+    color:white;
+    position:absolute;
+    border-color:white transparent transparent transparent;
+}
+#new-product .title ,#star-move .title ,#coffee .title,#food .title,#about-us .title,#help-center .title{
+    color:white;
+    list-style:none;
+    position:relative;
+    width:100%;
+    height:30px;
+    line-height: 30px;
+    font-size:16px;
+}
+.nav .left{
+    float:left;
+    width: 50%;
+    margin-left:20px;
+    color:white;
+}
+ .product-detail li,.star-detail li{
+    color:grey;
+    padding:5px 40px;
+}
+.product-detail{
+    display:none;
+}
+#new-product .product-detail li:hover{
+    color:#b89f7a;
+}
+#star-move .star-detail li:hover{
+    color:#b89f7a;
+}
+#coffee .star-detail li:hover{
+    color:#b89f7a;
+}
+#food .star-detail li:hover{
+    color:#b89f7a;
+}
+#about-us .star-detail li:hover{
+    color:#b89f7a;
+}
+#help-center .star-detail li:hover{
+    color:#b89f7a;
+}
+#new-product{
+    margin-top:20px;
+    position:relative;
+}
+#star-move{
+    margin-top:25px;
+}
+#star-move .star-detail{
+    display:none;
+}
+#coffee .star-detail{
+    display:none;
+}
+#food .star-detail{
+    display:none;
+}
+#help-center .star-detail{
+    display:none;
+}
+#about-us .star-detail{
+    display:none;
+}
+#coffee{
+    margin-top:20px;
 }
