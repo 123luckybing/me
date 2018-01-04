@@ -90,16 +90,28 @@ li{
     position:relative;
     top:10px;
 }
-#footer-new-product .title,#footer-food .title,#footer-star-card .title ,#footer-star-gift .title{
+#footer-top-last li:hover{
+    color:#b89f7a;
+}
+#footer-new-product .title,#footer-food .title,#footer-star-card .title ,#footer-star-gift .title ,#footer-about-starBucks .title ,#footer-quick-link .title,#footer-problem .title{
     position:relative;
 }
 #footer-new-product .title .left{
     font-size:18px;
 }
+#footer-problem .title .left{
+    font-size:18px;
+}
+#footer-quick-link .title .left{
+    font-size:18px;
+}
+#footer-about-starBucks .title .left{
+    font-size:18px;
+}
 #footer-star-gift .title .left{
     font-size:18px;
 }
-#footer-new-product,#footer-food,#footer-star-card,#footer-star-gift{
+#footer-new-product,#footer-food,#footer-star-card,#footer-star-gift,#footer-about-starBucks ,#footer-quick-link,#footer-problem{
     margin-top:20px;
 }
 #footer-food .title .left{
@@ -108,12 +120,11 @@ li{
 #footer-star-card .title .left{
     font-size:18px;
 }
-.footer-product-detail,.footer-food-detail,.footer-star-card-detail,.footer-star-gift-detail{
-    position:absolute;
+.footer-product-detail,.footer-food-detail,.footer-star-card-detail,.footer-star-gift-detail,.footer-about-starBucks-detail,.footer-about-starBucks-detail ,.footer-problem-detail{
     left:5%;
     display:none;
 }
-#footer-new-product .tran,#footer-food .tran,#footer-star-card .tran,#footer-star-gift .tran{
+#footer-new-product .tran,#footer-food .tran,#footer-star-card .tran,#footer-star-gift .tran,#footer-about-starBucks .tran ,#footer-quick-link .tran ,#footer-problem .tran{
     width: 0;
     height: 0;
     border:5px solid;
@@ -124,4 +135,5 @@ li{
     position:absolute;
     border-color:white transparent transparent transparent;
 }
+
 

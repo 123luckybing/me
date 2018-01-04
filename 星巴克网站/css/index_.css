@@ -313,3 +313,39 @@ a{
 #coffee{
     margin-top:20px;
 }
+#starbucks-reseve{
+    width: 100%;
+    height: 605px;
+    background: #000;
+    overflow:hidden;
+    position:relative;
+}
+#starbucks-reseve img{
+    position:absolute;
+    left:10%;
+    top:80px;
+}
+#starbucks-reseve .cell{
+    width: 40%;
+    position:absolute;
+    right:5%;
+    top:250px;
+    color:#ffffff;
+}
+.cell h3 ,.learn ,.buy-here{
+    color:#b89f7a;
+}
+.cell div{
+    width: 145px;
+    height: 50px;
+    border:2px solid #b89f7a;
+    float:left;
+    line-height:50px;
+    text-align:center;
+    margin-right:20px;
+    margin-left:auto;
+}
+.cell div:hover{
+    background: #b89f7a;
+    color:#ffffff;
+}

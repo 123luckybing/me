@@ -25,11 +25,11 @@ require(["jquery"],function($){
     $("#left").on("click",function(){
         $("#left-nav").fadeIn(1000);
     });
-    $("#left-nav").on("click",function(event){
+    $("#left-nav").on("click",function(){
         $("#left-nav").fadeOut(1000);
     });
     var flag = false;//ºÏÉÏµÄ
-    $(".title").on("click",function(event){
+    $("#left-nav .title").on("click",function(event){
         event.stopPropagation();
         if(flag==false){
             $(this).siblings().slideDown(500);
@@ -38,4 +38,24 @@ require(["jquery"],function($){
         }
         flag=!flag;
     });
+//Footer
+        var flag1 = false;
+
+    $("#footer-top-last .title").on("click",function(){
+        if(flag1==false) {
+            var ulh =  $(this).siblings().height();
+            $(this).siblings().slideDown(500);
+           //$("#footer").css("height",
+           //    $(this).height()+ ulh);
+            $(this).css({
+                color:"#b89f7a"
+            });
+        }else{
+            $(this).siblings().slideUp(500);
+            $(this).css("color","#ffffff");
+        }
+        console.log($("#footer").height());
+        flag1 = !flag1;
+    });
+
     });
