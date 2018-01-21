@@ -2,74 +2,57 @@
     margin:0;
     padding:0;
 }
-a{
-    text-decoration: none;
-}
-#top{
-    width:50px;
-    height:50px;
-    background:#f6f6f6;
-    border-radius: 50%;
-    border:2px solid lightgrey;
-    font-size:25px;
-    color:grey;
-    text-align: center;
-    line-height:50px;
-    position:fixed;
-    right:10px;
-    bottom:10px;
-}
-#return{
-    width:55px;
-    height:55px;
-    background:#f6f6f6;
-    font-size: 15px;
-    color:grey;
-    position:fixed;
-    right:10px;
-    bottom:65px;
-    border-radius:50%;
-    border:1px solid lightgrey;
-}
-#return .letter{
-    top:7px;
-    position:absolute;
-    left:12px;
-}
-#nav img{
-    width:80px;
-    height:80px;
-    position:absolute;
-    top:15px;
-    left:28%;
-    border-radius: 50%;
-}
-#nav{
+#header{
     width:100%;
-    height:120px;
+    height:160px;
+    background:url(img/banner.gif);
     position:relative;
-    background:#ffe4dd;
+    overflow:hidden;
 }
-#nav span{
-    width:40%;
-    height:55px;
-    position: absolute;
-    top:10px;
-    text-align:justify;
-    right:25%;
+#header p{
+    font-size:13px;
+    margin-top:35px;
+    margin-left:50px;
 }
-#honer{
-    height:1000px;
+#header .top{
+    color:black;
 }
-#honer .left{
-    width:30%;
-    height:350px;
-    background:#ffe4dd;
+#header .buttom{
+    color:#808080;
+}
+#header img{
     position:absolute;
-    left:5%;
+    right:2px;
+    top:10px;
 }
-#honer .left .total{
-    margin:0 auto;
-    width:40%;
+#content{
+    width: 100%;
+    height: 1000px;
+    background: url(img/bg.gif) top left repeat-x #e9f1f8;
+}
+#left{
+    width:222px;
+    height:500px;
+    border:1px dashed black;
+    margin-left:10px;
+}
+#left .org,#left .post{
+    width:100%;
+    height:100px;
+    margin-top:20px;
     position:relative;
+}
+#left .org img,#left .post img{
+    margin-left:5px;
+}
+#left .org h4,#left .post h4{
+    position:absolute;
+    top:0;
+    left:39px;
+    color:#676767;
+}
+#left .org h5,#left .post h5{
+    color:#808080;
+    margin-left:10px;
+    margin-top:5px;
 }
