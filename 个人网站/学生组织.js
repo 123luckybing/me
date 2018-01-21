@@ -60,5 +60,31 @@
     };
     Page_fourth_big.onclick = function(){
         this.style.display="none";
-    }
+    };
+
+    var Down1= document.getElementsByClassName("down1")[0];
+    var Down2= document.getElementsByClassName("down2")[0];
+    var Down3= document.getElementsByClassName("down3")[0];
+    var Reg =  document.getElementsByClassName("reg")[0];
+    var Total_st =  document.getElementsByClassName("total_st")[0];
+    var Total_nd=  document.getElementsByClassName("total_nd")[0];
+    console.log(Down1);
+    Down1.onclick = function(){
+        Reg.style.display='block';
+    };
+    Reg.onclick =function(){
+        this.style.display = 'none';
+    };
+    Down2.onclick = function(){
+        Total_st.style.display='block';
+    };
+    Total_st.onclick =function(){
+        this.style.display = 'none';
+    };
+    Down3.onclick = function(){
+        Total_nd.style.display='block';
+    };
+    Total_nd.onclick =function(){
+        this.style.display = 'none';
+    };
 })();
