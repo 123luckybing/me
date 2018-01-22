@@ -28,6 +28,10 @@
     var twoDown = document.getElementById("twoDown");
     var activity = document.getElementById("activity");
     var match = document.getElementById("match");
+    var money = document.getElementById("money");
+    var volenteer =document.getElementById("volenteer");
+    var English =document.getElementById("English");
+    var car =document.getElementById("car");
     window.onscroll = function() {
         var t = document.documentElement.scrollTop||document.body.scrollTop;
         if(t>0){
@@ -46,6 +50,21 @@
         }if(t>1800){
             activity.style.left = " 600px ";
             activity.style.transition = "left 1s ease";
+        }if(t>2400){
+            match.style.left = " 600px ";
+            match.style.transition = "left 1s ease";
+        }if(t>2900){
+            money.style.left = " 600px ";
+            money.style.transition = "left 1s ease";
+        }if(t>3700){
+            volenteer.style.left = " 600px ";
+            volenteer.style.transition = "left 1s ease";
+        }if(t>4400){
+            English.style.left = " 600px ";
+            English.style.transition = "left 1s ease";
+        }if(t>5100){
+            car.style.left = " 600px ";
+            car.style.transition = "left 1s ease";
         }
     };
 })();

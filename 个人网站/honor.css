@@ -83,7 +83,7 @@ a:hover{
     float:left;
     margin-top:5px;
 }
-#twoDown,#oneDown,#twoUp,#oneUp,#activity,#match{
+#twoDown,#oneDown,#twoUp,#oneUp,#activity,#match,#money,#volenteer,#English,#car{
     position:absolute;
     left:1300px;
     z-index:100;
@@ -99,7 +99,7 @@ a:hover{
     padding: 15px;
     right:-100px;
 }
-#twoDown img , #oneDown img,#oneUp img,#twoUp img,#activity img,#match img{
+#twoDown img ,#English img,#car img, #oneDown img,#oneUp img,#twoUp img,#activity img,#match img,#money img,#volenteer img{
     position:absolute;
     width: 500px;
     height: 400px;
@@ -125,7 +125,19 @@ a:hover{
 #match{
     top:2900px;
 }
-#oneUp h4,#oneDown h4,#twoUp h4,#twoDown h4,#activity h4,#match h4{
+#money{
+   top:3500px;
+}
+#volenteer{
+   top:4100px;
+}
+#English{
+    top:4700px;
+}
+#car{
+    top:5300px;
+}
+#oneUp h4,#oneDown h4,#twoUp h4,#twoDown h4,#activity h4,#match h4,#money h4,#volenteer h4,#English h4,#car h4{
     color:orange;
 }
 
