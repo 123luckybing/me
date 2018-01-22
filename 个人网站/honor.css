@@ -1,0 +1,132 @@
+*{
+    margin:0;
+    padding:0;
+}
+#header{
+    position:absolute;
+    top:50px;
+    left:200px;
+    width: 250px;
+    height: 192px;
+    border-radius:3px;
+    color: #777;
+    text-shadow: 0 1px #fff;
+    background: rgba(255,255,255,0.9);
+    -webkit-box-shadow: 0 -1px 4px #ccc inset;
+    box-shadow: 0 -1px 4px #ccc inset;
+    border: 1px solid #ccc;
+    padding: 15px;
+}
+#background img{
+    width: 100%;
+    height: 100%;
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    display:none;
+}
+#background .appear{
+    display:block;
+}
+#header h3,#header h4 ,#header h5{
+    color:#777;
+    padding:5px;
+    text-align:center;
+}
+#header ul{
+    margin-top:20px;
+}
+#header li{
+    list-style:none;
+    float:left;
+    width:80px;
+    margin-left:30px;
+}
+a{
+    text-decoration:none;
+}
+a:hover{
+    text-decoration:underline;
+}
+#list{
+    position:fixed;
+    top:320px;
+    left:200px;
+    width: 250px;
+    height: 392px;
+    border-radius:3px;
+    color: #777;
+    text-shadow: 0 1px #fff;
+    background: rgba(255,255,255,0.9);
+    -webkit-box-shadow: 0 -1px 4px #ccc inset;
+    box-shadow: 0 -1px 4px #ccc inset;
+    border: 1px solid #ccc;
+    padding: 15px;
+}
+#list img{
+    width: 112px;
+    height: 112px;
+    border-radius:50%;
+    margin-left:70px;
+    margin-top:10px;
+}
+#list h4{
+    text-align:center;
+    color: #777;
+    margin-top:5px;
+}
+#list li{
+    list-style:none;
+    margin-left:10px;
+    float:left;
+    margin-top:5px;
+}
+#twoDown,#oneDown,#twoUp,#oneUp,#activity,#match{
+    position:absolute;
+    left:1300px;
+    z-index:100;
+    width: 607px;
+    height: 500px;
+    border-radius:10px;
+    color: #777;
+    text-shadow: 0 1px #fff;
+    background: rgba(255,255,255,0.9);
+    -webkit-box-shadow: 0 -1px 4px #ccc inset;
+    box-shadow: 0 -1px 4px #ccc inset;
+    border: 1px solid #ccc;
+    padding: 15px;
+    right:-100px;
+}
+#twoDown img , #oneDown img,#oneUp img,#twoUp img,#activity img,#match img{
+    position:absolute;
+    width: 500px;
+    height: 400px;
+    margin-left:50px;
+    margin-top:30px;
+    border:1px solid black;
+}
+#twoDown{
+    top:1750px;
+}
+#oneUp{
+    top:50px;
+}
+#oneDown{
+    top:650px;
+}
+#twoUp{
+    top:1200px;
+}
+#activity{
+    top:2300px;
+}
+#match{
+    top:2900px;
+}
+#oneUp h4,#oneDown h4,#twoUp h4,#twoDown h4,#activity h4,#match h4{
+    color:orange;
+}
+
+
