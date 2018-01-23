@@ -3,7 +3,7 @@
     padding:0;
 }
 #header{
-    position:absolute;
+    position:fixed;
     top:50px;
     left:200px;
     width: 250px;

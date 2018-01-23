@@ -1,0 +1,88 @@
+*{
+    margin:0;
+    padding:0;
+}
+#background{
+    position:fixed;
+    top:0;
+    right:0;
+    left:0;
+    bottom:0;
+    background:url(img/s03_bg.png);
+    overflow:scroll;
+}
+#background img{
+    position:relative;
+    width: 500px;
+    height: 400px;
+}
+#background h1{
+    color:white;
+    position:absolute;
+    font-size:35px;
+    top:30%;
+    left:12%;
+    transform:translate(50%,50%);
+}
+#background h2{
+    color:white;
+    font-size:20px;
+    position:absolute;
+    top:40%;
+    left:5%;
+    transform:translate(50%,50%);
+}
+#right{
+    width:800px;
+    top:20px;
+    right:30px;
+    position:relative;
+    left:500px;
+    color:white;
+}
+#first{
+    width: 700px;
+    height: 250px;
+    position:absolute;
+    top:20px;
+    left:30px;
+}
+#second{
+    width: 700px;
+    height: 250px;
+    position:absolute;
+    top:270px;
+    left:30px;
+}
+#third{
+    width: 700px;
+    height: 250px;
+    position:absolute;
+    top:520px;
+    left:30px;
+}
+#fourth{
+    width: 700px;
+    height: 250px;
+    position:absolute;
+    top:730px;
+    left:30px;
+}
+#first h3,#second h3,#third h3,#fourth h3{
+    width: 500px;
+}
+#first strong,#second strong,#third strong,#fourth strong{
+  position:absolute;
+    top:5px;
+    left:300px;
+}
+#first p,#second p,#third p,#fourth p{
+    float:right;
+    right:30px;
+    top:5px;
+    position:absolute;
+}
+#first h4,#second h4,#third h4,#fourth h4{
+    margin-top:10px;
+    text-align:justify;
+}
