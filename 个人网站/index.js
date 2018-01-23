@@ -21,13 +21,26 @@
                 window.scrollTo(0, iScrollTop -= 100);
             }
         }, 50);
-}
+};
     var oPicture=document.getElementById("picture");
     var oImg=oPicture.getElementsByTagName("img");
     var oButton=document.getElementById("button");
     var oLeft=oButton.getElementsByClassName("left")[0];
     var nowIndex=0;
     var oRight=oButton.getElementsByClassName("right")[0];
+    var timer;
+    function play() {
+         timer = setInterval(function () {
+            oRight.onclick();
+        }, 2000);
+    }
+    play();
+    oPicture.onmouseover = function(){
+        clearInterval(timer);
+    };
+    oPicture.onmouseout = function(){
+        play();
+    };
     oRight.onclick=oLeft.onclick=function(){
         if(this==oLeft){
           nowIndex--;
@@ -46,26 +59,7 @@
         oImg[nowIndex].className="selected";
 };
 
-    //youwenti
-    oRight.onmouseover=oLeft.onmouseover=function() {
-        if (this == oLeft) {
-            nowIndex--;
-            if (nowIndex == -1) {
-                nowIndex = oImg.length - 1;
-            }
-            oLeft.innerHTML = "";
-        } else {
-            nowIndex++;
-            if (nowIndex == oImg.length) {
-                nowIndex = 0;
-            }
-            oRight.innerHTML = "";
-        }
-    }
-    oRight.onmouseout=oLeft.onmouseout=function(){
-
-    }
 
 
 
-})()
+})();
