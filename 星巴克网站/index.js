@@ -40,20 +40,21 @@ require(["jquery"],function($){
     });
 //Footer
         var flag1 = false;
-
+    var h = $("#footer-top-last").height();
+    console.log(h);
     $("#footer-top-last .title").on("click",function(){
         if(flag1==false) {
             $(this).siblings().slideDown(500);
-           //$("#footer").css("height",
-           //    $(this).height()+ ulh);
             $(this).css({
                 color:"#b89f7a"
             });
+            h += 50;
+            $("#footer-top-last").height(h);
+            console.log($("#footer-top-last").height());
         }else{
             $(this).siblings().slideUp(500);
             $(this).css("color","#ffffff");
         }
-        console.log($("#footer").height());
         flag1 = !flag1;
     });
 
