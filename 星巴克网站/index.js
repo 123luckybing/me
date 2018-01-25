@@ -43,7 +43,6 @@ require(["jquery"],function($){
 
     $("#footer-top-last .title").on("click",function(){
         if(flag1==false) {
-            var ulh =  $(this).siblings().height();
             $(this).siblings().slideDown(500);
            //$("#footer").css("height",
            //    $(this).height()+ ulh);

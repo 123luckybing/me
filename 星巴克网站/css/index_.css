@@ -315,6 +315,7 @@ a{
 }
 #starbucks-reseve{
     width: 100%;
+    height: 605px;
     background: #000;
     overflow:hidden;
     position:relative;
@@ -348,3 +349,124 @@ a{
     background: #b89f7a;
     color:#ffffff;
 }
+#starbucks-reseve-last{
+    background: #000;
+    display:none;
+    width:100%;
+    height: 900px;
+    overflow:hidden;
+}
+#starbucks-reseve-last .band{
+    width: 100%;
+    height: 334px;
+    color:white;
+}
+#starbucks-reseve-last h1{
+    color:#a98e67;
+    text-align:center;
+}
+#starbucks-reseve-last p{
+    width:80%;
+    color:#707070;
+    margin-left:10%;
+    margin-top:20px;
+    text-align:justify;
+}
+.band button{
+    width:80%;
+    height:50px;
+    border:3px solid #a98e67;
+    margin-top:30px;
+    margin-left:10%;
+    background: #000;
+    color:#a98e67;
+}
+.band button:hover{
+    color:white;
+    background: #a98e67;
+}
+#wsg{
+    background: #106e4b;
+    width: 100%;
+    height: 222px;
+    overflow:hidden;
+}
+#apple_watch_web{
+    overflow:hidden;
+    height: 220px;
+    width: 100%;
+    background: #fff2e9;
+}
+#collection{
+    width: 100%;
+    height: 646px;
+    overflow:hidden;
+    background: grey;
+}
+#wsg .img{
+    width: 80%;
+    margin-left:10%;
+    margin-top:10px;
+    position:relative;
+}
+#wsg .img img{
+    position:absolute;
+}
+.word{
+    width: 150px;
+    height: 127px;
+    margin-left:5%;
+    margin-top:50px;
+}
+.qrcode{
+    width: 150px;
+    height: 150px;
+    margin-left:35%;
+    margin-top:35px;
+}
+.cup{
+    width: 150px;
+    height:180px;
+    margin-left:60%;
+    margin-top:25px;
+}
+.title{
+    width: 150px;
+    height: 150px;
+    margin-left:85%;
+    margin-top:40px;
+}
+#wsg_last{
+    display:none;
+    height: 382px;
+    background:#106e4b;
+    width: 100%;
+    overflow:hidden;
+    position:relative;
+}
+#wsg_last .word_last{
+    width:35%;
+    position:absolute;
+    left:5%;
+    top:20px;
+}
+#wsg_last .qrcode_last{
+    width:20%;
+    position:absolute;
+    left:55%;
+    top:20px;
+}
+#wsg_last .cup_last{
+    width:35%;
+    position:absolute;
+    left:5%;
+    top:150px;
+}
+#wsg_last .title_last{
+    width:35%;
+    position:absolute;
+    left:55%;
+    top:200px;
+}
+
+
