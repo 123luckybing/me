@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        #content{
+            width: 50px;
+            height: 50px;
+            background: red;
+        }
+    </style>
+</head>
+<body>
+    <button>高度加50</button>
+    <div id="content"></div>
+</body>
+<script src="jquery-1.11.2.js"></script>
+<script>
+   $(function(){
+       var h = $("#content").height();
+       console.log(h);
+       $("button").on("click",function(){
+            h+=50;
+           $("#content").height(h);
+       });
+   });
+</script>
+</html>

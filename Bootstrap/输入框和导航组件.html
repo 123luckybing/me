@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>输入框和导航组件</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+</head>
+<body>
+<div class="container">
+    <!--左添加-->
+    <div class="input-group input-group-xs">
+        <span class="input-group-addon">@</span>
+        <input type="text" class="form-control"/>
+    </div>
+    <!--右添加-->
+    <div class="input-group input-group-sm">
+        <input type="text" class="form-control"/>
+        <span class="input-group-addon">.00</span>
+    </div>
+    <!--两侧添加-->
+    <div class="input-group input-group-lg">
+        <span class="input-group-addon">$</span>
+        <input type="text" class="form-control"/>
+        <span class="input-group-addon">.00</span>
+    </div>
+    <!--左侧使用复选框-->
+    <div class="input-group">
+        <span class="input-group-addon">
+            <input type="checkbox"/>
+        </span>
+        <input type="text" class="form-control"/>
+    </div>
+    <!--右侧使用单选框-->
+    <div class="input-group">
+        <input type="text" class="form-control"/>
+        <span class="input-group-addon">
+            <input type="radio"/>
+        </span>
+    </div>
+    <!--右侧按钮如提交-->
+    <div class="input-group">
+        <input type="text" class="form-control"/>
+        <div class="input-group-btn">
+            <button class="btn btn-default">提交</button>
+        </div>
+    </div>
+    <!--下拉菜单-->
+    <div class="input-group-btn">
+        <button class="btn btn-default" data-toggle="dropdown">
+            选择爱好
+            <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu dropdown-menu-left">
+            <li>001</li>
+            <li>002</li>
+            <li>003</li>
+        </ul>
+    </div>
+</div>
+<pre>
+    导航组件
+</pre>
+<!--基本导航页-->
+<ul class="nav">
+    <li><a href="#">首页</a></li>
+    <li><a href="#">产品一</a></li>
+    <li><a href="#">产品二</a></li>
+</ul>
+<!--首选导航页-->
+<ul class="nav nav-tabs">
+    <li class="active"><a href="#">首页</a></li>
+    <li><a href="#">产品一</a></li>
+    <li><a href="#">产品二</a></li>
+</ul>
+<!--胶囊式-->
+<ul class="nav nav-pills">
+    <li class="active"><a href="#">首页</a></li>
+    <li><a href="#">产品一</a></li>
+    <li><a href="#">产品二</a></li>
+</ul>
+<!--垂直式-->
+<ul class="nav nav-stacked nav-pills">
+    <li class="active"><a href="#">首页</a></li>
+    <li><a href="#">产品一</a></li>
+    <li><a href="#">产品二</a></li>
+</ul>
+<!--两端对齐-->
+<ul class="nav nav-tabs nav-justified">
+    <li class="active"><a href="#">首页</a></li>
+    <li><a href="#">产品一</a></li>
+    <li><a href="#">产品二</a></li>
+    <li><a href="#">产品三</a></li>
+</ul>
+<!--禁用式-->
+<ul class="nav nav-tabs nav-justified">
+    <li class="disabled"><a href="#">首页</a></li>
+    <li><a href="#">产品一</a></li>
+    <li><a href="#">产品二</a></li>
+    <li><a href="#">产品三</a></li>
+</ul>
+<script src="js/jquery-1.11.2.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>
