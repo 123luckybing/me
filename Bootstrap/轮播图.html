@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>轮播图</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+</head>
+<body>
+<div class="container">
+    <!--data-ride="carousel"设置自动播放 5s-->
+<div id="carousel" class="carousel slide" data-ride="carousel" style="width:516px">
+    <!--设置style的宽,图片切换不会有白边-->
+<ol class="carousel-indicators">
+    <!--data-target="#父元素id"-->
+    <li data-target="#carousel" data-slide-to="0"></li>
+    <li data-target="#carousel" data-slide-to="1"></li>
+    <li data-target="#carousel" data-slide-to="2"></li>
+</ol>
+<div class="carousel-inner" style="margin:0 auto;">
+    <!--active默认出现，其他先不出现-->
+    <div class="item active">
+        <img src="../imag/s1.jpg" alt="1"/>
+        <div class="carousel-caption">
+            <h3>我是口红1</h3>
+            <p>我是一只口红</p>
+        </div>
+    </div>
+
+    <div class="item">
+        <img src="../imag/s2.jpg" alt="2"/>
+        <div class="carousel-caption">
+            <h3>我是口红2</h3>
+            <p>我是一只口红</p>
+        </div>
+    </div>
+
+    <div class="item">
+        <img src="../imag/s3.jpg" alt="3"/>
+        <div class="carousel-caption">
+            <h3>我是口红3</h3>
+            <p>我是一只口红</p>
+        </div>
+    </div>
+
+</div>
+    <!--左右两个箭头 href对元素的Id-->
+<a href="#carousel" data-slide="prev" class="carousel-control left">&laquo;</a>
+<a href="#carousel" data-slide="next" class="carousel-control right">&raquo;</a>
+</div>
+</div>
+<script src="js/jquery-1.11.2.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script>
+
+</script>
+</body>
+</html>

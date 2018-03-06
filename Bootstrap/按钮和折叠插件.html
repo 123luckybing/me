@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>按钮和折叠插件</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+</head>
+<body>
+<div class="container">
+    <button class="btn btn-default" data-toggle="button">
+        单个切换
+    </button>
+
+    <div class="btn-group" data-toggle="buttons">
+        <label for="" class="btn btn-default">男
+            <input type="radio" name="sex" value="男"/>
+        </label>
+        <label for="" class="btn btn-default">女
+            <input type="radio" name="sex" value="男"/>
+        </label>
+    </div>
+
+    <div class="btn-group" data-toggle="buttons">
+        <label for="" class="btn btn-default">足球
+            <input type="checkbox" name="hobby" value="足球"/>
+        </label>
+        <label for="" class="btn btn-default">羽毛球
+            <input type="checkbox" name="hobby" value="羽毛球"/>
+        </label>
+        <label for="" class="btn btn-default">球
+            <input type="checkbox" name="hobby" value="球"/>
+        </label>
+        <label for="" class="btn btn-default">毛球
+            <input type="checkbox" name="hobby" value="毛球"/>
+        </label>
+    </div>
+
+    <button class="btn btn-default" id='btn' data-a-text="loading..." style="margin-top:100px" autocomplete="off">
+        开始上传
+    </button>
+
+    <button class="btn btn-default" data-toggle="collapse" data-target="#content" style="margin-top:200px">
+        点击出简介
+    </button>
+    <div class="collapse" id="content">
+        <div class="well">
+            蒋婷，中国内地女演员，歌手，2017年被星探发现，参演电影《舞爱》从而出道。2025年，合作刘诗诗主演电视剧《醉玲珑》获得更多的关注，并凭借角色素锦入围2025最佳配角奖。
+        </div>
+    </div>
+
+    <!--手风琴折叠-->
+    <div class="panel-group" id="parent">
+        <!--1-->
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <div class="panel-title">
+                    <a href="#one" data-toggle="collapse" data-parent="#parent">第一部分链接</a>
+                </div>
+            </div>
+            <div class="panel-collapse collapse" id="one">
+                <div class="panel-body">
+                    第一部分内容
+                </div>
+            </div>
+        </div>
+            <!--2-->
+        <div class="panel-default panel">
+                <div class="panel-heading">
+                    <div class="panel-title">
+                        <a href="#two" data-toggle="collapse" data-parent="#parent">第二部分链接</a>
+                    </div>
+                </div>
+                <div class="panel-collapse collapse" id="two">
+                    <div class="panel-body">
+                        第二部分内容
+                    </div>
+                </div>
+            </div>
+        <!--3-->
+                <div class="panel panel-default">
+                 <div class="panel-heading">
+                <div class="panel-title">
+                    <a href="#three" data-toggle="collapse" data-parent="#parent">第三部分链接</a>
+                </div>
+            </div>
+            <div class="panel-collapse collapse" id="three">
+                <div class="panel-body">
+                    第三部分内容
+                </div>
+            </div>
+        </div>
+        <!--4-->
+            <div class="panel panel-default">
+            <div class="panel-heading">
+                <div class="panel-title">
+                    <a href="#fourth" data-toggle="collapse" data-parent="#parent">第四部分链接</a>
+                </div>
+            </div>
+            <div class="panel-collapse collapse" id="fourth">
+                <div class="panel-body">
+                    第四部分内容
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+</div>
+<script src="js/jquery-1.11.2.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script>
+    $("#btn").on("click",function(){
+       var btn = $(this).button('a');
+        setTimeout(function(){
+            btn. button("reset");
+        },1000);
+    })
+</script>
+</body>
+</html>

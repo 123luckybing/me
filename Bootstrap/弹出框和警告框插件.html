@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>弹出框和警告框插件</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+</head>
+<body>
+<div class="container">
+    <button class="btn btn-lg btn-warning" style="margin-top:100px"
+            data-toggle="popover"
+            title="bootstrap"
+            data-content="this is bootstrap, I love it very much"
+            data-trigger="hover"
+            id="view"
+            data-delay="1000"
+            >
+        划过弹出隐藏弹出框
+    </button>
+
+    <div class="alert alert-warning fade in" style="margin-top:200px">
+        这是一个警告框
+        <button class="close" type="button" data-dismiss="alert">
+            <span>&times;</span>
+        </button>
+    </div>
+
+    <button class="btn btn-success"
+            data-toggle="popover"
+            title="个人介绍"
+            data-content="我是周芳冰"
+            id="introduce"
+            data-trigger="hover"
+    >
+        个人介绍
+    </button>
+</div>
+<script src="js/jquery-1.11.2.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script>
+    $("#view").popover();
+    $("#introduce").popover();
+</script>
+</body>
+</html>

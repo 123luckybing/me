@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>选项卡</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+</head>
+<body>
+<div class="container">
+<ul class="nav nav-tabs">
+    <li class="active"><a href="#first" data-toggle="tab">A</a></li>
+    <li><a href="#second" data-toggle="tab">B</a></li>
+    <li><a href="#third" data-toggle="tab">C</a></li>
+    <li><a href="#fourth" data-toggle="tab">D</a></li>
+</ul>
+<div class="tab-content">
+    <div class="active tab-pane fade in" id="first">
+        111
+    </div>
+    <div class="tab-pane fade" id="second">
+        222
+    </div>
+    <div class="tab-pane fade" id="third">
+        333
+    </div>
+    <div class="tab-pane fade" id="fourth">
+        444
+    </div>
+</div>
+
+    <ul class="nav nav-pills">
+        <li class="active"><a href="#Javascript" data-toggle="tab">javascript</a></li>
+        <li><a href="#jq" data-toggle="tab">jq</a></li>
+        <li><a href="#html" data-toggle="tab">html</a></li>
+        <li><a href="#css" data-toggle="tab">css</a></li>
+    </ul>
+    <div class="tab-content">
+        <div id="Javascript" class="tab-pane active">
+            javascript
+        </div>
+        <div id="jq" class="tab-pane">
+            jq
+        </div>
+        <div class="tab-pane" id="html">
+            html
+        </div>
+        <div id="css" class="tab-pane">
+            css
+        </div>
+    </div>
+
+    <a href="#" id="cut"
+       style="margin:180px"
+       data-toggle="tooltip"
+       title="<i>大减价 精彩不能够错过</i>"
+       data-html="true"
+       data-animation="true"
+       data-placement="auto left"
+       data-delay="1000"
+       data-trigger="hover"
+            >减价详情</a>
+
+
+
+
+    <a href="#" id="section" style="margin:150px" data-toggle="tooltip" title="这是html5">Html5</a>
+</div>
+<script src="js/jquery-1.11.2.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script>
+    $("#section").tooltip();
+    $("#cut").tooltip();
+</script>
+</body>
+</html>
