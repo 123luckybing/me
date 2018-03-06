@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    var str =prompt();
+    function rever(str){
+        var str1 = str;
+//        因为reserve会导致原来的变，所以先保存起来
+        var str2 = str1.split("");
+        //字符串转化成数组
+        var arr = str.split("");
+        var arr1 = arr.reverse("");
+        //reserve 原来数组也改变
+        console.log(str2);
+        console.log(arr1);
+        for(var i=0;i<arr1.length;i++){
+            var bFlag = false;
+            if(str2[i]==arr1[i]){
+                bFlag = true;
+            }else{
+                bFlag = false;
+            }
+        }
+        if(bFlag){
+            console.log("是回文");
+        }else{
+            console.log("不是回文");
+        }
+    }
+    rever(str);
+</script>
+</body>
+</html>

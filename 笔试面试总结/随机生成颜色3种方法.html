@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        #div1{
+            width: 200px;
+            height: 200px;
+            border:1px solid black;
+            float:left;
+        }
+        #div2{
+            width: 200px;
+            height: 200px;
+            border:1px solid black;
+            float:left;
+        }
+        #div3{
+            width: 200px;
+            height: 200px;
+            border:1px solid black;
+            float:left;
+        }
+    </style>
+</head>
+<body>
+<div id="div1"></div>
+<div id="div2"></div>
+<div id="div3"></div>
+<script>
+    //方法一
+    var oDiv1 = document.getElementById("div1");
+    var num1 = Math.floor(Math.random()*256);
+    var num2 = Math.floor(Math.random()*256);
+    var num3 = Math.floor(Math.random()*256);
+    console.log(num1,num2,num3);
+    oDiv1.style.background = "rgba("+num1+","+num2+","+num3+",1)";
+
+    //方法二
+    var oDiv2 = document.getElementById("div2");
+    var bg = "#"+ Math.floor(Math.random()*256).toString(10);
+    console.log(bg);
+    oDiv2.style.background= bg ;
+
+    //方法三
+    var oDiv3 = document.getElementById("div3");
+    var bg2 = "#"+ Math.floor(Math.random()*0xffffff).toString(16);
+    console.log(bg2);
+    oDiv3.style.background= bg2 ;
+</script>
+</body>
+</html>

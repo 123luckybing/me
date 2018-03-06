@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    var arr1 = [4,11];//[a,b]
+    var arr2 = [10,11];//[c,d]
+//    比较a,c，大的作为交集的开始，比较b,d 小的作为交集结束
+//    如果大的小于小的，无交集
+    function intersection(arr1,arr2){
+        var Maxac =Math.max(arr1[0],arr2[0]);
+        var Minbd = Math.min(arr1[1],arr2[1]);
+       if(Maxac<=Minbd){
+           var arr = [Maxac,Minbd];
+           console.log("交集区间是："+"["+ arr +"]");
+       }else{
+           console.log("无交集");
+       }
+    }
+    intersection(arr1,arr2);
+</script>
+</body>
+</html>

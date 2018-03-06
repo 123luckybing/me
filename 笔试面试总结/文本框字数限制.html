@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+请输入：<input type="text" id="input"/>
+<script>
+    var Input = document.getElementById("input");
+    Input.oninput = function(){
+        var text =Input.value;
+        if(text.length>12){
+            Input.style.borderColor = "red";
+        }
+
+    }
+</script>
+</body>
+</html>

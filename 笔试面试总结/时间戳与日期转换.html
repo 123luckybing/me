@@ -1,0 +1,21 @@
+<!--编写一个函数，要求输入年月日时分秒，输出该年月日时分秒的下一秒。-->
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>牛客1</title>
+</head>
+<body>
+<script>
+//转化为时间戳，加一之后再转回来
+   function nextSecond(time){
+      var Time = new Date(time);
+       //new Date(time);将tim字符串转或成时间
+       var second = Time.getTime();
+       var Next = second +1000;
+       document.write(new Date(Next).toLocaleString());
+   }
+    nextSecond("2004-4-1 2:49:59");
+</script>
+</body>
+</html>

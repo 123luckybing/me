@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        #div1{
+            width: 200px;
+            height: 200px;
+            border:1px dashed black;
+            margin:100px auto;
+            /*perspective:1000px;*/
+        }
+        #div2{
+            width: 200px;
+            height: 200px;
+            background:red;
+            /*transform:rotateX(30deg);*/
+            /*transform:rotateX(-30deg);*/
+            /*transform:rotateY(30deg);*/
+            /*transform:rotateY(-60deg);*/
+            /*transform:rotateZ(-60deg);*/
+            /*transform:rotateZ(60deg) scale3d(2,2,0.5);*/
+            transform:rotateZ(60deg);
+            transform-style:preverse-3d;
+        }
+        #div3{
+            width: 200px;
+            height: 200px;
+            background:green;
+            transform:rotateZ(60deg);
+        }
+    </style>
+</head>
+<body>
+<div id="div1">
+    <div id="div2">
+        <div id="div3"></div>
+    </div>
+</div>
+</body>
+</html>

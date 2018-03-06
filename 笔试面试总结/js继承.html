@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    function classA(){
+        this.name = "zhou";
+    }
+    classA.prototype.sayName = function(){
+        console.log(this.name);
+    };
+    function classB(){
+        classA.call(this);
+    }
+    classB.prototype =new classA();
+    classB.prototype.constructor =classB;
+    var ol = new classB();
+    console.log(ol.name);
+</script>
+</body>
+</html>

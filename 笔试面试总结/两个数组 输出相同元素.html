@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+   var  arr1 = [1,2,3,4,5];
+   var  arr2 = [6,7,8,9,5];
+   function same(arr1,arr2){
+       var result = [];
+       for(var i=0;i<arr1.length;i++){
+           for(var j=0;j<arr2.length;j++){
+               if(arr1[i]==arr2[j]){
+                  result.push( arr1[i]);
+               }
+           }
+       }
+       var res = result.toString();
+       console.log(res);
+   }
+    same(arr1,arr2);
+</script>
+</body>
+</html>

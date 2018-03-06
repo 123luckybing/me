@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    //思路：与前一个不同,则添加到新的数组里，相同就放弃
+    var str = 'aatbhbccccdc';
+    function delectReapeatChars(str){
+        var resultStr=str[0];
+        for(var i=1;i<str.length;i++){
+         if(str[i-1]!= str[i]){
+            resultStr+=str[i];
+         }
+        }
+        console.log(resultStr);
+    }
+    delectReapeatChars(str);
+</script>
+</body>
+</html>

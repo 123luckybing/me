@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html> 
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>右固定左适应</title>
+    <!--固定的脱离文档流，html里先放置-->
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+       #right {
+           width: 200px;
+           height: 200px;
+           background: red;
+           float:right;
+       }
+        #left{
+            height: 200px;
+            background: green;
+            margin-right:200px;
+        }
+    </style>
+</head>
+<body>
+<div id="right"></div>
+<div id="left"></div>
+</body>
+</html>

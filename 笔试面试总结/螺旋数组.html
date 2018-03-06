@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    function square(num){
+        if(num ==1){
+            console.log(1);
+        }else{
+            var n=2*num+1;
+           var arr =new Array(n);
+           //2*num+1行一维数组
+            for(var i=0;i<n;i++){
+                arr[i]=new Array(n);
+            }
+            //二维数组
+//            先初始化为0
+            for(var i=0;i<n;i++){
+                for(var i=0;i<n;i++){
+                    arr[i][i]=0;
+                }
+            }
+//            中间为1
+            arr[n][n]=1;
+        }
+    }
+    square(2);
+</script>
+</body>
+</html>

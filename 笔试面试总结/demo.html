@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>百度题</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        #demo{
+            width: 100px;
+            height: 100px;
+            border:2px solid #000;
+            background: #fff;
+            margin:20px;
+            position:relative;
+        }
+        #a,#b{
+            width: 0;
+            height: 0;
+            position:absolute;
+            left:102px;
+            border:solid transparent;
+        }
+        #a{
+            top:18px;
+            border-width:12px;
+            border-left-color:#000;
+        }
+        #b{
+            top:20px;
+            border-width:10px;
+            border-left-color:#fff;
+        }
+        #line{
+            width: 2px;
+            height: 20px;
+            background:#fff;
+            position:absolute;
+            top:20px;
+            left:100px;
+
+        }
+    </style>
+</head>
+<body>
+<div id="demo">
+    <div id="a"></div>
+    <div id="b"></div>
+    <div id="line"></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        #div1{
+            width: 200px;
+            height: 200px;
+            border:2px dashed black;
+            margin:100px auto;
+        }
+        #div2{
+            width: 200px;
+            height: 200px;
+            background: red;
+            /*transform:skew(45deg);*/
+            /*transform:skew(-45deg);*/
+            /*transform:skew(45deg,30deg);*/
+            transform:skewY(45deg);
+        }
+    </style>
+</head>
+<body>
+<div id="div1">
+    <div id="div2">div</div>
+</div>
+</body>
+</html>

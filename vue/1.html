@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>备忘录</title>
+    <link rel="stylesheet" href="Bootstrap/css/bootstrap.min.css"/>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        #container li{
+            list-style:none;
+            width: 300px;
+            height: 50px;
+            background: #ccc;
+            margin:10px 10px;
+        }
+        #container .delit{
+            float:left;
+        }
+       .reserve,.delall{
+           margin-right:10px;
+       }
+    </style>
+</head>
+<body>
+<div id="container">
+    <h1>备忘录</h1>
+    <hr>
+    添加备忘录：
+    <input type="text" placeholder="请输入备忘录" v-model="name" @keyup.13="add"/>
+    <button class="delall" @click="all">全选</button>
+    <button class="reserve">反选</button>
+    <ul>
+        <li v-for="(list,index) in todolist" class="col-ms-12 col-sm-6 col-md-4 col-lg-3" @mouseover="delDis(index)" @mouseout="delDisx(index)">
+            <input type="checkbox" :checked="list.isCheck"/>
+            <span v-text="list.name"></span>
+            <button class="delit" v-show="list.isShow" @click="del(index)">[X]</button>
+            <!--啊啊啊我TM终于调出来了  都在list下，用 list.xx-->
+        </li>
+    </ul>
+</div>
+
+<script src="vue.js"></script>
+<script>
+    var vm = new Vue({
+        el:"#container",
+        methods:{
+            add:function(){
+//                console.log(this.name);
+                this.todolist.push({
+                    name:this.name,
+                    isShow:false,
+                    isCheck:false
+                });
+                this.name="";
+            },
+            delDis:function(index) {
+                this.todolist[index].isShow = true;
+            },
+            delDisx:function(index){
+                this.todolist[index].isShow =false;
+            },
+            del:function(index){
+                alert("是否确认删除");
+                this.todolist.splice(index,1);
+            },
+            all:function(index){
+
+            }
+        },
+        data:{
+            todolist:[],
+            name:"",
+            isShow:false,
+            isCheck:false
+        }
+    });
+</script>
+</body>
+</html>

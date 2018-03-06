@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>鼠标悬停 文字提示</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        span{
+            display:none;
+            position:absolute;
+            top:0;
+            font-size:12px;
+            left:0;
+            border:1px solid black;
+            background: #00B7FF;
+        }
+        h1{
+            width: 100px;
+            border:1px solid black;
+        }
+    </style>
+</head>
+<body>
+<div class="mask">
+    <h1>1</h1>
+    <span class="appear">这是1</span>
+</div>
+<br/>
+<div class="mask">
+    <h1>2</h1>
+    <span class="appear">这是2</span>
+</div>
+<br/>
+<div class="mask">
+    <h1>3</h1>
+    <span class="appear">这是3</span>
+</div>
+<script>
+    var oMask = document.getElementById("mask");
+    var H1 = document.getElementsByTagName("h1");
+    var oSpan = document.getElementsByTagName("span");
+    for(var i=0;i<H1.length;i++){
+        H1[i].index= i;
+        for(var j=0;j<H1.length;j++){
+            H1[i].onmouseover= function(e){
+                oSpan[this.index].style.display= "block";
+                var Left=  e.clientX +'px';
+                var Top=  e.clientY +'px';
+                oSpan[this.index].style.top= Top ;
+                oSpan[this.index].style.left= Left;
+            };
+            H1[i].onmouseout= function(e){
+                oSpan[this.index].style.display= "none";
+            }
+        }
+    }
+</script>
+</body>
+</html>

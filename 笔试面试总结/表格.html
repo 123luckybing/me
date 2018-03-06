@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>表格隔行变色</title>
+    <style>
+        td:first-child{
+            width:50px;
+        }
+        td:last-child{
+            width: 100px;
+        }
+        tr:nth-child(2n){
+            background: grey;
+        }
+        tr:nth-child(2n+1){
+            background:white;
+        }
+        tr:hover{
+            background: yellow;
+        }
+    </style>
+</head>
+<body>
+<table border="1">
+    <tr>
+        <td>1</td>
+        <td>白色</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>灰色</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>白色</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>灰色</td>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>白色</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>灰色</td>
+    </tr>
+</table>
+</body>
+</html>

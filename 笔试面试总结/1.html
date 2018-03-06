@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    var obj = function () {
+        this.a = 1;
+        this.b = 2;
+        this.c = 5;
+        this.fun = function () {
+            console.log( this.a);
+            console.log( this.b);
+            console.log( this.c);
+            this.c = this.a + this.b;
+        }
+    };
+    var o = new obj();
+    o.fun();
+    console.log(o.c);
+</script>
+</body>
+</html>

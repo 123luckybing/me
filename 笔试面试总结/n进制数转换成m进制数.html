@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+//    n进制数先转换成十进制再转换成m进制
+    function change(num,n,m){
+        var a =parseInt(num,n);//转化成10进制
+        var b = a.toString(m);//十进制数转化成m进制
+        console.log(b);
+    }
+    change("100","2","3");
+</script>
+</body>
+</html>

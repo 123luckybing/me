@@ -8,9 +8,6 @@
     <file url="file://$PROJECT_DIR$/vuecli/src/components/test.vue" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/vuecli/src/components/test4.vue" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/vuecli/src/components/testUrl.vue" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/vuecli/src/router/index.js" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/webpack/src/[entry].js" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/webpack/src/css/index.css" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/webpack/webpack.config.js" charset="UTF-8" />
   </component>
 </project>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    var arr=[1,2,3,4,5];
+    function random(arr){
+        arr.sort(function(a,b){
+            return Math.random()>0.5?1:-1;
+        });
+    }
+    random(arr);
+    console.log(arr);
+</script>
+</body>
+</html>
