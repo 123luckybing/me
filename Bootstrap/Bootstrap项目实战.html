@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Bootstrap项目实战</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <style>
+        #carousel{
+            width: 50%;
+            margin:50px auto;
+        }
+        .container1{
+            width: 100%;
+            background:rgba(248,248,248,1);
+        }
+        .carousel-control{
+            font-size:30px;
+        }
+        .tab{
+            text-align:center;
+            color:#ff0000;
+        }
+        .tab-p p{
+            margin-top:20px;
+            color:#4cae4c;
+            font-size:20px;
+            text-align:justify;
+        }
+        @media(max-width:792px){
+            .tab{
+                font-size:15px;
+            }
+            .tab-p{
+                font-size:14px;
+            }
+            #footer{
+                font-size:14px;
+            }
+        }
+        @media(max-width:992px){
+            .tab{
+                font-size:18px;
+            }
+            .tab-p{
+                font-size:17px;
+            }
+        }
+        .media-object{
+            width: 100px;
+            height: 100px;
+        }
+        #footer{
+            background: #e5e5e5;
+        }
+        .img-responsive{
+            width: 25%;
+            height: 25%;
+            padding-top: 20px;
+        }
+        .Img-first{
+            background: #e5e5e5;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="navbar-header">
+            <a href="" class="navbar-brand" style="margin-left:20px">北风网</a>
+            <!--2-->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#content">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+             <!--1-->
+        <div class="collapse navbar-collapse" id="content">
+            <ul  class="nav navbar-nav navbar-right" style="margin-right:20px">
+                <li class="active"><a href="index.html">首页</a></li>
+                <li><a href="inf.html">资讯</a></li>
+                <li><a href="case.html">案例</a></li>
+                <li><a href="about.html">关于</a></li>
+            </ul>
+        </div>
+    </nav>
+</div>
+
+<!--轮播图-->
+<div class="container1">
+<div id="carousel" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-target="#carousel" data-slide-to="0"></li>
+        <li data-target="#carousel" data-slide-to="1"></li>
+        <li data-target="#carousel" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+        <div class="item active">
+            <img src="../imag/s1.jpg" alt=""/>
+        </div>
+        <div class="item">
+            <img src="../imag/s2.jpg" alt=""/>
+        </div>
+        <div class="item">
+            <img src="../imag/s3.jpg" alt=""/>
+        </div>
+    </div>
+    <a href="#carousel" data-slide="prev" class="carousel-control left">&laquo;</a>
+    <a href="#carousel" data-slide="next" class="carousel-control right">&raquo;</a>
+</div>
+</div>
+<div class="container">
+    <div class="tab">
+        <h3 class="tab-h3">
+            高端四色口红~北风网等你来选
+        </h3>
+        <div class="tab-p">
+           <p> 口红是女性朋友们用来选择护唇的化妆品，涂抹唇膏不仅能够保护我们的双唇，而且会让双唇变得更加滋润饱满，可以说唇膏是象征着一个女人的品味。</p>
+        </div>
+    </div>
+
+    <div class="media col-lg-6" >
+        <div class="media-left">
+            <img src="../imag/s1.jpg" alt="" class="media-object"/>
+        </div>
+        <div class="media-body">
+            <h4 class="media-heading">口红一</h4>
+            <p>口红是女性朋友们用来选择护唇的化妆品，涂抹唇膏不仅能够保护我们的双唇，而且会让双唇变得更加滋润饱满，可以说唇膏是象征着一个女人的品味。</p>
+        </div>
+    </div>
+    <div class="media col-lg-6">
+        <div class="media-left">
+            <img src="../imag/s2.jpg" alt="" class="media-object"/>
+        </div>
+        <div class="media-body">
+            <div class="media-heading">
+                <h4>口红二</h4>
+                <p>口红是女性朋友们用来选择护唇的化妆品，涂抹唇膏不仅能够保护我们的双唇，而且会让双唇变得更加滋润饱满，可以说唇膏是象征着一个女人的品味。</p>
+            </div>
+        </div>
+    </div>
+    <div class="media col-lg-6">
+        <div class="media-left">
+            <img src="../imag/s3.jpg" alt="" class="media-object"/>
+        </div>
+        <div class="media-body">
+            <h4>口红四</h4>
+            <p>口红是女性朋友们用来选择护唇的化妆品，涂抹唇膏不仅能够保护我们的双唇，而且会让双唇变得更加滋润饱满，可以说唇膏是象征着一个女人的品味。</p>
+        </div>
+    </div>
+    <div class="media col-lg-6">
+        <div class="media-left">
+            <img src="../imag/s4.jpg" alt="" class="media-object"/>
+        </div>
+        <div class="media-body">
+            <h4>口红四</h4>
+            <p>口红是女性朋友们用来选择护唇的化妆品，涂抹唇膏不仅能够保护我们的双唇，而且会让双唇变得更加滋润饱满，可以说唇膏是象征着一个女人的品味。</p>
+        </div>
+    </div>
+</div>
+<div class="container">
+
+    <div class="Img-first">
+        <div class="row">
+            <div class="col-md-6">
+                <img src="../imag/s1.jpg" alt="" class="img-responsive center-block"/>
+            </div>
+            <div class="text col-md-6" style="line-height:40px;">
+                <h3>口红一</h3>
+                <p>口红是女性朋友们用来选择护唇的化妆品，涂抹唇膏不仅能够保护我们的双唇，而且会让双唇变得更加滋润饱满，可以说唇膏是象征着一个女人的品味。</p>
+            </div>
+        </div>
+    </div>
+    <div class="Img-second">
+        <div class="row">
+            <div class="col-md-6 pull-right">
+                <img src="../imag/s2.jpg" alt="" class="img-responsive center-block"/>
+            </div>
+            <div class="text col-md-6 pull-left" style="line-height:40px;">
+                <h3>口红二</h3>
+                <p>口红是女性朋友们用来选择护唇的化妆品，涂抹唇膏不仅能够保护我们的双唇，而且会让双唇变得更加滋润饱满，可以说唇膏是象征着一个女人的品味。</p>
+            </div>
+        </div>
+    </div>
+</div>
+<footer id="footer">
+    <div class="container center-block" style="width:50%">
+        <h3 style="text-align:center">联系我们</h3>
+        <p style="text-align:center">邮箱：1978467950@qq.com</p>
+        <p style="text-align:center">电话：18846828803 </p>
+        <p style="text-align:center" class="center-block">有事请留言</p>
+    </div>
+</footer>
+<script src="js/jquery-1.11.2.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script>
+//    左右箭头垂直居中
+    $(function(){
+        var h = $(".item img").height();
+        $(".carousel-control").css("line-height",h+'px');
+//        浏览器变问题
+        $(window).resize(function(){
+//            第一张好使其与不好使问题
+            var h = $(".carousel-inner img").eq(0).height()||$(".carousel-inner img").eq(1).height()||$(".carousel-inner img").eq(2).height();
+            $(".carousel-control").css("line-height",h+'px');
+        });
+    });
+</script>
+</body>
+</html>

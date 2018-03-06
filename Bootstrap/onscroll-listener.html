@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>onscroll-listener</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+</head>
+<body>
+<nav class="navbar navbar-default" id="nav1">
+    <a href="#" class="navbar-brand">web</a>
+    <ul class="nav navbar-nav">
+        <li><a href="#HTML5">HTML5</a></li>
+        <li><a href="#Bootstrap">Bootstrap</a></li>
+        <li class="dropdown">
+            <a href="" data-toggle="dropdown">
+                Javascript
+                <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+                <li><a href="#jq">Jquery</a></li>
+                <li><a href="#react">React</a></li>
+                <li><a href="#vue">Vue</a></li>
+                <li><a href="#vue1">Vue1</a></li>
+                <li><a href="#vue2">Vue2</a></li>
+                <li><a href="#vue3">Vue3</a></li>
+                <li><a href="#vue4">Vue4</a></li>
+            </ul>
+        </li>
+    </ul>
+</nav>
+<!--<div style="margin:10px 30px;height:130px;overflow:scroll;position:relative" id="content">-->
+<div style="margin:10px 30px;height:130px;overflow:scroll;position:relative" data-spy="scroll" data-offset="0" data-target="#nav1" id="content">
+    <section class="sec">
+        <h4 id="jq">JQ
+            <a href="#" onclick="removeSec(this)">del</a>
+        </h4>
+        <p>如何在不重启 node 进程的情况下热更新一个 js/json 文件? 这个问题本身是否有问题?
+        可以清除掉 require.cache 的缓存重新 require(xxx), 视具体情况还可以用 VM 模块重新执行.
+        当然这个问题可能是典型的 X-Y Problem, 使用 js 实现热更新很容易碰到 v8 优化之后各地拿到缓存的引用导致热更新 js 没意义. 当然热更新 json 还是可以简单一点比如用读取文件的方式来热更新, 但是这样也不如从 redis 之类的数据库中读取比较合理.
+        </p>
+    </section>
+    <section class="sec">
+        <h4 id="HTML5">HTML5
+            <a href="#" onclick="removeSec(this)">del</a>
+        </h4>
+        <p>如何在不重启 node 进程的情况下热更新一个 js/json 文件? 这个问题本身是否有问题?
+        可以清除掉 require.cache 的缓存重新 require(xxx), 视具体情况还可以用 VM 模块重新执行.
+        当然这个问题可能是典型的 X-Y Problem, 使用 js 实现热更新很容易碰到 v8 优化之后各地拿到缓存的引用导致热更新 js 没意义. 当然热更新 json 还是可以简单一点比如用读取文件的方式来热更新, 但是这样也不如从 redis 之类的数据库中读取比较合理.
+        </p>
+    </section>
+    <section class="sec">
+        <h4 id="Bootstrap">Bootstrap
+            <a href="#" onclick="removeSec(this)">del</a>
+        </h4>
+        <p>如何在不重启 node 进程的情况下热更新一个 js/json 文件? 这个问题本身是否有问题?
+        可以清除掉 require.cache 的缓存重新 require(xxx), 视具体情况还可以用 VM 模块重新执行.
+        当然这个问题可能是典型的 X-Y Problem, 使用 js 实现热更新很容易碰到 v8 优化之后各地拿到缓存的引用导致热更新 js 没意义. 当然热更新 json 还是可以简单一点比如用读取文件的方式来热更新, 但是这样也不如从 redis 之类的数据库中读取比较合理.
+        </p>
+    </section>
+    <section class="sec">
+        <h4 id="react">React
+            <a href="#" onclick="removeSec(this)">del</a>
+        </h4>
+        <p>如何在不重启 node 进程的情况下热更新一个 js/json 文件? 这个问题本身是否有问题?
+        可以清除掉 require.cache 的缓存重新 require(xxx), 视具体情况还可以用 VM 模块重新执行.
+        当然这个问题可能是典型的 X-Y Problem, 使用 js 实现热更新很容易碰到 v8 优化之后各地拿到缓存的引用导致热更新 js 没意义. 当然热更新 json 还是可以简单一点比如用读取文件的方式来热更新, 但是这样也不如从 redis 之类的数据库中读取比较合理.
+        </p>
+    </section>
+    <section class="sec">
+        <h4 id="vue">vue
+            <a href="#" onclick="removeSec(this)">del</a>
+        </h4>
+        <p>如何在不重启 node 进程的情况下热更新一个 js/json 文件? 这个问题本身是否有问题?
+        可以清除掉 require.cache 的缓存重新 require(xxx), 视具体情况还可以用 VM 模块重新执行.
+        当然这个问题可能是典型的 X-Y Problem, 使用 js 实现热更新很容易碰到 v8 优化之后各地拿到缓存的引用导致热更新 js 没意义. 当然热更新 json 还是可以简单一点比如用读取文件的方式来热更新, 但是这样也不如从 redis 之类的数据库中读取比较合理.
+        </p>
+    </section>
+    <section class="sec">
+        <h4 id="vue1">vue1
+            <a href="#" onclick="removeSec(this)">del</a>
+        </h4>
+        <p>如何在不重启 node 进程的情况下热更新一个 js/json 文件? 这个问题本身是否有问题?
+        可以清除掉 require.cache 的缓存重新 require(xxx), 视具体情况还可以用 VM 模块重新执行.
+        当然这个问题可能是典型的 X-Y Problem, 使用 js 实现热更新很容易碰到 v8 优化之后各地拿到缓存的引用导致热更新 js 没意义. 当然热更新 json 还是可以简单一点比如用读取文件的方式来热更新, 但是这样也不如从 redis 之类的数据库中读取比较合理.
+        </p>
+    </section>
+    <section class="sec">
+        <h4 id="vue2">vue2
+            <a href="#" onclick="removeSec(this)">del</a>
+        </h4>
+        <p>如何在不重启 node 进程的情况下热更新一个 js/json 文件? 这个问题本身是否有问题?
+        可以清除掉 require.cache 的缓存重新 require(xxx), 视具体情况还可以用 VM 模块重新执行.
+        当然这个问题可能是典型的 X-Y Problem, 使用 js 实现热更新很容易碰到 v8 优化之后各地拿到缓存的引用导致热更新 js 没意义. 当然热更新 json 还是可以简单一点比如用读取文件的方式来热更新, 但是这样也不如从 redis 之类的数据库中读取比较合理.
+        </p>
+    </section>
+    <section class="sec">
+        <h4 id="vue3">vue3
+            <a href="#" onclick="removeSec(this)">del</a>
+        </h4>
+        <p>如何在不重启 node 进程的情况下热更新一个 js/json 文件? 这个问题本身是否有问题?
+        可以清除掉 require.cache 的缓存重新 require(xxx), 视具体情况还可以用 VM 模块重新执行.
+        当然这个问题可能是典型的 X-Y Problem, 使用 js 实现热更新很容易碰到 v8 优化之后各地拿到缓存的引用导致热更新 js 没意义. 当然热更新 json 还是可以简单一点比如用读取文件的方式来热更新, 但是这样也不如从 redis 之类的数据库中读取比较合理.
+        </p>
+    </section>
+    <section class="sec">
+        <h4 id="vue4">vue4
+            <a href="#" onclick="removeSec(this)">del</a>
+        </h4>
+         <p>如何在不重启 node 进程的情况下热更新一个 js/json 文件? 这个问题本身是否有问题?
+        可以清除掉 require.cache 的缓存重新 require(xxx), 视具体情况还可以用 VM 模块重新执行.
+        当然这个问题可能是典型的 X-Y Problem, 使用 js 实现热更新很容易碰到 v8 优化之后各地拿到缓存的引用导致热更新 js 没意义. 当然热更新 json 还是可以简单一点比如用读取文件的方式来热更新, 但是这样也不如从 redis 之类的数据库中读取比较合理.
+        </p>
+    </section>
+</div>
+<script src="js/jquery-1.11.2.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script>
+//    $("#content").scrollspy({
+//        offset:0,
+//        target:"#nav1"
+//    });
+//    $("#nav1").on("activate.bs.scrollspy",function(){
+//        alert("active new");
+//    });
+    function removeSec(e){
+        $(e).parents(".sec").remove();
+        $("#content").scrollspy("refresh");
+    }
+</script>
+</body>
+</html>
