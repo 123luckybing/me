@@ -8,7 +8,11 @@
 <div id="app">
     <button @click="change">改值</button>
     <ul>
-        <li v-for="item in list">{{item}}</li>
+        <li v-for="item in list" v-text="item"></li>
+    </ul>
+    <button @click="newArr">new</button>
+    <ul>
+        <li v-for="list in itemList" v-text="list"></li>
     </ul>
 </div>
 <script src="vue.js"></script>
@@ -16,12 +20,22 @@
   var um =new Vue({
       el:"#app",
       data:{
-          list:["a","s","f","o","g","r"]
+          list:["a","s","f","o","g","r"],
+          itemList:["琳达","苏曼","张一明"],
+          flag:true
       },
       methods:{
           change(){
             Vue.set(this.list,0,"zhoufangbing");
-            }
+            },
+          newArr(){
+                if(this.flag){
+                    Vue.set(this.itemList,1,"张力");
+                }else{
+                    Vue.set(this.itemList,1,"苏曼");
+                }
+                this.flag =!this.flag;
+                }
       }
   });
 </script>
