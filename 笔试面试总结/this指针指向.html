@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<button id="button"></button>
+<div id="text"></div>
+<script>
+    var obj = {
+        say: function () {
+            setTimeout(function () {
+                console.log(this)
+            });
+        }
+    };
+    obj.say();
+    //匿名函数function调用this，指向window
+//    若不想this指向window，指向对象
+    var obj = {
+        func: function() {},
+        say: function () {
+            // 此时的this就是obj对象
+            setTimeout(function () {
+                console.log(this);
+                this.func();
+            }.bind(this));
+        }
+    }
+    obj.say(); // obj
+
+    var button = document.getElementById("button"),
+            text = document.getElementById("text");
+    button.onclick = function() {
+        alert(this.id); // 弹出text
+    }.bind(text);
+</script>
+</body>
+</html>

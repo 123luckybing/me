@@ -135,10 +135,12 @@
                         this.productList.splice(index,1);
                     },
                 delall(){
-                        let arr =this.productList.filter((val,index)=>{
-                            if(!this.checked.includes(index)){
-                                return val;
-                                    }
+                        let arr = this.productList.filter(
+                                        (val,index)=>{
+                                    console.log(this.checked);
+//                            if(!this.checked.includes(index)){
+//                                return val;
+//                                    }
                         });
                             this.productList = arr;
                             this.checked=[];

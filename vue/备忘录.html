@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>备忘录</title>
-    <link rel="stylesheet" href="Bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../Bootstrap/css/bootstrap.min.css"/>
     <style>
         *{
             margin:0;
@@ -32,6 +32,7 @@
     <input type="text" placeholder="请输入备忘录" v-model="name" @keyup.13="add"/>
     <button class="delall" @click="all">全选</button>
     <button class="reserve">反选</button>
+    <button @click="delSelect">删除选中</button>
     <ul>
         <li v-for="(list,index) in todolist" class="col-ms-12 col-sm-6 col-md-4 col-lg-3" @mouseover="delDis(index)" @mouseout="delDisx(index)">
             <input type="checkbox" :checked="list.isCheck"/>
@@ -66,9 +67,19 @@
                 alert("是否确认删除");
                 this.todolist.splice(index,1);
             },
-            all:function(index){
-
-            }
+            all:function(){
+                //循环todolist的每一个元素
+                this.todolist.forEach(function(val){
+                    val.isCheck = !val.isCheck;
+                });
+            },
+            delSelect:function(){
+                let arr = this.todolist.filter((val,index)=>{
+                if(!this.checked.includes(index)){
+                    return val;
+                    }
+                });
+             }
         },
         data:{
             todolist:[],
