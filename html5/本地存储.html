@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    localStorage.username ="lisi";
+    localStorage.setItem("age",18);
+    console.log(localStorage.username);
+    console.log(localStorage.getItem("age"));
+    localStorage.removeItem("username");
+    localStorage.clear();
+
+    sessionStorage.username="wangwu";
+    sessionStorage.setItem("age",22);
+    console.log(sessionStorage.username);
+    console.log(sessionStorage.getItem("age"));
+    sessionStorage.removeItem("username");
+    sessionStorage.clear();
+</script>
+</body>
+</html>

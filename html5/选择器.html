@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>选择器</title>
+</head>
+<body>
+<div id="div1">
+    <div class="aa bb">111</div>
+    <div class="aa">111</div>
+    <div class="aa">111</div>
+</div>
+
+<div id="div2">
+    <div class="ab">111</div>
+    <div class="ab">111</div>
+    <div class="ab">111</div>
+</div>
+<script>
+    var oDiv1 = document.querySelector("#div1 .aa");
+    oDiv1.style.background = '#ff0000';
+    var oDiv2 = document.querySelectorAll("#div2 .ab");
+//    console.log(oDiv2);
+//    oDiv1.className +=" cc";
+//    console.log(oDiv1.className); 返回对象
+   oDiv1.classList.add("cc");
+    console.log(oDiv1.classList);
+    oDiv1.classList.remove("bb");
+    console.log(oDiv1.classList);
+    oDiv1.classList.toggle("aa");
+    console.log(oDiv1.classList);
+</script>
+</body>
+</html>
