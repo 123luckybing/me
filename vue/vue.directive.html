@@ -12,6 +12,7 @@
 </head>
 <body>
 <div id="app">
+    <h1 v-jspang="color">文字变成绿色</h1>
    <h3 v-bg="bb">也许路途很遥远，也许这条路很危险，但是我眼中的风景，是你们想不到的耀眼。——杨幂</h3>
    <h3 v-bg="cc">学习做一个乐于接受命运赋予的人，并且勇于承担后果，懂得后退，才能进步。享受付出，才能幸福。——杨幂</h3>
     <h3 v-bg="aa">在人之上，要把别人当人，在人之下，要把自己当人。总有一天我会让你们看得起我。 ——杨幂</h3>
@@ -19,17 +20,23 @@
 
 <script src="vue.js"></script>
 <script>
-Vue.directive("bg",function(el,binding,vnode){
-    el.style.background=binding.value;
-});
-var um = new Vue({
-    el:"#app",
-    data:{
-        aa:"lightgreen",
-        bb:"lightblue",
-        cc:"yellow"
-     }
-});
+    Vue.directive("bg",function(el,binding,vnode){
+        el.style.background=binding.value;
+    });
+    Vue.directive("jspang",function(el,binding,vnode){
+        el.style.color = binding.value;
+    })
+    var um = new Vue({
+        el:"#app",
+        data:{
+            aa:"lightgreen",
+            bb:"lightblue",
+            cc:"yellow",
+            color:"green"
+         }
+    });
+
+    //要定义一个v-jspang的指令，作用就是让文字变成绿色
 </script>
 </body>
 </html>

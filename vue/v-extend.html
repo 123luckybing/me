@@ -11,26 +11,29 @@
 </div>
 <script src="vue.js"></script>
 <script>
-   var authorName = Vue.extend({
-        template:"<p><a :href='url'>{{name}}</a></p>",
-        data:function(){
-            return {
-                name:'zhoufangbing',
-                url:"http://www.baidu.com"
-            }
-        }
-    });
+//   var authorName = Vue.extend({
+//        template:"<p><a :href='url'>{{name}}</a></p>",
+//        data:function(){
+//            return {
+//                name:'zhoufangbing',
+//                url:"http://www.baidu.com"
+//            }
+//        }
+//    });
 //    new authorName().$mount("#app");
-    var person = Vue.extend({
-        template:"<p><a :href='personUrl'>{{perName}}</a></p>",
-        data:function(){
-            return {
-                personUrl: 'http://www.baidu.com',
-                perName: 'yangmi'
-            }
-        }
-    });
+
+
+//    var person = Vue.extend({
+//        template:"<p><a :href='personUrl'>{{perName}}</a></p>",
+//        data:function(){
+//            return {
+//                personUrl: 'http://www.baidu.com',
+//                perName: 'yangmi'
+//            }
+//        }
+//    });
 //    new person().$mount("#div1");
+
 new Vue({
     el:"#div1",
     components:{

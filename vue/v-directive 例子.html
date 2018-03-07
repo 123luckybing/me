@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background: red;
+        }
+        #app{
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+<!--自定义的属性pin,需要加“v-”前缀-->
+<!--属性值是布尔值，true的话，便position: fixed-->
+<div id="app">
+    <div v-pin="tf">固定</div>
+    <button @click="toggle">点击</button>
+</div>
+<script src="vue.js"></script>
+<script>
+    Vue.directive("pin",function(el,binding,vnode){
+        if(binding.value){
+            el.style.position = "fixed";
+            el.style.right = "10px";
+            el.style.bottom ="10px";
+        }else{
+            el.style.position = "static";
+        }
+    });
+    new Vue({
+        el:"#app",
+        data:{
+           tf:true
+        },
+        methods:{
+            toggle(){
+                this.tf = !this.tf;
+            }
+
+        }
+    });
+</script>
+</body>
+</html>
