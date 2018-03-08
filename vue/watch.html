@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>watch监控</title>
+</head>
+<body>
+<div id="app">
+    {{firstName}} +{{lastName}} = {{fullName}}
+</div>
+<script src="vue.js"></script>
+<script>
+   var vm =  new Vue({
+       el: "#app",
+       data: {
+           firstName: "zhou",
+           lastName: "fangbing",
+           fullName:""
+       },
+       watch: {
+           firstName: function (val) {
+               this.fullName = val + this.lastName;
+           },
+           lastName: function (val) {
+               this.fullName = this.firstName + val;
+           }
+       }
+   });
+</script>
+</body>
+</html>

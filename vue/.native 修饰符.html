@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <div id="app">
+        <my-button @click.native="add"></my-button>
+        <div>{{msg}}</div>
+    </div>
+</body>
+<script src="vue.js"></script>
+<script>
+    new Vue({
+        el:"#app",
+        components:{
+            myButton:{
+              template:"<p>点击加一</p>"
+            }
+        },
+        data:{
+            msg:0
+        },
+        methods:{
+            add(){
+                this.msg++;
+            }
+        }
+
+
+    });
+</script>
+</html>
