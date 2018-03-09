@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>slot练习</title>
+</head>
+<body>
+<div id="app">
+    <my-component>
+        <p slot="username">加油</p>
+    </my-component>
+</div>
+
+<template id="add">
+    <div>
+        <slot name="username"></slot>
+    </div>
+</template>
+<script src="vue.js"></script>
+<script>
+    new Vue({
+        el:"#app",
+        components:{
+            myComponent:{
+                template:"#add"
+            }
+        }
+    });
+</script>
+</body>
+</html>
