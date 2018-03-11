@@ -83,7 +83,7 @@ a:hover{
     float:left;
     margin-top:5px;
 }
-#twoDown,#oneDown,#twoUp,#oneUp,#activity,#match,#money,#volenteer,#English,#car{
+#activity,#match,#money,#volenteer,#English,#car{
     position:absolute;
     left:1300px;
     z-index:100;
@@ -99,7 +99,7 @@ a:hover{
     padding: 15px;
     right:-100px;
 }
-#twoDown img ,#English img,#car img, #oneDown img,#oneUp img,#twoUp img,#activity img,#match img,#money img,#volenteer img{
+#English img,#car img, #activity img,#match img,#money img,#volenteer img{
     position:absolute;
     width: 500px;
     height: 400px;
@@ -107,37 +107,25 @@ a:hover{
     margin-top:30px;
     border:1px solid black;
 }
-#twoDown{
-    top:1750px;
-}
-#oneUp{
-    top:50px;
-}
-#oneDown{
-    top:650px;
-}
-#twoUp{
-    top:1200px;
-}
 #activity{
-    top:2300px;
+    top:10px;
 }
 #match{
-    top:2900px;
+    top:600px;
 }
 #money{
-   top:3500px;
+   top:1200px;
 }
 #volenteer{
-   top:4100px;
+   top:1800px;
 }
 #English{
-    top:4700px;
+    top:2400px;
 }
 #car{
-    top:5300px;
+    top:3000px;
 }
-#oneUp h4,#oneDown h4,#twoUp h4,#twoDown h4,#activity h4,#match h4,#money h4,#volenteer h4,#English h4,#car h4{
+#activity h4,#match h4,#money h4,#volenteer h4,#English h4,#car h4{
     color:orange;
 }
 
