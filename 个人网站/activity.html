@@ -8,24 +8,44 @@
     <link rel="stylesheet" href="activity.css"/>
 </head>
 <body>
-<!--<div id="total">-->
-     <!--<span>-->
-         <!--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在大学课余期间，我积极参加志愿活动。去敬老院帮助阿姨打扫卫生、陪老人聊天；去小动物救助站清理猫舍、狗舍，给小动物喂食；去哈尔滨市第一医院帮助患者打印胶片；去残疾人联合康复中心与智力障碍儿童一起折纸、画画、唱歌；去哈尔滨市幸福中心小学支教，为孩子们讲解国内外知识，帮助他们打开通往外界的大门。大学期间共计志愿服务时长292小时。走出校门、融入社会，我希望能用自己微弱的力量去温暖更多的人,在实现人生价值的同时,给需要帮助的人带去温暖。-->
-     <!--</span>-->
-<!--</div>-->
-<!--<div id="Spin-photos">-->
- <!--<div id="container">-->
-    <!--<img src="img/社会活动1.jpg" alt=""/>-->
-    <!--<img src="img/社会活动2.jpg" alt=""/>-->
-    <!--<img src="img/社会活动3.jpg" alt=""/>-->
-    <!--<img src="img/社会活动4.jpg" alt=""/>-->
-    <!--<img src="img/社会活动5.jpg" alt=""/>-->
-    <!--<img src="img/社会活动6.jpg" alt=""/>-->
-    <!--<img src="img/社会活动7.jpg" alt=""/>-->
-    <!--<img src="img/社会活动8.jpg" alt=""/>-->
-    <!--<img src="img/社会活动9.jpg" alt=""/>-->
- <!--</div>-->
-<!--</div>-->
+<div class="container">
+    <div id="carousel" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carousel" data-slide-to="0"></li>
+            <li data-target="#carousel" data-slide-to="1"></li>
+            <li data-target="#carousel" data-slide-to="2"></li>
+            <li data-target="#carousel" data-slide-to="3"></li>
+            <li data-target="#carousel" data-slide-to="4"></li>
+            <li data-target="#carousel" data-slide-to="5"></li>
+            <li data-target="#carousel" data-slide-to="6"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="item active">
+                <img src="img/社会活动1.jpg" alt="" class="center-block"/>
+            </div>
+            <div class="item">
+                <img src="img/社会活动2.jpg" alt="" class="center-block"/>
+            </div>
+            <div class="item">
+                <img src="img/社会活动3.jpg" alt="" class="center-block"/>
+            </div>
+            <div class="item">
+                <img src="img/社会活动5.jpg" alt="" class="center-block"/>
+            </div>
+            <div class="item">
+                <img src="img/社会活动6.jpg" alt="" class="center-block"/>
+            </div>
+            <div class="item">
+                <img src="img/社会活动7.jpg" alt="" class="center-block"/>
+            </div>
+            <div class="item">
+                <img src="img/社会活动8.jpg" alt="" class="center-block"/>
+            </div>
+        </div>
+        <a href="#carousel" data-slide="prev" class="carousel-control left">&laquo;</a>
+        <a href="#carousel" data-slide="next" class="carousel-control right">&raquo;</a>
+    </div>
+</div>
 <div class="container">
     <div class="thumbnail col-lg-3 col-md-4 col-sm-6 col-xs-12">
         <img src="img/市医院.jpg" alt=""/>
@@ -70,25 +90,24 @@
             <p> 嘉康利全民健身万里行轻松跑活动的足迹遍布全国的7大城市，天南海北的人们相聚一起，体验5公里跑步的乐趣，践行轻松跑的真谛。在美丽冰城哈尔滨举办该活动时，我们作志愿者为运动员们指引路线、发放用水、解决运动员的困难。我们以“心系志愿 轻松跑Easy Run”为主题,宣传轻松运动,一路向前。</p>
         </div>
     </div>
-    <div class="thumbnail col-lg-3 col-md-4 col-sm-6 col-xs-12">
-        <img src="img/.jpg" alt=""/>
+    <div class="thumbnail col-lg-6 col-md-12 col-sm-12 col-xs-12">
+        <img src="img/timg.jpg" alt="" style="height: 250px"/>
         <div class="caption">
             <h3 class="media-heading">心得体会</h3>
             <p>温煦的笑容透露出志愿者的善良，真诚的服务之下是关爱社会的心。作为一名青年志愿者，我传播了良好道德风尚，在服务过程中，用自己的实际行动感染着服务对象，使志愿者的服务精神传递下去。始于爱与善，一腔的热情铸造信仰。坚守志愿精神，爱心的传输扣紧了人与人之间的纽带，无私地付出，传播着文化与历史，这份信仰将汇聚成一股强大的社会暖流，流转心间，激发更多的善意。我相信，每一名志愿者都是夜空中最亮的星，汇聚众人的力量，照亮整片大地，志愿服务的道路上，我将继续前进!</p>
         </div>
     </div>
 </div>
-
-    <!--</p>-->
-<!--</div>-->
-<!--<div id="top">↑</div>-->
-<!--<a href="index.html" target="_self">-->
-    <!--<div id="return">-->
-        <!--<div class="letter">-->
-            <!--返回<br/>主页-->
-        <!--</div>-->
-    <!--</div>-->
-<!--</a>-->
+<div id="top">↑</div>
+<a href="index.html" target="_self">
+    <div id="return">
+        <div class="letter">
+            返回<br/>主页
+        </div>
+    </div>
+</a>
 <script src="activity.js"></script>
+<script src="jquery-1.11.2.js"></script>
+<script src="bootstrap.min.js"></script>
 </body>
 </html>

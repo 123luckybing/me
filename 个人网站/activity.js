@@ -10,25 +10,6 @@
             }
         }, 50);
     };
-
-
-    //var oContainer=document.getElementById("container");
-    //var oImg=oContainer.getElementsByTagName("img");
-    //
-    // for(var i=0;i<oImg.length;i++){
-    //     oImg[i].style.transform="rotateY("+(i+1)*40+"deg) translateZ(280px)";
-    //     oImg[i].style.transitionDelay = i * 100 + "ms";
-    //     play();
-    // }
-    //
-    // function play(){
-    //     var num=0;
-    //     setInterval(function(){
-    //         num++;
-    //         oContainer.style.transform = "rotateY(" + num * 40 + "deg)";
-    //     },3000)
-    // }
-
     //存放图片路径的数组
     var imgSrcArr = [
         'img/市医院.jpg',
@@ -38,8 +19,6 @@
         'img/残联.jpg',
         'img/健身.jpg'
     ];
-
-
     var imgWrap = [];
     function preloadImg(arr) {
         for(var i =0; i< arr.length ;i++) {
