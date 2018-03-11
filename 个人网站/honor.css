@@ -3,11 +3,7 @@
     padding:0;
 }
 #header{
-    position:fixed;
-    top:50px;
-    left:200px;
-    width: 250px;
-    height: 192px;
+    margin-top:30px;
     border-radius:3px;
     color: #777;
     text-shadow: 0 1px #fff;
@@ -37,12 +33,13 @@
 }
 #header ul{
     margin-top:20px;
+    width: 80%;
+    height: 30px;
 }
 #header li{
     list-style:none;
     float:left;
     width:80px;
-    margin-left:30px;
 }
 a{
     text-decoration:none;
@@ -51,11 +48,7 @@ a:hover{
     text-decoration:underline;
 }
 #list{
-    position:fixed;
-    top:320px;
-    left:200px;
-    width: 250px;
-    height: 392px;
+    margin-top:260px;
     border-radius:3px;
     color: #777;
     text-shadow: 0 1px #fff;
@@ -66,11 +59,9 @@ a:hover{
     padding: 15px;
 }
 #list img{
-    width: 112px;
-    height: 112px;
+    width: 30%;
+    height: 30%;
     border-radius:50%;
-    margin-left:70px;
-    margin-top:10px;
 }
 #list h4{
     text-align:center;
@@ -83,50 +74,33 @@ a:hover{
     float:left;
     margin-top:5px;
 }
-#activity,#match,#money,#volenteer,#English,#car{
-    position:absolute;
-    left:1300px;
-    z-index:100;
-    width: 607px;
-    height: 500px;
-    border-radius:10px;
-    color: #777;
-    text-shadow: 0 1px #fff;
-    background: rgba(255,255,255,0.9);
-    -webkit-box-shadow: 0 -1px 4px #ccc inset;
-    box-shadow: 0 -1px 4px #ccc inset;
-    border: 1px solid #ccc;
-    padding: 15px;
-    right:-100px;
-}
-#English img,#car img, #activity img,#match img,#money img,#volenteer img{
-    position:absolute;
-    width: 500px;
-    height: 400px;
-    margin-left:50px;
+
+#right{
+    height: 2000px;
     margin-top:30px;
-    border:1px solid black;
 }
-#activity{
-    top:10px;
-}
-#match{
-    top:600px;
-}
-#money{
-   top:1200px;
-}
-#volenteer{
-   top:1800px;
-}
-#English{
-    top:2400px;
-}
-#car{
-    top:3000px;
+#activity,#match,#money,#volenteer,#English,#car{
+    z-index:100;
+    border-radius:10px;
+    background: rgba(255,255,255,0.9);
 }
 #activity h4,#match h4,#money h4,#volenteer h4,#English h4,#car h4{
     color:orange;
+}
+@media screen and (max-width:576px){
+    #header{
+        position:absolute;
+        top:1px;
+    }
+    #list{
+        position:absolute;
+        top:20px;
+    }
+    #right{
+        position:absolute;
+        top:500px;
+        height:1000px;
+    }
 }
 
 
