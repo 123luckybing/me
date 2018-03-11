@@ -4,50 +4,60 @@
     <meta charset="UTF-8">
     <title>lucky周芳冰</title>
     <link rel="shortcut icon" href="img/鲸鱼.png"/>
+    <link rel="stylesheet" href="bootstrap.min.css"/>
     <link rel="stylesheet" href="index.css"/>
 </head>
 <body>
-<div id="nav">
-    <img src="img/t1.png" alt=""/>
-    <div class="nav-list">
-        <ul>
-            <li class="home">
-                <img src="img/主页.png" alt=""/>主页
+<nav  class="navbar navbar-default navbar-fixed-top">
+    <div class="nav-header">
+        <img src="img/t1.png" alt="" class="navbar-brand"/>
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#content">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+    </div>
+    <div class="collapse navbar-collapse" id="content">
+        <ul class="nav navbar-nav navbar-right">
+            <li class="active">
+                <a href="#">主页</a>
             </li>
-            <a href="学生组织.html" target="_blank">
-                <li class="student"><img src="img/冠军.png" alt=""/>学生组织</li>
-            </a>
-            <a href="社会活动.html" target="_blank">
-                <li class="society">
-                    <img src="img/技能-1.png" alt=""/>社会活动
-                </li>
-            </a>
-            <a href="所获荣誉.html" target="_blank">
-                <li class="honor">
-                    <img src="img/皮卡丘-2.png" alt=""/>所获荣誉
-                </li>
-            </a>
-            <a href="项目经验.html" target="_blank">
-                <li class="project">
-                    <img src="img/小火龙.png" alt=""/>项目经验
-                </li>
-            </a>
-    </ul>
-</div>
-</div>
-<div id="picture">
-    <img src="img/me1.jpg" alt="" class="selected"/>
-    <img src="img/me2.jpg" alt=""/>
-    <img src="img/me3.jpg" alt=""/>
-    <div id="button">
-        <div class="left">&lt;</div>
-        <div class="right">&gt;</div>
+            <li>
+                <a href="organization.html" target="_blank">学生组织</a>
+            </li>
+            <li>
+                <a href="activity.html" target="_blank">社会活动</a>
+            </li>
+            <li>
+                <a href="honer.html" target="_blank">所获荣誉</a>
+            </li>
+            <li>
+                <a href="experience.html" target="_blank">项目经验</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="container1">
+    <div id="carousel" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carousel" data-slide-to="0"></li>
+            <li data-target="#carousel" data-slide-to="1"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="item active">
+                <img src="img/me1.jpg" alt=""/>
+            </div>
+            <div class="item">
+                <img src="img/me2.jpg" alt=""/>
+            </div>
+        </div>
+        <a href="#carousel" data-slide="prev" class="carousel-control left">&laquo;</a>
+        <a href="#carousel" data-slide="next" class="carousel-control right">&raquo;</a>
     </div>
 </div>
-<div id="personal-information">
-    <div id="title">个人信息</div>
-    <div id="left">
-        <table>
+<div id="title">个人信息</div>
+<div id="left" class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+    <table class="left-center">
             <tr>
                 <td>姓名</td>
                 <td>周芳冰</td>
@@ -86,23 +96,27 @@
             </tr>
             <tr>
                 <td>掌握技术</td>
-                <td>html(5)&nbsp; css(3) &nbsp;javascript <br/>jQuery&nbsp; Bootstrap
+                <td>html(5)&nbsp; css(3) &nbsp;javascript <br/>jQuery&nbsp; Bootstrap &nbsp;ES6 &nbsp;webpack&nbsp; vue&nbsp; sass
                  </td>
             </tr>
         </table>
     </div>
-    <div id="right">
+<div id="right" class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+    <div class="right-center">
         <img src="img/皮卡丘-2.png" alt=""/>
         <div id="self-introduce">
           &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;本人乐观开朗、积极向上、有较强的自学能力、愿意学习和应用新的技术、团队合作意识强，乐于分享和沟通。在项目开发中，能够根据项目特点，开发建立组件结构应用、样式和功能框架。能够适应多种浏览器和平台的差异性，保证开发代码和表现兼容的目的。这样的一名遇到bug能研究一晚上、没秃顶、会写段子的web前端工程师，走过路过，这个女孩请不要错过！
         </div>
     </div>
 </div>
-<div id="fixed">↑</div>
-<div id="end">
-    &lt;&lt;&nbsp;&nbsp;想更多地了解我吗~那么点击上方导航栏查看关于我的更多信息吧~精彩不断哦~&nbsp;&nbsp;&gt;&gt;
-</div>
-<script src="index.js"></script>
+<!--<div id="fixed">↑</div>-->
+<!--<div id="end">-->
+    <!--&lt;&lt;&nbsp;&nbsp;想更多地了解我吗~那么点击上方导航栏查看关于我的更多信息吧~精彩不断哦~&nbsp;&nbsp;&gt;&gt;-->
+<!--</div>-->
+<script src="jquery-1.11.2.js"></script>
+<script src="bootstrap.min.js"></script>
+<!--<script src="index.js"></script>-->
+
 <audio src="华晨宇%20烟火里的尘埃(百度付费正版).mp3" autoplay loop></audio>
 </body>
 </html>

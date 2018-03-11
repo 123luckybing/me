@@ -5,144 +5,54 @@
 li{
     list-style:none;
 }
-body{
-    position:relative;
+.nav.navbar-nav.navbar-right{
+    margin-right:5%;
 }
-#nav{
-    width:100%;
-    height:80px;
-    background:#fff2e9;
-    position:relative;
-    z-index: 999;
-}
-#nav img{
-    width:150px;
-    height:60px;
-    left:80px;
-    top:10px;
-    position:absolute;
-}
-#nav .nav-list li{
-    float:left;
-    width:100px;
-    height:30px;
-    text-align:right;
-    line-height:30px;
-    font-size:18px;
-    margin-left:30px;
-    color:#f0a818;
-    cursor:pointer;
-    position:relative;
-}
-#nav .nav-list li:hover{
-    color:orangered;
-}
-#nav .nav-list ul{
-    width:960px;
-    height:30px;
-    position:absolute;
-    top:20px;
-    right:60px;
-}
-#nav .nav-list img{
-    width:20px;
-    height:20px;
-    position: absolute;
-}
-#nav .nav-list .home{
-    position:relative;
-}
-#nav .nav-list .home img{
-    position:absolute;
-    left:45px;
-    top:6px;
-}
-#nav .student{
-    position:relative;
-}
-#nav .student img{
-    top:4px;
-    position:absolute;
-    left:7px;
-}
-#picture{
-    width:100%;
-    height:900px;
-    position:relative;
-}
-#nav .society img{
-    left:7px;
-    top:7px;
-}
-#nav .honor img{
-    left:8px;
-    top:5px;
-}
-#nav .score img {
-    left: 8px;
-    top: 7px;
-}
-#nav .project img{
-    left:6px;
-    top:5px;
-}
-#nav .blog img{
-    left:-3px;
-    top:2px;
-    width:30px;
-    height:30px;
-}
-#picture img{
-    width:100%;
-    height:900px;
-    position:absolute;
-    top:0;
-    left:0;
-    display:none;
+.carousel-inner img{
+    width: 100%;
+    margin-top:50px;
 }
 #title{
     width:100%;
-    height:100px;
+    height:80px;
     color:greenyellow;
-    font-size:50px;
+    font-size:30px;
     text-align: center;
-    line-height:100px;
+    background: #f1f1f1;
+    line-height:80px;
 }
+
 #left{
-    width:30%;
-    height:400px;
-    position: absolute;
-    left:17%;
-    top:110px;
+    height: 400px;
+    position:relative;
+    background:#f1f1f1;
 }
-#personal-information{
-    position: relative;
-    background:#f6f6f6 ;
-    width:100%;
-    height:420px;
+#left .left-center,#right .right-center{
+    border:2px solid white;
+    position:absolute;
+    width: 80%;
+    height: 350px;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
 }
 #left table td:first-child{
-    width:40%;
+    width:50%;
+    text-align:center;
+    border:2px solid white;
     background: greenyellow;
 }
 #left table td:last-child{
     border:2px solid white;
-}
-#left table tr{
-    width:100%;
-    text-align: center;
-    left:10%;
-    cursor:pointer;
+    text-align:center;
 }
 #left table tr:hover{
-    -webkit-transform: scale(1.1);
+    -webkit-transform: scale(1.2);
+    cursor:pointer;
 }
 #right{
-    width:40%;
-    height:300px;
-    position:absolute;
-    left:51%;
-    top:110px;
+    background: #f1f1f1;
+    height: 400px;
 }
 #right img{
     width:100px;
