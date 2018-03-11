@@ -87,7 +87,7 @@ a:hover{
 #activity h4,#match h4,#money h4,#volenteer h4,#English h4,#car h4{
     color:orange;
 }
-@media screen and (max-width:576px){
+@media screen and (max-width:792px){
     #header{
         position:absolute;
         top:1px;
@@ -98,7 +98,7 @@ a:hover{
     }
     #right{
         position:absolute;
-        top:500px;
+        top:540px;
         height:1000px;
     }
 }
