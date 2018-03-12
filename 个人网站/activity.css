@@ -2,6 +2,11 @@
     margin:0;
     padding:0;
 }
+body{
+    width: 100%;
+    height: 100%;
+    cursor:url(img/icon.png),default;
+}
 .caption h3{
     text-align:center;
 }

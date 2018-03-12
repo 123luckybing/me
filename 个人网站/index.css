@@ -5,6 +5,11 @@
 li{
     list-style:none;
 }
+body{
+    width: 100%;
+    height: 100%;
+    cursor:url(img/icon.png),default;
+}
 .nav.navbar-nav.navbar-right{
     margin-right:5%;
 }
@@ -48,7 +53,6 @@ li{
 }
 #left table tr:hover{
     -webkit-transform: scale(1.2);
-    cursor:pointer;
 }
 #right{
     background: #f1f1f1;
@@ -78,7 +82,6 @@ li{
     left:10%;
     top:10px;
     line-height:25px;
-    cursor:pointer;
     font-size:16px;
 }
 @media(max-width:488px){

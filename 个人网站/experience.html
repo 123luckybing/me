@@ -4,80 +4,99 @@
     <meta charset="UTF-8">
     <link rel="shortcut icon" href="img/小火龙.png"/>
     <title>项目经验</title>
-    <link rel="stylesheet" href="project.css"/>
     <link rel="stylesheet" href="bootstrap.min.css"/>
+    <link rel="stylesheet" href="project.css"/>
 </head>
 <body>
 <div id="background"></div>
-<div id="personal-skill" class="col-lg-4 col-md-6  col-sm-6 col-xs-12">
-    <h1>个人技能</h1>
-    <div class="progress">
-        HTML/5
-        <div class="progress-bar progress-bar-striped active" style="width:80%">80%</div>
+<div class="col-lg-4 col-md-6  col-sm-6 col-xs-12">
+    <div id="personal-skill">
+        <h1>个人技能</h1>
+        <div class="progress">
+            HTML
+            <div class="progress-bar progress-bar-striped active" style="width:80%">80%</div>
+        </div>
+        <div class="progress">
+            CSS/3
+            <div class="progress-bar progress-bar-striped active" style="width:80%">80%</div>
+        </div>
+        <div class="progress">
+            Js
+            <div class="progress-bar progress-bar-striped active" style="width:80%">80%</div>
+        </div>
+        <div class="progress">
+            JQ
+            <div class="progress-bar progress-bar-striped active" style="width:70%">70%</div>
+        </div>
+        <div class="progress">
+            Vue
+            <div class="progress-bar progress-bar-striped active" style="width:70%">70%</div>
+        </div>
+        <div class="progress">
+            webpack
+            <div class="progress-bar progress-bar-striped active" style="width:70%">70%</div>
+        </div>
+        <div class="progress">
+            ES6
+            <div class="progress-bar progress-bar-striped active" style="width:70%">70%</div>
+        </div>
+        <div class="progress">
+            PHP
+            <div class="progress-bar progress-bar-striped active" style="width:50%">50%</div>
+        </div>
     </div>
-    <div class="progress">
-        CSS/3
-        <div class="progress-bar progress-bar-striped active" style="width:80%">80%</div>
-    </div>
-    <div class="progress">
-        Js
-        <div class="progress-bar progress-bar-striped active" style="width:80%">80%</div>
-    </div>
-    <div class="progress">
-        JQ
-        <div class="progress-bar progress-bar-striped active" style="width:70%">70%</div>
-    </div>
-    <div class="progress">
-        Vue
-        <div class="progress-bar progress-bar-striped active" style="width:70%">70%</div>
-    </div>
-    <div class="progress">
-        webpack
-        <div class="progress-bar progress-bar-striped active" style="width:70%">70%</div>
-    </div>
-    <div class="progress">
-        ES6
-        <div class="progress-bar progress-bar-striped active" style="width:70%">70%</div>
-    </div>
-    <div class="progress">
-        PHP
-        <div class="progress-bar progress-bar-striped active" style="width:50%">50%</div>
+    <div id="self-assessment">
+        <h1>自我评价</h1>
+        <pre class="text-justify">
+1. 对前端技术具有浓厚的兴趣，喜欢逛CSDN，博客园等技术论坛；<br/>
+2. 具备良好的审美能力，有良好的代码编程习惯；<br/>
+3. 学习适应能力强，愿意不断学习新知识丰富自己；<br/>
+4. 抗压能力强，有信心在不同的工作强度下进行开发工作；<br/>
+5. 性格随和，具有良好的团队合作精神。
+        </pre>
     </div>
 </div>
-<div id="self-assessment" class ="col-lg-4 col-md-6 col-sm-6 col-xs-12">
-    <h1>自我评价</h1>
-
+<div id="right">
+    <div id="first" class="col-lg-4 col-md-6  col-sm-12 col-xs-12">
+        <div>
+            <div class="pull-left circle"></div>
+            <h3>星巴克响应式网站（独立完成）---</h3>
+        </div>
+        <strong>Web前端工程师</strong>
+        <p>2017.11</p>
+        <h4 class="text-justify">该项目运用html、css、javascript、jQuery、css3、html5等技术，模拟星巴克交互网站的制作。与以往我的项目不同，该项目运用媒体查询技术实现了响应式设计，页面根据浏览器的不同宽度做出不同的反应。该项目基本模拟实现了星巴克网站的前端所有功能，包括新品上市、产品介绍、会员制度、品牌介绍等。网页交互部分采用了jQuery技术，与以往使用的Javascript相比，更加简洁。该项目网页繁多、代码量大，模块要求设计更加复杂，在制作的过程中也遇到了很多问题（如代码报错、想要的效果出不来等），但最终我克服了困难，完成了项目。该项目令我收获颇多，让我在前端的道路上不断成长。</h4>
+    </div>
+    <div id="second" class="col-lg-4 col-md-6  col-sm-12 col-xs-12">
+        <div>
+            <div class="pull-left circle"></div>
+            <h3>VueApp(独立完成)----------------</h3>
+        </div>
+        <strong>Web前端工程师</strong>
+        <p>2017.9</p>
+        <h4 class="text-justify">该项目使用vue-cli搭建框架，使用vuex进行状态管理，使用vue-router进行页面状态转换，同时使用ajax动态获取后台数据。该项目将图书、电影、音乐、图片进行分块整合，方便用户查询与使用。在图书模块，使用vue-swipe插件和vue-touch插件，将图片做成vue轮播图的形式，使该模块美观。在音乐模块，使用vue-player插件，对所选音乐进行播放，同时也引入了音乐歌词子组件。在电影模块，首页向用户显示了当前热映电影的海报、主演、导演、场次、大众评分等，当鼠标点击当前选中电影后，点击进去会显示出电影详情。在图片模块，点击时会进行上下图片的切换。由于猫眼电影接口有时访问不了，所以在本地引入了json文件，对本地json文件进行访问。</h4>
+        <hr/>
+    </div>
+    <div id="third" class="col-lg-4 col-md-6  col-sm-12 col-xs-12">
+        <div>
+            <div class="pull-left circle"></div>
+            <h3>个人网站建设（独立完成）------</h3>
+        </div>
+        <strong>Web前端工程师</strong>
+        <p>2017.8</p>
+        <h4 class="text-justify">个人网站运用html、css、javascript、css3、html5等技术，主要包括轮播图、旋转木马、旋转照片墙、固定顶部等特效，从而实现网页的交互。该项目从网页角度出发，将自身所会技能、大学生活、社会活动、荣誉奖项等方面做了详细的介绍，将自身经历做成网页，向大家展示，方便大家对我的了解。在网站做好后，我进行了网站的建设与维护，包含域名的购买、云服务器的申请、公安备案申请、服务器、数据库与网站的维护等工作。在此基础上，随着时间的流逝、自己的不断成长，我会将我的个人网站不断改进。</h4>
+<hr/>
 </div>
-<!--<div id="right">-->
-    <!--<div id="first">-->
-        <!--<h3>星巴克响应式网站（独立完成）-&#45;&#45;</h3>-->
-        <!--<strong>Web前端工程师</strong>-->
-        <!--<p>2017.11</p>-->
-        <!--<h4>该项目运用html、css、javascript、jQuery、css3、html5等技术，模拟星巴克交互网站的制作。与以往我的项目不同，该项目运用媒体查询技术实现了响应式设计，页面根据浏览器的不同宽度做出不同的反应。该项目基本模拟实现了星巴克网站的前端所有功能，包括新品上市、产品介绍、会员制度、品牌介绍等。网页交互部分采用了jQuery技术，与以往使用的Javascript相比，更加简洁。该项目网页繁多、代码量大，模块要求设计更加复杂，在制作的过程中也遇到了很多问题（如代码报错、想要的效果出不来等），但最终我克服了困难，完成了项目。该项目令我收获颇多，让我在前端的道路上不断成长。</h4>-->
-        <!--<hr/>-->
-    <!--</div>-->
-    <!--<div id="second">-->
-        <!--<h3>VueApp(独立完成)&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;</h3>-->
-        <!--<strong>Web前端工程师</strong>-->
-        <!--<p>2017.9</p>-->
-        <!--<h4>该项目使用vue-cli搭建框架，使用vuex进行状态管理，使用vue-router进行页面状态转换，同时使用ajax动态获取后台数据。该项目将图书、电影、音乐、图片进行分块整合，方便用户查询与使用。在图书模块，使用vue-swipe插件和vue-touch插件，将图片做成vue轮播图的形式，使该模块美观。在音乐模块，使用vue-player插件，对所选音乐进行播放，同时也引入了音乐歌词子组件。在电影模块，首页向用户显示了当前热映电影的海报、主演、导演、场次、大众评分等，当鼠标点击当前选中电影后，点击进去会显示出电影详情。在图片模块，点击时会进行上下图片的切换。由于猫眼电影接口有时访问不了，所以在本地引入了json文件，对本地json文件进行访问。</h4>-->
-        <!--<hr/>-->
-    <!--</div>-->
-    <!--<div id="third">-->
-        <!--<h3>个人网站建设（独立完成）&#45;&#45;&#45;&#45;&#45;&#45;</h3>-->
-        <!--<strong>Web前端工程师</strong>-->
-        <!--<p>2017.8</p>-->
-        <!--<h4>个人网站运用html、css、javascript、css3、html5等技术，主要包括轮播图、旋转木马、旋转照片墙、固定顶部等特效，从而实现网页的交互。该项目从网页角度出发，将自身所会技能、大学生活、社会活动、荣誉奖项等方面做了详细的介绍，将自身经历做成网页，向大家展示，方便大家对我的了解。在网站做好后，我进行了网站的建设与维护，包含域名的购买、云服务器的申请、公安备案申请、服务器、数据库与网站的维护等工作。在此基础上，随着时间的流逝、自己的不断成长，我会将我的个人网站不断改进。</h4>-->
-        <!--<hr/>-->
-    <!--</div>-->
-    <!--<div id="fourth">-->
-        <!--<h3>淘宝首页（独立完成）-&#45;&#45;&#45;&#45;&#45;&#45;</h3>-->
-        <!--<strong>Web前端工程师</strong>-->
-        <!--<p>2017.8</p>-->
-        <!--<h4>运用前端技术栈中的html、css、javascript技术模仿制作了淘宝网首页页面。通过本次网页制作，我对前端语言的使用更加熟练，网页成品初步能与淘宝网所实现的功能一样，向买家更好地展示包括产品分类、热销产品轮播图、网页导航、固定顶部、售后服务、产品搜索等功能。初步计划基本实现。在打代码运行的过程中，也遇到了一些困难，刚开始有很多次由于技术不熟练或者字母拼写错误，编译器报错。我通过报错的错误提示进行调整找错，解决了问题。</h4>-->
-        <!--<hr/>-->
-    <!--</div>-->
-<!--</div>-->
+<div id="fourth" class="col-lg-4 col-md-6  col-sm-12 col-xs-12">
+    <div>
+        <div class="pull-left circle"></div>
+        <h3>淘宝首页（独立完成）-------</h3>
+    </div>
+    <strong>Web前端工程师</strong>
+    <p>2017.8</p>
+    <h4 class="text-justify">运用前端技术栈中的html、css、javascript技术模仿制作了淘宝网首页页面。通过本次网页制作，我对前端语言的使用更加熟练，网页成品初步能与淘宝网所实现的功能一样，向买家更好地展示包括产品分类、热销产品轮播图、网页导航、固定顶部、售后服务、产品搜索等功能。初步计划基本实现。在打代码运行的过程中，也遇到了一些困难，刚开始有很多次由于技术不熟练或者字母拼写错误，编译器报错。我通过报错的错误提示进行调整找错，解决了问题。</h4>
+    <hr/>
+</div>
+</div>
 <script src="jquery-1.11.2.js"></script>
 <script src="bootstrap.min.js"></script>
 </body>
