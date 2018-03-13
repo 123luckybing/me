@@ -10,10 +10,21 @@ body{
 #header{
     margin-top:30px;
     border-radius:3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
     color: #777;
     text-shadow: 0 1px #fff;
+    -webkit-text-shadow: 0 1px #fff;
+    -moz-text-shadow: 0 1px #fff;
+    -ms-text-shadow: 0 1px #fff;
+    -o-text-shadow: 0 1px #fff;
     background: rgba(255,255,255,0.9);
     -webkit-box-shadow: 0 -1px 4px #ccc inset;
+    -o-box-shadow: 0 -1px 4px #ccc inset;
+    -ms-box-shadow: 0 -1px 4px #ccc inset;
+    -moz-box-shadow: 0 -1px 4px #ccc inset;
     box-shadow: 0 -1px 4px #ccc inset;
     border: 1px solid #ccc;
     padding: 15px;
@@ -55,10 +66,21 @@ a:hover{
 #list{
     margin-top:260px;
     border-radius:3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
     color: #777;
     text-shadow: 0 1px #fff;
+    -webkit-text-shadow: 0 1px #fff;
+    -moz-text-shadow: 0 1px #fff;
+    -ms-text-shadow: 0 1px #fff;
+    -o-text-shadow: 0 1px #fff;
     background: rgba(255,255,255,0.9);
     -webkit-box-shadow: 0 -1px 4px #ccc inset;
+    -o-box-shadow: 0 -1px 4px #ccc inset;
+    -ms-box-shadow: 0 -1px 4px #ccc inset;
+    -moz-box-shadow: 0 -1px 4px #ccc inset;
     box-shadow: 0 -1px 4px #ccc inset;
     border: 1px solid #ccc;
     padding: 15px;
@@ -87,6 +109,10 @@ a:hover{
 #activity,#match,#money,#volenteer,#English,#car{
     z-index:100;
     border-radius:10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
     background: rgba(255,255,255,0.9);
 }
 #activity h4,#match h4,#money h4,#volenteer h4,#English h4,#car h4{

@@ -39,6 +39,10 @@ body{
     height: 350px;
     top:50%;
     left:50%;
+    -webkit-transform:translate(-50%,-50%);
+    -moz-transform:translate(-50%,-50%);
+    -ms-transform:translate(-50%,-50%);
+    -o-transform:translate(-50%,-50%);
     transform:translate(-50%,-50%);
 }
 #left table td:first-child{
@@ -53,6 +57,10 @@ body{
 }
 #left table tr:hover{
     -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transform: scale(1.2);
 }
 #right{
     background: #f1f1f1;
@@ -66,14 +74,26 @@ body{
     top:50%;
     left:50%;
     transform:translate(-50%,-50%);
+    -moz-transform:translate(-50%,-50%);
+    -ms-transform:translate(-50%,-50%);
+    -o-transform:translate(-50%,-50%);
+    -webkit-transform:translate(-50%,-50%);
 }
 #right img{
     width:150px;
     height:150px;
     border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius:50%;
     position: relative;
     left: 50%;
     transform:translate(-50%);
+    -moz-transform:translate(-50%);
+    -ms-transform:translate(-50%);
+    -o-transform:translate(-50%);
+    -webkit-transform:translate(-50%);
 }
 #self-introduce{
     width:90%;
@@ -97,6 +117,10 @@ body{
         top:50%;
         left:50%;
         transform:translate(-50%,-50%);
+        -moz-transform:translate(-50%,-50%);
+        -ms-transform:translate(-50%,-50%);
+        -o-transform:translate(-50%,-50%);
+        -webkit-transform:translate(-50%,-50%);
     }
 }
 #self-introduce:hover {
@@ -111,6 +135,10 @@ body{
     height:40px;
     text-align:center;
     border-radius:50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius:50%;
     border:1px solid black;
     font-size:30px;
     color:black;
@@ -120,4 +148,5 @@ body{
     bottom:10px;
     background: white;
     opacity: 0.5;
+    filter:alpha(opacity=50);
 }

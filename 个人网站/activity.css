@@ -18,6 +18,10 @@ body{
     height:50px;
     background:#f6f6f6;
     border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
     border:2px solid lightgrey;
     font-size:25px;
     color:grey;
@@ -37,6 +41,10 @@ body{
     right:10px;
     bottom:65px;
     border-radius:50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
     border:1px solid lightgrey;
 }
 #return .letter{
