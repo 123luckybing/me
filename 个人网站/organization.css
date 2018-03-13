@@ -39,7 +39,6 @@
 #left .org,#left .post,#left .time,#left .work{
     width:100%;
     height:110px;
-    margin-top:20px;
     position:relative;
 }
 #left .org img,#left .post img,#left .time img,#left .work img,{
