@@ -87,4 +87,29 @@
     Total_nd.onclick =function(){
         this.style.display = 'none';
     };
+
+
+
+
+    var oClock = document.getElementById("clock");
+    var list = "";
+    for(var i=0;i<60;i++){
+        list+="<li style='transform:rotate("+ i*6+"deg)'></li>";
+    }
+    oClock.innerHTML = list;
+
+    run();
+    function run() {
+        var date = new Date();
+        var second = date.getSeconds();
+        var minute = date.getMinutes()+second/60;
+        var hour = date.getHours()+minute/60;
+        var oHour = document.getElementById("hour");
+        var oMinute = document.getElementById("minute");
+        var oSecond = document.getElementById("second");
+        oHour.style.transform = "rotate(" + (hour * 30) + "deg)";
+        oMinute.style.transform = "rotate(" + (minute * 6) + "deg)";
+        oSecond.style.transform = "rotate(" + (second * 6) + "deg)";
+    }
+    setInterval(run,1000);
 })();
