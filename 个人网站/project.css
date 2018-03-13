@@ -11,18 +11,90 @@
     background:url(img/bg.jpg);
     overflow:scroll;
 }
- #right #first,#second,#third,#fourth{
-    border-left:1px solid green;
+#right{
+    height: 700px;
+    background: #000;
 }
-.circle{
- width: 10px;
- height: 10px;
- border-radius:50%;
- background: green;
+#first,#second,#third,#fourth,#sixth,#fifth{
+    position:absolute;
+    background: white;
+    top:0;
+    left:0;
+}
+.circle {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: green;
 }
 body{
     width: 100%;
     height: 100%;
     cursor:url(img/icon.png),default;
+    font-size:10px;
+    perspective:1000px;
+}
+@media(max-width:962px) and (min-width:768px){
+    #first h4,#second h4,#third h4,#fourth h4{
+       font-size:14px;
+    }
+}
+@media(max-width:792px){
+   body{
+       font-size:12px;
+   }
+}
+.wrap{
+    width: 400px;
+    position:relative;
+    height: 400px;
+    margin-top:10%;
+    perspective-origin:50% 30%;
+    animation:xuanzhuan 40s linear infinite;
+    transform-style:preserve-3d;
+}
+#first{
+    -webkit-transform:translateZ(17rem);
+    -moz-transform:translateZ(17rem);
+    -ms-transform:translateZ(17rem);
+    -o-transform:translateZ(17rem);
+    transform:translateZ(17rem);
+}
+#second{
+    -webkit-transform:rotateY(180deg) translateZ(17rem);
+    -moz-transform:rotateY(180deg) translateZ(17rem);
+    -o-transform:rotateY(180deg) translateZ(17rem);
+    -ms-transform:rotateY(180deg) translateZ(17rem);
+    transform:rotateY(180deg) translateZ(17rem);
+
+}
+#third{
+    -webkit-transform:rotateY(90deg) translateZ(17rem);
+    -moz-transform:rotateY(90deg) translateZ(17rem);
+    -ms-transform:rotateY(90deg) translateZ(17rem);
+    -o-transform:rotateY(90deg) translateZ(17rem);
+    transform:rotateY(90deg) translateZ(17rem);
+
+}
+#fourth{
+    -webkit-transform:rotateY(-90deg) translateZ(17rem);
+    -moz-transform:rotateY(-90deg) translateZ(17rem);
+    -ms-transform:rotateY(-90deg) translateZ(17rem);
+    -o-transform:rotateY(-90deg) translateZ(17rem);
+    transform:rotateY(-90deg) translateZ(17rem);
+
+}
+#fifth{
+    transform:rotateX(90deg) translateZ(17rem);
+}
+#sixth{
+    transform:rotateX(-90deg) translateZ(17rem);
+}
+@keyframes xuanzhuan{
+    from{
+
+    }to{
+         transform:rotateY(360deg);
+     }
 }
  
