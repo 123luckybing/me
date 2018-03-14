@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
-    <file url="file://$PROJECT_DIR$/vueapp/src/components/book/book.vue" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/vueapp/src/components/movie/movieDetail.vue" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/vueapp/src/components/music/MusicData.vue" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/vueapp/src/components/music/music.vue" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/vuecli/src/components/test.vue" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/vuecli/src/components/test4.vue" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/vuecli/src/components/testUrl.vue" charset="UTF-8" />
@@ -14,7 +10,6 @@
     <file url="file://$PROJECT_DIR$/vuepractice/src/components/cosmetics.vue" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/vuepractice/src/components/shoe.vue" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/vuepractice/src/components/sport.vue" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/vuepractice/src/components/title.vue" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/vuepractice/src/components/tour.vue" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/vuepractice/src/components/trousers.vue" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/vuepractice/src/components/tuo.vue" charset="UTF-8" />

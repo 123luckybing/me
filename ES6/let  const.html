@@ -14,7 +14,7 @@
        console.log(b);//10
 
       let c=3;
-      console.log(c);
+      console.log(c);//3
 
       var d=10;
       var d=20;
@@ -88,6 +88,18 @@
          grade:89
      };
     console.log(Information);
+
+    var object1 ={
+        name:"zhangsan",
+        age:16
+    }
+    console.log(object1);
+        Object.freeze(object1);
+        //冻结
+    object1.name ="lili";
+    console.log(object1);
+
+
 </script>
 </body>
 </html>
