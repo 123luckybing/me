@@ -25,7 +25,59 @@
 //        });
 
         //Promise b依赖于a
+//     new Promise(function(resolve,reject){
+//         $.get("a.json",{},function(res){
+//             if(res){
+//                 console.log(res);
+//                 resolve();
+//             }else{
+//                 reject();
+//             }
+//         },'json');
+//     }).then(function(){
+//                 console.log("成功");
+//                 $.get("b.json",{},function(res){
+//                     console.log(res);
+//                 },"json");
+//
+//             })
+//       .catch(function(){
+//                 console.log("失败");
+//             });
 
+
+        //Promise.all()
+//    let P1 = new Promise(function(resolve,reject){
+//        setTimeout(function(){
+//            console.log(1);
+          //  resolve();
+//        },1000);
+////        reject();
+//    });
+//    let P2 = new Promise(function(resolve,reject){
+//        setTimeout(function(){
+//            console.log(2);
+//        },2000);
+//        resolve();
+//    });
+//    let P3 = new Promise(function(resolve,reject){
+//        setTimeout(function(){
+//            console.log(3);
+//        },3000);
+//        resolve();
+//    });
+//
+//    Promise.all([P1,P2,P3]).then(function(){
+//        console.log("success");
+//    }).catch(function(){
+//        console.log("fail");
+//    });
+
+//    Promise.race([P1,P2,P3]).then(function(){
+//            console.log("success");
+//        }).catch(function(){
+//            console.log("fail");
+//        });
 
     </script>
 </body>
