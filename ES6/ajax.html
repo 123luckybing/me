@@ -27,7 +27,7 @@
                let result = xmlhttp.responseText;//打印出来的是字符串得转化成对象
                let obj = JSON.parse(result);
                 let list = obj.productData;
-            console.log(list);
+                console.log(list);
                 for(let item of list){
                  //console.log(item);
                     oUl.innerHTML +=`<li>${ item.store}</li>`;
