@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+<script>
+//    Array.from 将json数据转化成数组
+//    let json={
+//        '0':'zhangsan',
+//        '1':18,
+//        length:2
+//    };
+//    console.log(Array.from(json));
+
+    let oDiv = document.querySelectorAll("div");
+    console.log(oDiv);//类数组
+//将类数组转化成数组
+//    let arr = [...oDiv];
+//    let arr =Array.from(oDiv);
+//    let arr = [].slice.call(oDiv);
+//    let arr = Array.prototype.slice.call(oDiv);
+//    console.log(arr);
+
+//    let arr = new Array(1,2,3,3);
+//    console.log(arr);
+
+    /*let arr = new Array(3).fill(6);
+    console.log(arr);*/
+
+//    let arr = Array.of(3);
+//    console.log(arr);
+//
+    let arr =[1,2,3,2,4,7,8,10,11];
+//    console.log(arr.copyWithin(2,4,7));
+    //[1,2,4,7,8,7,8,10,11]
+
+//    let f = arr.find((val,key,arr)=>{
+//    if(val>4){
+//        return val;
+//        }
+//    })
+//    console.log(f);
+   console.log(arr.fill("aa",3,8));
+//    [1,2,3,aa,aa,aa,aa,aa,11]
+</script>
+</body>
+</html>
