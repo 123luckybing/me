@@ -2,58 +2,39 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>class</title>
 </head>
 <body>
 
 </body>
 <script>
 
-//    function User(){
-//        this.name = 'zx';
+//    function People(name,age){
+//        this.name = name;
+//        this.age = age;
 //    }
-//    User.prototype.say = function(){
-//        console.log(11111);
-//    }
-//    var u = new User();
-//    u.say();
+//    People.prototype.eat = function(){
+//        console.log(this.name+"今年"+this.age+"在吃！");
+//    };
 //
-//
-//
-//
-//    function Son(){
-//
-//    }
-//
-//    Son.prototype = u;
-//    var s = new Son();
-//
+//    let p1 = new People("张三",18);
+//    p1.eat();
 
-//Math.random();
-// 工具类
-//    class User{
-//        constructor(n){
-//            this.name = n;
-//        }
-//        static say(){
-//            console.log(this.xxx);
-//        }
-//    }
-//
-//    User.say();
-//    var u1 = new User('xx');
-//    u1.say();
+        class People{
+            constructor(name,age){
+                this.name = name,
+                this.age = age
+            }
+            showName(){
+                console.log(this.name);
+            }
+        }
+    var p1 = new People("zhangsan",12);
+    console.log(p1.name);
+    p1.showName();
 
-    //static
-//
-//    class Son extends User{
-//        constructor(n,a){
-//            super(n);
-//            this.age = a;
-//        }
-//    }
-//    var s = new Son('yy',12);
-//    s.say();
+
+
 
 </script>
 </html>
