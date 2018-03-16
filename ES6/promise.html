@@ -13,33 +13,6 @@
 
     <script src='jquery-1.11.2.js'></script>
     <script>
-        //ajax:不刷新页面的请求
-
-        //jquery: $.get();  $.post();
-
-        /* let $list = $('#list');
-        $.get('product-data.json', {}, function (res) {
-            let list = res.productData;
-            for (let item of list) {
-                let $li = $(`<li>${item.name}</li>`);
-                $list.append($li);
-            }
-    
-        }, 'json'); */
-
-        //ajax原理
-
-        /* //1、创建对象
-        var xmlhttp;
-        if (window.XMLHttpRequest) {// code for IE7+, Firefox, Chrome, Opera, Safari
-            xmlhttp = new XMLHttpRequest();
-        } else {// code for IE6, IE5
-            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
-        }
-        //2、向服务器发送请求
-        xmlhttp.open("GET", "test1.txt", true);
-        xmlhttp.send();
-
         //3、服务器响应
         xmlDoc = xmlhttp.responseXML;
         txt = "";
