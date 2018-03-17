@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="header">
-        选择城市
+        天气选择城市
     </div>
     <div class="city">
         <ul>

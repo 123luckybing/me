@@ -13,7 +13,7 @@ export default new Router({
     //重定向在外面重新写
     {
       path    : '/',
-      redirect: '/weather/WeatherMain'
+      redirect: '/weather/WeatherChange'
     },
     {
       path:"/weather",

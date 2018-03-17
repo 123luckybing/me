@@ -1,7 +1,7 @@
 <template>
   <div>
     <ul class="footer">
-      <li><router-link to="/weather/WeatherMain">天气</router-link></li>
+      <li><router-link to="/weather/WeatherChange">天气</router-link></li>
       <li>xx</li>
       <li>xx</li>
       <li>xx</li>
