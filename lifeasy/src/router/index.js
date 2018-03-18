@@ -5,6 +5,9 @@ import Commonheader from '@/components/common/header'
 import Commonfooter from '@/components/common/footer'
 import WeatherChange from '@/components/weather/WeatherChange'
 import WeatherMain from '@/components/weather/WeatherMain'
+import express from '@/components/express/Express'
+import expressChoose from '@/components/express/ExpressChoose'
+import expressDetail from '@/components/express/ExpressDetail'
 Vue.use(Router);
 
 export default new Router({
@@ -38,6 +41,19 @@ export default new Router({
       path: '/footer',
       name: 'Commonfooter',
       component:Commonfooter
+    },{
+      path: '/express',
+      name: 'express',
+      component:express,
+      children:[{
+        path:"expressChoose",
+        name:"expressChoose",
+        component:expressChoose
+      },{
+        path:"expressDetail/:typ/:number_order",
+        name:"expressDetail",
+        component:expressDetail
+      }]
     }
   ]
 })

@@ -1,7 +1,7 @@
 <template>
   <div class="content">
     <h4 class="change" @click="change">选择城市</h4>
-    <h4>当前日期：{{mainList.date}}</h4>
+    <h4 class="data">当前日期：{{mainList.date}}</h4>
     <h1>{{mainList.city}}</h1>
     <div class="wendu">{{lastList.wendu}}°</div>
     <ul class="today">

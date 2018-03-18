@@ -2,7 +2,7 @@
   <div>
     <ul class="footer">
       <li><router-link to="/weather/WeatherChange">天气</router-link></li>
-      <li>xx</li>
+      <li><router-link to="/express/ExpressChoose">查物流</router-link></li>
       <li>xx</li>
       <li>xx</li>
     </ul>
@@ -25,10 +25,14 @@
   width: 100%;
   display:-webkit-box;
 }
-ul li{
-  -webkit-box-flex:1;
-  font-size:20px;
-  line-height:1rem;
+ul li {
+  -webkit-box-flex: 1;
+  font-size: 20px;
+  line-height: 1rem;
+  list-style: none;
+}
+ul li a{
+  color:white;
 }
 .router-link-active{
     color:black;
