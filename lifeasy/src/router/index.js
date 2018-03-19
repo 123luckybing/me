@@ -8,6 +8,9 @@ import WeatherMain from '@/components/weather/WeatherMain'
 import express from '@/components/express/Express'
 import expressChoose from '@/components/express/ExpressChoose'
 import expressDetail from '@/components/express/ExpressDetail'
+import Broadcast from '@/components/broadcast/Broadcast'
+import BroadcastSearch from '@/components/broadcast/BroadcastSearch'
+import BroadcastDetail from '@/components/broadcast/BroadcastDetail'
 Vue.use(Router);
 
 export default new Router({
@@ -54,6 +57,21 @@ export default new Router({
         name:"expressDetail",
         component:expressDetail
       }]
+    },{
+      path:"/Broadcast",
+      name:"Broadcast",
+      component:Broadcast,
+      children:[
+        {
+          path:"BroadcastSearch",
+          name:"BroadcastSearch",
+          component:BroadcastSearch,
+        },{
+          path:"BroadcastDetail/:start/:end",
+          name:"BroadcastDetail",
+          component:BroadcastDetail,
+        }
+      ]
     }
   ]
 })

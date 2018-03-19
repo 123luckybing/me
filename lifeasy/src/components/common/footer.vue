@@ -3,7 +3,7 @@
     <ul class="footer">
       <li><router-link to="/weather/WeatherChange">天气</router-link></li>
       <li><router-link to="/express/ExpressChoose">查物流</router-link></li>
-      <li>xx</li>
+      <li><router-link to="/Broadcast/BroadcastSearch">火车票</router-link></li>
       <li>xx</li>
     </ul>
   </div>
